@@ -7,7 +7,26 @@ app.controller('myCtrl', function($scope, $http) {
     /* EXAMPLE CODE $scope.name="Jimmy";
     $scope.names=[{name:'Jimmy',work:'ISC'},{name:'Randy',work:'ISC'},{name:'Zach',work:'VUMC'}]; */
 
-    $scope.tab = "Home";
+    $scope.home = true;
+    $scope.movies = false;
+    $scope.football = false;
+    $scope.loadContent = function(tabName) {
+        if (tabName == 'home') {
+            $scope.home = true;
+            $scope.movies = false;
+            $scope.football = false;
+        }
+        else if (tabName == 'movies') {
+            $scope.home = false;
+            $scope.movies = true;
+            $scope.football = false;
+        }
+        else{
+            $scope.home = false;
+            $scope.movies = false;
+            $scope.football = true;
+        }
+    }
 
 });
 /*create directive - must use camel case when defining and use dashes

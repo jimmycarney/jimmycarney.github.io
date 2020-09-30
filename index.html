@@ -32,11 +32,22 @@
         <h4>Jimmy Carney</h4>
 
         <div id = "tabs">
-            <p class = "tab">Home</p>
-            <p class = "tab">Movies</p>
-            <p class = "tab">Football</p>
+            <p class = "tab" ng-click = "loadContent('home')">Home</p>
+            <p class = "tab" ng-click = "loadContent('movies')">Movies</p>
+            <p class = "tab" ng-click = "loadContent('football')">Football</p>
         </div>
 
+        <div id="home" class="center-content" ng-show="home">
+            <p>Home Div</p>
+        </div>
+
+        <div id="movies" class="center-content" ng-show="movies">
+            <p>Movies Div</p>
+        </div>
+
+        <div id="football" class="center-content" ng-show="football">
+            <p>Football Div</p>
+        </div>
         <!--ng-model binds the value of HTML controls to an application variable-->
         <!--the binding goes both ways, changing value in input field changes app variable-->
         <!-- EXAMPLE CODE <p>Name: <input type = "text" ng-model = "name"></p> -->
