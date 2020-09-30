@@ -15,22 +15,24 @@
     <!--ng-controller defines the controller-->
     <!--ng-init initializes and application variable (add ng-init="name='Jimmy'" to div tag)-->
     <div ng-app="myApp" ng-controller="myCtrl">
+        
         <!--ng-model binds the value of HTML controls to an application variable-->
         <!--the binding goes both ways, changing value in input field changes app variable-->
-        <p>Name: <input type = "text" ng-model = "name"></p>
+        <!-- EXAMPLE CODE <p>Name: <input type = "text" ng-model = "name"></p> -->
+
         <!--ng-bind binds an application variable to the HTML view-->
-        <p ng-bind = "name"></p>
+        <!-- EXAMPLE CODE <p ng-bind = "name"></p> -->
         <!--application variables can be written in expressions (data binding)-->
-        <p>{{ name }}</p>
+        <!-- EXAMPLE CODE <p>{{ name }}</p> -->
         <!--can add ng-init="names=[{name:'Jimmy',work:'ISC'},{name:'Randy',work:'ISC'},{name:'Zach',work:'VUMC'}]" to div tag-->
-        <div>
+        <!-- EXAMPLE CODE <div>
             <ul>
-                <!--ng-repeat repeats an HTML element(once for each item in collection)-->
+                ng-repeat repeats an HTML element(once for each item in collection)
                 <li ng-repeat="x in names">
                     {{ x.name + ": " + x.work }}
                 </li>
             </ul>
-        </div>
+        </div> -->
         <!--directive defined above as testDirective (use dashes in html)-->
         <test-directive></test-directive>
     </div>
