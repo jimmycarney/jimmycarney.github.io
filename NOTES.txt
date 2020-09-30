@@ -1,0 +1,63 @@
+Creating local server for development:
+>open terminal
+>cd into directory containing index.html file
+>run "py -m SimpleHTTPServer 8000" or "python -m SimpleHTTPServer 8000"
+>open localhost:8000 in a browser
+
+Creating new git repository:
+>Create repository on github website
+>open terminal
+>cd into folder where you want to store the project
+>run "git clone https://github.com/<username>/<repository>"
+>cd into <repository> (index.html is the file that will be hosted)
+
+Add, commit, and push git changes:
+>git add --all
+>git commit -m "Initial commit"
+>git push -u origin master
+
+Hosting a site on github:
+>Create a new repository on github named <username>.github.io
+>>open terminal
+>cd into folder where you want to store the project
+>run "git clone https://github.com/<username>/<username>.github.io"
+>cd into <username>.github.io (index.html is the file that will be hosted)
+>add, commit, and push git changes
+	>have to commit files more than once to get them to actually work
+
+Using an API:
+>Create an http request object (new XMLHttpRequest())
+>Use the http request object to perform a GET request on the desired URL
+	>This doesn't work for some sites because they restrict access to APIs
+		>Results in access control error
+>See the httpGetAsync function for an example
+	NFL Arrest API endpoints and properties:
+		https://www.nflArrest.com/api/v1/
+		crime - Category, arrest_count
+		team - Team_name, City_name, Team_Conference_Division, arrest_count
+		team/topPlayers/<team id (i.e. PHI)> - Name, arrest_count
+	
+	EPISODATE API endpoints and properties:
+		https://www.episodate.com/api/
+		most-popular - page, pages, (in tv_shows list) name, status, 
+						image_thumbnail_path, network
+		search?q=<showname> - page, pages, (in tv_shows list) name, status, 
+						image_thumbnail_path, network
+		show-details?q=<showname> - name, description, episodes
+
+
+	(CORS error with localhost but testing to see if that's true for the github page)
+	Github jobs endpoints and properties:
+		https://jobs.github.com/positions.json?
+		description=<any word> - returns all with description containing term
+		location=<city, zip, etc> - returns all nearest location
+		full_time=<bool> - returns all full or not full time jobs
+			concatenate search criteria with &
+		Properties (all same) - id, type, url, created_at, company, company_url, 
+								location, title, description, how_to_apply, 
+								company_logo (url)
+
+
+
+
+
