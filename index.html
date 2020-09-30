@@ -6,7 +6,20 @@
 </head>
 <script src ="indexController.js"></script>
 <style>
-    p:hover{
+    body{
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(146,168,209,1) 100%);
+    }
+    #tabs{
+        width: 150px;
+    }
+    .tab{
+        width: 90px;
+        text-align: center;
+        border: 3px solid #92a8d1;
+        border-radius: 3px;
+    }
+    .tab:hover{
         cursor: pointer;
     }
 </style>
@@ -16,6 +29,14 @@
     <!--ng-init initializes and application variable (add ng-init="name='Jimmy'" to div tag)-->
     <div ng-app="myApp" ng-controller="myCtrl">
         
+        <h4>Jimmy Carney</h4>
+
+        <div id = "tabs">
+            <p class = "tab">Home</p>
+            <p class = "tab">Movies</p>
+            <p class = "tab">Football</p>
+        </div>
+
         <!--ng-model binds the value of HTML controls to an application variable-->
         <!--the binding goes both ways, changing value in input field changes app variable-->
         <!-- EXAMPLE CODE <p>Name: <input type = "text" ng-model = "name"></p> -->
