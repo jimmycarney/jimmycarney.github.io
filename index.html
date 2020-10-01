@@ -16,9 +16,8 @@
         text-align: center;
     }
     .center-content{
-        width: 600px;
+        width: 800px;
         margin: 0 auto;
-        text-align: center;
     }
     .tab{
         text-align: center;
@@ -29,7 +28,17 @@
         width: 80px;
     }
     .tab:hover{
+        background: #495469;
         cursor: pointer;
+    }
+    .genre{
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    .row p{
+        text-align: center;
+        display: inline-block;
+        width: 19%;
     }
 </style>
 <body>
@@ -38,12 +47,12 @@
     <!--ng-init initializes and application variable (add ng-init="name='Jimmy'" to div tag)-->
     <div ng-app="myApp" ng-controller="myCtrl">
 
-        <h4>Jimmy Carney</h4>
+        <h2>Jimmy Carney</h2>
 
         <div id = "tabs">
-            <p class = "tab" ng-click = "loadContent('home')">Home</p>
-            <p class = "tab" ng-click = "loadContent('movies')">Movies</p>
-            <p class = "tab" ng-click = "loadContent('football')">Football</p>
+            <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
+            <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
+            <p class = "tab" ng-click = "loadContent('football')" id = "footballTab">Football</p>
         </div>
 
         <div id="home" class="center-content" ng-show="home">
@@ -51,7 +60,85 @@
         </div>
 
         <div id="movies" class="center-content" ng-show="movies">
-            <p>Movies Div</p>
+            <h3>Movie Recommendations</h3>
+            <p class = "genre">Science Fiction</p>
+                <div class = movieList>
+                    <div class = "row">
+                        <p>Ex Machina</p>
+                        <p>Moon</p>
+                        <p>Blade Runner</p>
+                        <p>A Clockwork Orange</p>
+                        <p>Children of Men</p>
+                    </div>
+                    <div class = "row">
+                        <p>Arrival</p>
+                        <p>Snowpiercer</p>
+                        <p>Twelve Monkeys</p>
+                        <p>Mad Max: Fury Road</p>
+                        <p>Blade Runner: 2049</p>
+                    </div>
+                </div>
+            <p class = "genre">Drama</p>
+                <div class = movieList>
+                    <div class = "row">
+                        <p>The Social Network</p>
+                        <p>Good Will Hunting</p>
+                        <p>Dead Poet's Society</p>
+                        <p>Birdman</p>
+                        <p>Spotlight</p>
+                    </div>
+                    <div class = "row">
+                        <p>Rocky</p>
+                        <p>Moonlight</p>
+                        <p>Up in the Air</p>
+                        <p>There Will Be Blood</p>
+                        <p>BlacKkKlansman</p>
+                    </div>
+                </div>
+            <p class = "genre">Thriller</p>
+                <div class = movieList>
+                    <div class = "row">
+                        <p>Fight Club</p>
+                        <p>Nightcrawler</p>
+                        <p>Memento</p>
+                        <p>Silence of the Lambs</p>
+                        <p>The Shining</p>
+                    </div>
+                    <div class = "row">
+                        <p>Alien</p>
+                        <p>Seven</p>
+                        <p>Get Out</p>
+                        <p>Zodiac</p>
+                        <p>The Prestige</p>
+                    </div>
+                </div>
+            <p class = "genre">Crime</p>
+                <div class = movieList>
+                    <div class = "row">
+                        <p>The Departed</p>
+                        <p>Goodfellas</p>
+                        <p>The Godfather I & II</p>
+                        <p>Hell or High Water</p>
+                        <p>Scarface</p>
+                    </div>
+                    <div class = "row">
+                        <p>The Town</p>
+                        <p>Pulp Fiction</p>
+                        <p>Drive</p>
+                        <p>Hot Fuzz</p>
+                        <p>Baby Driver</p>
+                    </div> 
+                </div>
+            <p class = "genre">Very Unique</p>
+                <div class = movieList>
+                    <div class = "row">
+                        <p>The Shape of Water</p>
+                        <p>Being John Malkovich</p>
+                        <p>Sorry to Bother You</p>
+                        <p>The Lobster</p>
+                        <p>Safety Not Guaranteed</p>
+                    </div>
+                </div>
         </div>
 
         <div id="football" class="center-content" ng-show="football">
