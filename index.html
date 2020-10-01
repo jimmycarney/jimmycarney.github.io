@@ -40,6 +40,11 @@
         display: inline-block;
         width: 19%;
     }
+    .movieTitle{
+        text-align: center;
+        display: inline-block;
+        width: 19%
+    }
 </style>
 <body>
     <!--ng-app defines the AngularJS app-->
@@ -62,82 +67,34 @@
         <div id="movies" class="center-content" ng-show="movies">
             <h3>Movie Recommendations</h3>
             <p class = "genre">Science Fiction</p>
-                <div class = movieList>
-                    <div class = "row">
-                        <p>Ex Machina</p>
-                        <p>Moon</p>
-                        <p>Blade Runner</p>
-                        <p>A Clockwork Orange</p>
-                        <p>Children of Men</p>
-                    </div>
-                    <div class = "row">
-                        <p>Arrival</p>
-                        <p>Snowpiercer</p>
-                        <p>Twelve Monkeys</p>
-                        <p>Mad Max: Fury Road</p>
-                        <p>Blade Runner: 2049</p>
-                    </div>
+                <div class = "movieList">
+                    <p ng-repeat = "movie in moviesList | filter: {genre:'scifi'}" class = "movieTitle">
+                        {{movie.title}}
+                    </p>
                 </div>
             <p class = "genre">Drama</p>
-                <div class = movieList>
-                    <div class = "row">
-                        <p>The Social Network</p>
-                        <p>Good Will Hunting</p>
-                        <p>Dead Poet's Society</p>
-                        <p>Birdman</p>
-                        <p>Spotlight</p>
-                    </div>
-                    <div class = "row">
-                        <p>Rocky</p>
-                        <p>Moonlight</p>
-                        <p>Up in the Air</p>
-                        <p>There Will Be Blood</p>
-                        <p>BlacKkKlansman</p>
-                    </div>
+                <div class = "movieList">
+                    <p ng-repeat = "movie in moviesList | filter: {genre:'drama'}" class = "movieTitle">
+                        {{movie.title}}
+                    </p>
                 </div>
             <p class = "genre">Thriller</p>
-                <div class = movieList>
-                    <div class = "row">
-                        <p>Fight Club</p>
-                        <p>Nightcrawler</p>
-                        <p>Memento</p>
-                        <p>Silence of the Lambs</p>
-                        <p>The Shining</p>
-                    </div>
-                    <div class = "row">
-                        <p>Alien</p>
-                        <p>Seven</p>
-                        <p>Get Out</p>
-                        <p>Zodiac</p>
-                        <p>The Prestige</p>
-                    </div>
+                <div class = "movieList">
+                    <p ng-repeat = "movie in moviesList | filter: {genre:'thriller'}" class = "movieTitle">
+                        {{movie.title}}
+                    </p>
                 </div>
             <p class = "genre">Crime</p>
-                <div class = movieList>
-                    <div class = "row">
-                        <p>The Departed</p>
-                        <p>Goodfellas</p>
-                        <p>The Godfather I & II</p>
-                        <p>Hell or High Water</p>
-                        <p>Scarface</p>
-                    </div>
-                    <div class = "row">
-                        <p>The Town</p>
-                        <p>Pulp Fiction</p>
-                        <p>Drive</p>
-                        <p>Hot Fuzz</p>
-                        <p>Baby Driver</p>
-                    </div> 
+                <div class = "movieList">
+                    <p ng-repeat = "movie in moviesList | filter: {genre:'crime'}" class = "movieTitle">
+                        {{movie.title}}
+                    </p>
                 </div>
             <p class = "genre">Very Unique</p>
-                <div class = movieList>
-                    <div class = "row">
-                        <p>The Shape of Water</p>
-                        <p>Being John Malkovich</p>
-                        <p>Sorry to Bother You</p>
-                        <p>The Lobster</p>
-                        <p>Safety Not Guaranteed</p>
-                    </div>
+                <div class = "movieList">
+                    <p ng-repeat = "movie in moviesList | filter: {genre:'unique'}" class = "movieTitle">
+                        {{movie.title}}
+                    </p>
                 </div>
         </div>
 
