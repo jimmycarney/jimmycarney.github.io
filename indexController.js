@@ -52,6 +52,12 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
+    $scope.movieGenre = "scifi";
+
+    $scope.selectGenre = function(genre) {
+        $scope.movieGenre = genre;
+    }
+
 
 });
 /*create directive - must use camel case when defining and use dashes

@@ -31,14 +31,21 @@
         background: #495469;
         cursor: pointer;
     }
+    #movieTabs p{
+        text-align: center;
+        border: 1px solid #495469;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 3px;
+        width: 105px;
+    }
+    #movieTabs p:hover{
+        background: #495469;
+        cursor: pointer;
+    }
     .genre{
         font-size: 20px;
         margin-left: 50px;
-    }
-    .row p{
-        text-align: center;
-        display: inline-block;
-        width: 19%;
     }
     .movieTitle{
         text-align: center;
@@ -66,36 +73,25 @@
 
         <div id="movies" class="center-content" ng-show="movies">
             <h3>Movie Recommendations</h3>
-            <p class = "genre">Science Fiction</p>
-                <div class = "movieList">
-                    <p ng-repeat = "movie in moviesList | filter: {genre:'scifi'}" class = "movieTitle">
-                        {{movie.title}}
-                    </p>
-                </div>
-            <p class = "genre">Drama</p>
-                <div class = "movieList">
-                    <p ng-repeat = "movie in moviesList | filter: {genre:'drama'}" class = "movieTitle">
-                        {{movie.title}}
-                    </p>
-                </div>
-            <p class = "genre">Thriller</p>
-                <div class = "movieList">
-                    <p ng-repeat = "movie in moviesList | filter: {genre:'thriller'}" class = "movieTitle">
-                        {{movie.title}}
-                    </p>
-                </div>
-            <p class = "genre">Crime</p>
-                <div class = "movieList">
-                    <p ng-repeat = "movie in moviesList | filter: {genre:'crime'}" class = "movieTitle">
-                        {{movie.title}}
-                    </p>
-                </div>
-            <p class = "genre">Very Unique</p>
-                <div class = "movieList">
-                    <p ng-repeat = "movie in moviesList | filter: {genre:'unique'}" class = "movieTitle">
-                        {{movie.title}}
-                    </p>
-                </div>
+            <div id = "movieTabs">
+                <p ng-click = "selectGenre('scifi')">Science Fiction</p>
+                <p ng-click = "selectGenre('drama')">Drama</p>
+                <p ng-click = "selectGenre('thriller')">Thriller</p>
+                <p ng-click = "selectGenre('crime')">Crime</p>
+                <p ng-click = "selectGenre('unique')">Very Unique</p>
+                <p ng-click = "selectGenre('superhero')">Superhero</p>
+            </div>
+            <p class = "genre" ng-show = "movieGenre == 'scifi'">Science Fiction</p>
+            <p class = "genre" ng-show = "movieGenre == 'drama'">Drama</p>
+            <p class = "genre" ng-show = "movieGenre == 'thriller'">Thriller</p>
+            <p class = "genre" ng-show = "movieGenre == 'crime'">Crime</p>
+            <p class = "genre" ng-show = "movieGenre == 'superhero'">Superhero</p>
+            <p class = "genre" ng-show = "movieGenre == 'unique'">Very Unique</p>
+            <div class = "movieList">
+                <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle">
+                    {{movie.title}}
+                </p>
+            </div>
         </div>
 
         <div id="football" class="center-content" ng-show="football">
