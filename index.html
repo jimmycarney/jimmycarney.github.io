@@ -52,6 +52,12 @@
         display: inline-block;
         width: 19%
     }
+    #moviePopup{
+        text-align: center;
+        width: 600px;
+        background-color: white;
+        padding: 10px;
+    }
 </style>
 <body>
     <!--ng-app defines the AngularJS app-->
@@ -91,6 +97,14 @@
                 <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
                     {{movie.title}}
                 </p>
+            </div>
+            <div id = "moviePopup">
+                <img id = "moviePoster" src="">
+                <p id = "movieTitle"></p>
+                <p id = "movieRTScore"></p>
+                <p id = "movieIMDBScore"></p>
+                <p id = "movieMetaScore"></p>
+                <p id = "moviePlot"></p>
             </div>
         </div>
 

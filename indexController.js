@@ -66,7 +66,12 @@ app.controller('myCtrl', function($scope, $http) {
             url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
             /*url: "https://cors-anywhere.herokuapp.com/" + "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"*/
         }).then(function success(response) {
-            alert(response.data.Poster);
+            document.getElementById("movieTitle").innerHTML = response.data.Title;
+            document.getElementById("moviePoster").src = response.data.Poster;
+            document.getElementById("moviePlot").innerHTML = response.data.Plot;
+            document.getElementById("movieRTScore").innerHTML = "Rotten Tomatoes: " + response.data.Ratings[1].Value;
+            document.getElementById("movieIMDBScore").innerHTML = "IMDB: " + response.data.imdbRating;
+            document.getElementById("movieMetaScore").innerHTML = "Metacritic: " + response.data.Metascore + "%";
         },
         function error(response){
             alert("error!");
