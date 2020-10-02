@@ -88,7 +88,7 @@
             <p class = "genre" ng-show = "movieGenre == 'superhero'">Superhero</p>
             <p class = "genre" ng-show = "movieGenre == 'unique'">Very Unique</p>
             <div class = "movieList">
-                <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle">
+                <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
                     {{movie.title}}
                 </p>
             </div>

@@ -5,7 +5,7 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
     /*scope is an object with the available properties and methods*/
     /* EXAMPLE CODE $scope.name="Jimmy";*/
-    $scope.names=[{name:'Jimmy',work:'ISC'},{name:'Randy',work:'ISC'},{name:'Zach',work:'VUMC'}];
+    //$scope.names=[{name:'Jimmy',work:'ISC'},{name:'Randy',work:'ISC'},{name:'Zach',work:'VUMC'}];
 
     $scope.moviesList=[{title:'The Departed',genre:'crime'},{title:'Ex Machina',genre:'scifi'},{title:'The Social Network',genre:'drama'},{title:'Fight Club',genre:'thriller'},
     {title:'Good Will Hunting',genre:'drama'},{title:'Dead Poets Society',genre:'drama'},{title:'Terminator 2: Judgement Day',genre:'scifi'},{title:'The Empire Strikes Back',genre:'scifi'},{title:'The Return of the King',genre:'fantasy'},
@@ -19,6 +19,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'The Martian',genre:'scifi'},{title:'Blade Runner: 2049',genre:'scifi'},{title:'Mad Max: Fury Road',genre:'scifi'},{title:'The Nice Guys',genre:'crime'},{title:'Argo',genre:'drama'},
     {title:'WALL-E',genre:'scifi'},{title:'Get Out',genre:'thriller'},{title:'There Will Be Blood',genre:'drama'},{title:'BlacKkKlansman',genre:'drama'},{title:'Gladiator',genre:'action'}];
 
+    //variables that track which tab is selected
     $scope.home = true;
     $scope.movies = false;
     $scope.football = false;
@@ -52,12 +53,24 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
+    //variable that tracks which movie genre tab is selected
     $scope.movieGenre = "scifi";
 
     $scope.selectGenre = function(genre) {
-        $scope.movieGenre = genre;
+        $scope.movieGenre = genre;   
     }
 
+    $scope.testMovieAPI = function(title) {
+        $http({
+            method: 'GET',
+            url: "http://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
+        }).then(function success(response) {
+            alert(response.data.Poster);
+        },
+        function error(response){
+            alert("error!");
+        });
+    }    
 
 });
 /*create directive - must use camel case when defining and use dashes
