@@ -9,10 +9,10 @@ app.controller('myCtrl', function($scope, $http) {
 
     $scope.moviesList=[{title:'The Departed',genre:'crime'},{title:'Ex Machina',genre:'scifi'},{title:'The Social Network',genre:'drama'},{title:'Fight Club',genre:'thriller'},
     {title:'Good Will Hunting',genre:'drama'},{title:'Dead Poets Society',genre:'drama'},{title:'Terminator 2: Judgement Day',genre:'scifi'},{title:'The Empire Strikes Back',genre:'scifi'},{title:'The Return of the King',genre:'fantasy'},
-    {title:'Nightcrawler',genre:'thriller'},{title:'Goodfellas',genre:'crime'},{title:'The Shape of Water',genre:'unique'},{title:'Moon',genre:'scifi'},{title:'The Godfather I & II',genre:'crime'},
+    {title:'Nightcrawler',genre:'thriller'},{title:'Goodfellas',genre:'crime'},{title:'The Shape of Water',genre:'unique'},{title:'Moon',genre:'scifi'},{title:'The Godfather Part II',genre:'crime'},
     {title:'Blade Runner',genre:'scifi'},{title:'Memento',genre:'thriller'},{title:'Birdman',genre:'drama'},{title:'Spotlight',genre:'drama'},{title:'Hell or High Water',genre:'crime'},
     {title:'Silence of the Lambs',genre:'thriller'},{title:'Rocky',genre:'drama'},{title:'A Clockwork Orange',genre:'scifi'},{title:'Children of Men',genre:'scifi'},
-    {title:'Arrival',genre:'scifi'},{title:'Moonlight',genre:'drama'},{title:'The Shining',genre:'thriller'},{title:'Scarface',genre:'crime'},{title:'',genre:''},
+    {title:'Arrival',genre:'scifi'},{title:'Moonlight',genre:'drama'},{title:'The Shining',genre:'thriller'},{title:'The Godfather',genre:'crime'},{title:'',genre:''},
     {title:'The Dark Knight',genre:'superhero'},{title:'The Prestige',genre:'thriller'},{title:'The Terminator',genre:'scifi'},{title:'Her',genre:'scifi'},{title:'Alien',genre:'scifi'},
     {title:'Spiderman: Into the Spider-Verse',genre:'superhero'},{title:'Die Hard',genre:'action'},{title:'Interstellar',genre:'scifi'},{title:'Up in the Air',genre:'drama'},{title:'Snowpiercer',genre:'scifi'},
     {title:'The Farewell',genre:'drama'},{title:'Twelve Monkeys',genre:'scifi'},{title:'Black Panther',genre:'superhero'},{title:'Lady Bird',genre:'drama'},{title:'Scarface',genre:'crime'},
