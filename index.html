@@ -87,7 +87,7 @@
         <!-- <h2>Jimmy Carney</h2> -->
 
         <div id = "header">
-            
+
         </div>
 
         <div id = "tabs">
@@ -128,7 +128,7 @@
                 <p ng-bind = "moviePlot"></p>
             </div>
             <div class = "movieList">
-                <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
+                <p ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
                     {{movie.title}}
                 </p>
             </div>

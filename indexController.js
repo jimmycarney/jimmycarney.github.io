@@ -7,17 +7,26 @@ app.controller('myCtrl', function($scope, $http) {
     /* EXAMPLE CODE $scope.name="Jimmy";*/
     //$scope.names=[{name:'Jimmy',work:'ISC'},{name:'Randy',work:'ISC'},{name:'Zach',work:'VUMC'}];
 
-    $scope.moviesList=[{title:'The Departed',genre:'crime'},{title:'Ex Machina',genre:'scifi'},{title:'The Social Network',genre:'drama'},{title:'Fight Club',genre:'thriller'},
-    {title:'Good Will Hunting',genre:'drama'},{title:'Dead Poets Society',genre:'drama'},{title:'Terminator 2: Judgement Day',genre:'scifi'},{title:'The Empire Strikes Back',genre:'scifi'},{title:'The Return of the King',genre:'fantasy'},
-    {title:'Nightcrawler',genre:'thriller'},{title:'Goodfellas',genre:'crime'},{title:'The Shape of Water',genre:'unique'},{title:'Moon',genre:'scifi'},{title:'The Godfather Part II',genre:'crime'},
-    {title:'Blade Runner',genre:'scifi'},{title:'Memento',genre:'thriller'},{title:'Birdman',genre:'drama'},{title:'Spotlight',genre:'drama'},{title:'Hell or High Water',genre:'crime'},
-    {title:'Silence of the Lambs',genre:'thriller'},{title:'Rocky',genre:'drama'},{title:'A Clockwork Orange',genre:'scifi'},{title:'Children of Men',genre:'scifi'},
-    {title:'Arrival',genre:'scifi'},{title:'Moonlight',genre:'drama'},{title:'The Shining',genre:'thriller'},{title:'The Godfather',genre:'crime'},{title:'',genre:''},
-    {title:'The Dark Knight',genre:'superhero'},{title:'The Prestige',genre:'thriller'},{title:'The Terminator',genre:'scifi'},{title:'Her',genre:'scifi'},{title:'Alien',genre:'scifi'},
-    {title:'Spiderman: Into the Spider-Verse',genre:'superhero'},{title:'Die Hard',genre:'action'},{title:'Interstellar',genre:'scifi'},{title:'Up in the Air',genre:'drama'},{title:'Snowpiercer',genre:'scifi'},
-    {title:'The Farewell',genre:'drama'},{title:'Twelve Monkeys',genre:'scifi'},{title:'Black Panther',genre:'superhero'},{title:'Lady Bird',genre:'drama'},{title:'Scarface',genre:'crime'},
-    {title:'The Martian',genre:'scifi'},{title:'Blade Runner: 2049',genre:'scifi'},{title:'Mad Max: Fury Road',genre:'scifi'},{title:'The Nice Guys',genre:'crime'},{title:'Argo',genre:'drama'},
-    {title:'WALL-E',genre:'scifi'},{title:'Get Out',genre:'thriller'},{title:'There Will Be Blood',genre:'drama'},{title:'BlacKkKlansman',genre:'drama'},{title:'Gladiator',genre:'action'}];
+    $scope.moviesList=[{title:'The Departed',genre:'crime',rating:99},{title:'Ex Machina',genre:'scifi',rating:99},{title:'The Social Network',genre:'drama',rating:98},{title:'Fight Club',genre:'thriller',rating:97},
+    {title:'Good Will Hunting',genre:'drama',rating:96},{title:'Dead Poets Society',genre:'drama',rating:95},{title:'Terminator 2: Judgement Day',genre:'scifi',rating:95},{title:'The Empire Strikes Back',genre:'scifi',rating:95},{title:'The Return of the King',genre:'fantasy',rating:95},
+    {title:'Nightcrawler',genre:'thriller',rating:91},{title:'Goodfellas',genre:'crime',rating:94},{title:'The Shape of Water',genre:'unique',rating:91},{title:'Moon',genre:'scifi',rating:90},{title:'The Godfather Part II',genre:'crime',rating:90},
+    {title:'Blade Runner',genre:'scifi',rating:88},{title:'Memento',genre:'thriller',rating:93},{title:'Birdman',genre:'drama',rating:90},{title:'Spotlight',genre:'drama',rating:90},{title:'Hell or High Water',genre:'crime',rating:89},
+    {title:'Silence of the Lambs',genre:'thriller',rating:87},{title:'Rocky',genre:'drama',rating:89},{title:'A Clockwork Orange',genre:'scifi',rating:88},{title:'Children of Men',genre:'scifi',rating:88},
+    {title:'Arrival',genre:'scifi',rating:88},{title:'Moonlight',genre:'drama',rating:88},{title:'The Shining',genre:'thriller',rating:86},{title:'The Godfather',genre:'crime',rating:89},
+    {title:'The Dark Knight',genre:'superhero',rating:88},{title:'The Prestige',genre:'thriller',rating:86},{title:'The Terminator',genre:'scifi',rating:91},{title:'Her',genre:'scifi',rating:91},{title:'Alien',genre:'scifi',rating:90},
+    {title:'Spiderman: Into the Spider-Verse',genre:'superhero',rating:91},{title:'Die Hard',genre:'action',rating:89},{title:'Interstellar',genre:'scifi',rating:89},{title:'Up in the Air',genre:'drama',rating:89},{title:'Snowpiercer',genre:'scifi',rating:89},
+    {title:'The Farewell',genre:'drama',rating:88},{title:'Twelve Monkeys',genre:'scifi',rating:87},{title:'Black Panther',genre:'superhero',rating:87},{title:'Lady Bird',genre:'drama',rating:87},{title:'Scarface',genre:'crime',rating:87},
+    {title:'The Martian',genre:'scifi',rating:87},{title:'Blade Runner: 2049',genre:'scifi',rating:89},{title:'Mad Max: Fury Road',genre:'scifi',rating:90},{title:'The Nice Guys',genre:'crime',rating:87},{title:'Argo',genre:'drama',rating:87},
+    {title:'WALL-E',genre:'scifi',rating:90},{title:'Get Out',genre:'thriller',rating:87},{title:'There Will Be Blood',genre:'drama',rating:87},{title:'BlacKkKlansman',genre:'drama',rating:87},{title:'Gladiator',genre:'action',rating:88},
+    {title:'Perks of Being a Wallflower',genre:'drama',rating:85},{title:'Ready Player One',genre:'scifi',rating:85},{title:'Se7en',genre:'thriller',rating:84},{title:'Inception',genre:'scifi',rating:87},
+    {title:'The Town',genre:'crime',rating:86},{title:'The Shawshank Redemption',genre:'drama',rating:87},{title:'Starship Troopers',genre:'scifi',rating:86},{title:'The Hurt Locker',genre:'drama',rating:86},
+    {title:'The Peanut Butter Falcon',genre:'drama',rating:85},{title:'The Sixth Sense',genre:'thriller',rating:85},{title:'Taxi Driver',genre:'drama',rating:84},{title:'The Matrix',genre:'scifi',rating:90},
+    {title:'Casino Royale',genre:'action',rating:87},{title:'Jurassic Park',genre:'scifi',rating:88},{title:'Mission: Impossible - Fallout',genre:'action',rating:87},{title:'Minority Report',genre:'scifi',rating:86},
+    {title:'Us',genre:'thriller',rating:82},{title:'Moneyball',genre:'drama',rating:83},{title:'Pulp Fiction',genre:'unique',rating:85},{title:'Source Code',genre:'scifi',rating:84},
+    {title:'Knives Out',genre:'crime',rating:85},{title:'Sorry to Bother You',genre:'unique',rating:85},{title:'Thor: Ragnarok',genre:'superhero',rating:86},{title:'Being John Malkovich',genre:'unique',rating:86},
+    {title:'District 9',genre:'scifi',rating:85},{title:'Captain America: Civil War',genre:'superhero',rating:84},{title:'Avengers: Infinity War',genre:'superhero',rating:84},{title:'Ford v Ferrari',genre:'drama',rating:84},
+    {title:'Once Upon a Time...In Hollywood',genre:'drama',rating:83},{title:'Inglorious Bastards',genre:'action',rating:83},{title:'Django Unchained',genre:'action',rating:83},{title:'Dallas Buyers Club',genre:'drama',rating:83},
+    {title:'Drive',genre:'crime',rating:84},{title:'A Quiet Place',genre:'thriller',rating:83},{title:'The Theory of Everything',genre:'drama',rating:81},{title:'Zodiac',genre:'thriller',rating:81}];
 
     //variables that track which tab is selected
     $scope.home = true;
@@ -25,7 +34,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.football = false;
 
     //loadContent takes in a tab name and displays that tab content
-    //while hiding all other content
+    //while hiding all other content, and changes the styling of the selected tab
     $scope.loadContent = function(tabName) {
         document.getElementById('homeTab').style.background = "";
         document.getElementById('moviesTab').style.background = "";
@@ -51,8 +60,8 @@ app.controller('myCtrl', function($scope, $http) {
     //variable that tracks which movie genre tab is selected
     $scope.movieGenre = "scifi";
 
-    //selectGenre sets the movieGenre variable and changes the styling
-    //of the selected tab
+    //selectGenre sets the movieGenre variable, displaying that genre content, 
+    //and changes the styling of the selected tab
     $scope.selectGenre = function(genre) {
         $scope.movieGenre = genre;
         document.getElementById('scifiTab').style.background = "";
