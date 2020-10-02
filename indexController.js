@@ -60,23 +60,35 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.movieGenre = genre;   
     }
 
+    //variable that tracks whether or not the movie popup is showing
+    $scope.showPopup = false;
+
+    //testMovieAPI takes in a movie title, calls the movie info API
+    //for that title, and sets the popup variables
     $scope.testMovieAPI = function(title) {
         $http({
             method: 'GET',
             url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
             /*url: "https://cors-anywhere.herokuapp.com/" + "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"*/
         }).then(function success(response) {
-            document.getElementById("movieTitle").innerHTML = response.data.Title;
+            $scope.movieTitle = response.data.Title;
+            $scope.movieRuntime = response.data.Runtime;
             document.getElementById("moviePoster").src = response.data.Poster;
-            document.getElementById("moviePlot").innerHTML = response.data.Plot;
-            document.getElementById("movieRTScore").innerHTML = "Rotten Tomatoes: " + response.data.Ratings[1].Value;
-            document.getElementById("movieIMDBScore").innerHTML = "IMDB: " + response.data.imdbRating;
-            document.getElementById("movieMetaScore").innerHTML = "Metacritic: " + response.data.Metascore + "%";
+            $scope.moviePlot = response.data.Plot;
+            $scope.movieRTScore = "Rotten Tomatoes: " + response.data.Ratings[1].Value;
+            $scope.movieIMDBScore = "IMDB: " + response.data.imdbRating;
+            $scope.movieMetaScore = "Metacritic: " + response.data.Metascore + "%";
+            $scope.showPopup = true;
         },
         function error(response){
             alert("error!");
         });
-    }    
+    }
+
+    //hidePopup sets the showPopup variable to false
+    $scope.hidePopup = function() {
+        $scope.showPopup = false;
+    }
 
 });
 /*create directive - must use camel case when defining and use dashes

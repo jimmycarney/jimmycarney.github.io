@@ -52,11 +52,19 @@
         display: inline-block;
         width: 19%
     }
+    .movieTitle:hover{
+        cursor: pointer;
+    }
     #moviePopup{
+        position: absolute;
+        margin-top: -200px;
+        margin-left: 50px;
         text-align: center;
         width: 600px;
         background-color: white;
         padding: 10px;
+        box-shadow: 5px 5px 70px #000000;
+        cursor: pointer;
     }
 </style>
 <body>
@@ -87,6 +95,15 @@
                 <p ng-click = "selectGenre('unique')">Very Unique</p>
                 <p ng-click = "selectGenre('superhero')">Superhero</p>
             </div>
+            <div id = "moviePopup" ng-show = "showPopup" ng-click = "hidePopup()">
+                <img id = "moviePoster" src="">
+                <p ng-bind = "movieTitle"></p>
+                <p ng-bind = "movieRuntime"></p>
+                <p ng-bind = "movieRTScore"></p>
+                <p ng-bind = "movieIMDBScore"></p>
+                <p ng-bind = "movieMetaScore"></p>
+                <p ng-bind = "moviePlot"></p>
+            </div>
             <p class = "genre" ng-show = "movieGenre == 'scifi'">Science Fiction</p>
             <p class = "genre" ng-show = "movieGenre == 'drama'">Drama</p>
             <p class = "genre" ng-show = "movieGenre == 'thriller'">Thriller</p>
@@ -97,14 +114,6 @@
                 <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
                     {{movie.title}}
                 </p>
-            </div>
-            <div id = "moviePopup">
-                <img id = "moviePoster" src="">
-                <p id = "movieTitle"></p>
-                <p id = "movieRTScore"></p>
-                <p id = "movieIMDBScore"></p>
-                <p id = "movieMetaScore"></p>
-                <p id = "moviePlot"></p>
             </div>
         </div>
 
