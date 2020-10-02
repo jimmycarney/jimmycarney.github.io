@@ -63,7 +63,8 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.testMovieAPI = function(title) {
         $http({
             method: 'GET',
-            url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
+            /*url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"*/
+            url: "https://cors-anywhere.herokuapp.com/" + "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
         }).then(function success(response) {
             alert(response.data.Poster);
         },
