@@ -27,26 +27,21 @@ app.controller('myCtrl', function($scope, $http) {
     //loadContent takes in a tab name and displays that tab content
     //while hiding all other content
     $scope.loadContent = function(tabName) {
+        document.getElementById('homeTab').style.background = "";
+        document.getElementById('moviesTab').style.background = "";
+        document.getElementById('footballTab').style.background = "";
+        document.getElementById(tabName + 'Tab').style.background = "#495469";
         if (tabName == 'home') {
-            document.getElementById('homeTab').style.background = "#495469";
-            document.getElementById('moviesTab').style.background = "";
-            document.getElementById('footballTab').style.background = "";
             $scope.home = true;
             $scope.movies = false;
             $scope.football = false;
         }
         else if (tabName == 'movies') {
-            document.getElementById('homeTab').style.background = "";
-            document.getElementById('moviesTab').style.background = "#495469";
-            document.getElementById('footballTab').style.background = "";
             $scope.home = false;
             $scope.movies = true;
             $scope.football = false;
         }
         else{
-            document.getElementById('homeTab').style.background = "";
-            document.getElementById('moviesTab').style.background = "";
-            document.getElementById('footballTab').style.background = "#495469";
             $scope.home = false;
             $scope.movies = false;
             $scope.football = true;
@@ -56,8 +51,17 @@ app.controller('myCtrl', function($scope, $http) {
     //variable that tracks which movie genre tab is selected
     $scope.movieGenre = "scifi";
 
+    //selectGenre sets the movieGenre variable and changes the styling
+    //of the selected tab
     $scope.selectGenre = function(genre) {
-        $scope.movieGenre = genre;   
+        $scope.movieGenre = genre;
+        document.getElementById('scifiTab').style.background = "";
+        document.getElementById('dramaTab').style.background = "";
+        document.getElementById('thrillerTab').style.background = "";
+        document.getElementById('crimeTab').style.background = "";
+        document.getElementById('uniqueTab').style.background = "";
+        document.getElementById('superheroTab').style.background = "";
+        document.getElementById(genre + 'Tab').style.background = "#495469";
     }
 
     //variable that tracks whether or not the movie popup is showing
@@ -69,7 +73,6 @@ app.controller('myCtrl', function($scope, $http) {
         $http({
             method: 'GET',
             url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
-            /*url: "https://cors-anywhere.herokuapp.com/" + "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"*/
         }).then(function success(response) {
             document.getElementById("moviePoster").src = response.data.Poster;
             $scope.movieTitle = response.data.Title;

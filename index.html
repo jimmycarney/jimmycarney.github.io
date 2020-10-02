@@ -47,10 +47,6 @@
         background: #495469;
         cursor: pointer;
     }
-    .genre{
-        font-size: 20px;
-        margin-left: 50px;
-    }
     .movieTitle{
         text-align: center;
         display: inline-block;
@@ -88,7 +84,11 @@
     <!--ng-init initializes and application variable (add ng-init="name='Jimmy'" to div tag)-->
     <div ng-app="myApp" ng-controller="myCtrl">
 
-        <h2>Jimmy Carney</h2>
+        <!-- <h2>Jimmy Carney</h2> -->
+
+        <div id = "header">
+            
+        </div>
 
         <div id = "tabs">
             <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
@@ -101,14 +101,13 @@
         </div>
 
         <div id="movies" class="center-content" ng-show="movies">
-            <h3>Movie Recommendations</h3>
             <div id = "movieTabs">
-                <p ng-click = "selectGenre('scifi')">Science Fiction</p>
-                <p ng-click = "selectGenre('drama')">Drama</p>
-                <p ng-click = "selectGenre('thriller')">Thriller</p>
-                <p ng-click = "selectGenre('crime')">Crime</p>
-                <p ng-click = "selectGenre('unique')">Very Unique</p>
-                <p ng-click = "selectGenre('superhero')">Superhero</p>
+                <p ng-click = "selectGenre('scifi')" id = "scifiTab">Science Fiction</p>
+                <p ng-click = "selectGenre('drama')" id = "dramaTab">Drama</p>
+                <p ng-click = "selectGenre('thriller')" id = "thrillerTab">Thriller</p>
+                <p ng-click = "selectGenre('crime')" id = "crimeTab">Crime</p>
+                <p ng-click = "selectGenre('unique')" id = "uniqueTab">Very Unique</p>
+                <p ng-click = "selectGenre('superhero')" id = "superheroTab">Superhero</p>
             </div>
             <div id = "moviePopup" ng-show = "showPopup" ng-click = "hidePopup()">
                 <img id = "moviePoster" src="">
@@ -128,12 +127,6 @@
                 </div>
                 <p ng-bind = "moviePlot"></p>
             </div>
-            <p class = "genre" ng-show = "movieGenre == 'scifi'">Science Fiction</p>
-            <p class = "genre" ng-show = "movieGenre == 'drama'">Drama</p>
-            <p class = "genre" ng-show = "movieGenre == 'thriller'">Thriller</p>
-            <p class = "genre" ng-show = "movieGenre == 'crime'">Crime</p>
-            <p class = "genre" ng-show = "movieGenre == 'superhero'">Superhero</p>
-            <p class = "genre" ng-show = "movieGenre == 'unique'">Very Unique</p>
             <div class = "movieList">
                 <p ng-repeat = "movie in moviesList | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
                     {{movie.title}}
