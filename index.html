@@ -31,6 +31,10 @@
         background: #495469;
         cursor: pointer;
     }
+    #movieTabs{
+        width: 700px;
+        margin: 0 auto;
+    }
     #movieTabs p{
         text-align: center;
         border: 1px solid #495469;
@@ -57,14 +61,25 @@
     }
     #moviePopup{
         position: absolute;
-        margin-top: -200px;
-        margin-left: 50px;
         text-align: center;
         width: 600px;
+        height: 650px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
         background-color: white;
         padding: 10px;
         box-shadow: 5px 5px 70px #000000;
         cursor: pointer;
+    }
+    #movieInfo p, #movieScores p{
+        display: inline;
+        margin-right: 15px;
+    }
+    #movieInfo, #movieScores{
+        margin-top: 20px;
     }
 </style>
 <body>
@@ -97,11 +112,20 @@
             </div>
             <div id = "moviePopup" ng-show = "showPopup" ng-click = "hidePopup()">
                 <img id = "moviePoster" src="">
-                <p ng-bind = "movieTitle"></p>
-                <p ng-bind = "movieRuntime"></p>
-                <p ng-bind = "movieRTScore"></p>
-                <p ng-bind = "movieIMDBScore"></p>
-                <p ng-bind = "movieMetaScore"></p>
+                <div id = "movieInfo">
+                    <p ng-bind = "movieTitle"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "movieRating"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "movieRuntime"></p>
+                </div>
+                <div id = "movieScores">
+                    <p ng-bind = "movieRTScore"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "movieIMDBScore"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "movieMetaScore"></p>
+                </div>
                 <p ng-bind = "moviePlot"></p>
             </div>
             <p class = "genre" ng-show = "movieGenre == 'scifi'">Science Fiction</p>

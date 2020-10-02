@@ -71,13 +71,14 @@ app.controller('myCtrl', function($scope, $http) {
             url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
             /*url: "https://cors-anywhere.herokuapp.com/" + "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"*/
         }).then(function success(response) {
-            $scope.movieTitle = response.data.Title;
-            $scope.movieRuntime = response.data.Runtime;
             document.getElementById("moviePoster").src = response.data.Poster;
-            $scope.moviePlot = response.data.Plot;
+            $scope.movieTitle = response.data.Title;
+            $scope.movieRating = response.data.Rated;
+            $scope.movieRuntime = response.data.Runtime;
             $scope.movieRTScore = "Rotten Tomatoes: " + response.data.Ratings[1].Value;
             $scope.movieIMDBScore = "IMDB: " + response.data.imdbRating;
             $scope.movieMetaScore = "Metacritic: " + response.data.Metascore + "%";
+            $scope.moviePlot = response.data.Plot;
             $scope.showPopup = true;
         },
         function error(response){
