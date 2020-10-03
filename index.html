@@ -55,6 +55,9 @@
     .movieTitle:hover{
         cursor: pointer;
     }
+    .movieTitle img{
+        height: 100px;
+    }
     #moviePopup{
         position: absolute;
         text-align: center;
@@ -102,6 +105,7 @@
 
         <div id="movies" class="center-content" ng-show="movies">
             <div id = "movieTabs">
+                <p ng-click = "selectGenre('all')" id = "allTab">All</p>
                 <p ng-click = "selectGenre('scifi')" id = "scifiTab">Science Fiction</p>
                 <p ng-click = "selectGenre('drama')" id = "dramaTab">Drama</p>
                 <p ng-click = "selectGenre('thriller')" id = "thrillerTab">Thriller</p>
@@ -128,9 +132,10 @@
                 <p ng-bind = "moviePlot"></p>
             </div>
             <div class = "movieList">
-                <p ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
-                    {{movie.title}}
-                </p>
+                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: (genreFilter || '') && {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
+                    <img ng-src = "{{movie.imageSrc}}" />
+                    <p>{{movie.title}} ({{movie.rating}}%)</p>
+                </div>
             </div>
         </div>
 
