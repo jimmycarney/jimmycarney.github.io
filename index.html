@@ -84,6 +84,16 @@
     .sportsStats p{
         display: inline-block;
     }
+    table{
+        border-collapse: collapse;
+    }
+    .statsTable tr{
+        padding: 2px;
+        border-bottom: 1px solid black;
+    }
+    .statsTable th, td{
+        padding-right: 10px;
+    }
 </style>
 <body>
     <!--ng-app defines the AngularJS app-->
@@ -147,16 +157,36 @@
             <div id = "sportsTabs">
                 <p ng-click = "testMLBAPI(); testMLBTransactionAPI()">Phillies</p>
             </div>
-            <p>Phillies Hitting Leaders</p>
-            <div class = "sportsStats" ng-repeat = "player in philliesLeaders">
-                <p>{{player.name_display_first_last}}</p>
-                <p>{{player.pos}}</p>
-                <p>{{player.h}}</p>
-                <p>{{player.avg}}</p>
-                <p>{{player.obp}}</p>
-                <p>{{player.hr}}</p>
-                <p>{{player.rbi}}</p>
-            </div>
+            <table class = "statsTable">
+                <caption>Phillies Hitting Leaders</caption>
+                <tr>
+                    <th>Player</th>
+                    <th>Position</th>
+                    <th>Avg</th>
+                    <th>Hits</th>
+                    <th>AB</th>
+                    <th>HR</th>
+                    <th>RBI</th>
+                    <th>OBP</th>
+                    <th>SLG</th>
+                    <th>SO</th>
+                    <th>BB</th>
+                </tr>
+                <tr ng-repeat = "player in philliesLeaders">
+                    <td>{{player.name_display_first_last}}</td>
+                    <td>{{player.pos}}</td>
+                    <td>{{player.avg}}</td>
+                    <td>{{player.h}}</td>
+                    <td>{{player.ab}}</td>
+                    <td>{{player.hr}}</td>
+                    <td>{{player.rbi}}</td>
+                    <td>{{player.obp}}</td>
+                    <td>{{player.slg}}</td>
+                    <td>{{player.so}}</td>
+                    <td>{{player.bb}}</td>
+                </tr>
+
+            </table>
             <p>Phillies Recent Transactions</p>
             <div class = "sportsStats" ng-repeat = "transaction in philliesTransactions | orderBy: '-trans_date'">
                 <p>{{transaction.trans_date}}</p>
