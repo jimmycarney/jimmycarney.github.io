@@ -107,7 +107,7 @@ app.controller('myCtrl', function($scope, $http) {
             url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
         }).then(function success(response) {
             document.getElementById("moviePoster").src = response.data.Poster;
-            alert(response.data.Poster);
+            //alert(response.data.Poster);
             $scope.movieTitle = response.data.Title;
             $scope.movieRating = response.data.Rated;
             $scope.movieRuntime = response.data.Runtime;
