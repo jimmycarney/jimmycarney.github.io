@@ -157,8 +157,12 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showPopup = false;
     }
 
-    //testSportsAPI
-    $scope.testSportsAPI = function() {
+    //empty array to later store all Phillies hitting leaders for ng-repeat
+    $scope.philliesLeaders = [];
+
+    //testMLBAPI gets the hitting leaders for a certain season and filters
+    //that array to contain only Phillies players
+    $scope.testMLBAPI = function() {
         $http({
             method: 'GET',
             url: "https://mlb-data.p.rapidapi.com/json/named.leader_hitting_repeater.bam?sort_column=h&season=2020",
@@ -170,8 +174,31 @@ app.controller('myCtrl', function($scope, $http) {
             var philliesList = playerList.filter(function(item) {
                 return item.team_brief == "Phillies";
             });
-            alert(philliesList[0].name_display_first_last);
-            //alert(response.data.leader_hitting_repeater.leader_hitting_mux.queryResults.row[0].name_display_first_last);
+            $scope.philliesLeaders = philliesList;
+        },
+        function error(response){
+            alert("error!");
+        });
+    }
+
+    //empty array to later store all Phillies transactions for ng-repeat
+    $scope.philliesTransactions = [];
+
+    //testMLBTransactionAPI gets all mlb transactions for a certain date range and filters
+    //that array to contain only Phillies transactions
+    $scope.testMLBTransactionAPI = function () {
+        $http({
+            method: 'GET',
+            url: "https://mlb-data.p.rapidapi.com/json/named.transaction_all.bam?start_date=20200401&end_date=20201001&sport_id=1",
+            headers: {
+                "rapidapi-key": "d111e2f0d6msh1f805bf26cac48bp13c744jsn26bf5382001c"
+            }
+        }).then(function success(response) {
+            var transactionList = response.data.transaction_all.queryResults.row;
+            var philliesList = transactionList.filter(function(item) {
+                return item.team == "Philadelphia Phillies";
+            });
+            $scope.philliesTransactions = philliesList;
         },
         function error(response){
             alert("error!");

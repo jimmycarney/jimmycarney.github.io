@@ -81,6 +81,9 @@
     #movieInfo, #movieScores{
         margin-top: 20px;
     }
+    .sportsStats p{
+        display: inline-block;
+    }
 </style>
 <body>
     <!--ng-app defines the AngularJS app-->
@@ -141,7 +144,24 @@
         </div>
 
         <div id="sports" class="center-content" ng-show="sports">
-            <p ng-click="testSportsAPI()">Sports Div</p>
+            <div id = "sportsTabs">
+                <p ng-click = "testMLBAPI(); testMLBTransactionAPI()">Phillies</p>
+            </div>
+            <p>Phillies Hitting Leaders</p>
+            <div class = "sportsStats" ng-repeat = "player in philliesLeaders">
+                <p>{{player.name_display_first_last}}</p>
+                <p>{{player.pos}}</p>
+                <p>{{player.h}}</p>
+                <p>{{player.avg}}</p>
+                <p>{{player.obp}}</p>
+                <p>{{player.hr}}</p>
+                <p>{{player.rbi}}</p>
+            </div>
+            <p>Phillies Recent Transactions</p>
+            <div class = "sportsStats" ng-repeat = "transaction in philliesTransactions | orderBy: '-trans_date'">
+                <p>{{transaction.trans_date}}</p>
+                <p>{{transaction.note}}</p>
+            </div>
         </div>
 
         <!--ng-model binds the value of HTML controls to an application variable-->
