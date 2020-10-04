@@ -44,29 +44,29 @@ app.controller('myCtrl', function($scope, $http) {
     //variables that track which tab is selected
     $scope.home = true;
     $scope.movies = false;
-    $scope.football = false;
+    $scope.sports = false;
 
     //loadContent takes in a tab name and displays that tab content
     //while hiding all other content, and changes the styling of the selected tab
     $scope.loadContent = function(tabName) {
         document.getElementById('homeTab').style.background = "";
         document.getElementById('moviesTab').style.background = "";
-        document.getElementById('footballTab').style.background = "";
+        document.getElementById('sportsTab').style.background = "";
         document.getElementById(tabName + 'Tab').style.background = "#495469";
         if (tabName == 'home') {
             $scope.home = true;
             $scope.movies = false;
-            $scope.football = false;
+            $scope.sports = false;
         }
         else if (tabName == 'movies') {
             $scope.home = false;
             $scope.movies = true;
-            $scope.football = false;
+            $scope.sports = false;
         }
         else{
             $scope.home = false;
             $scope.movies = false;
-            $scope.football = true;
+            $scope.sports = true;
         }
     }
 
@@ -155,6 +155,27 @@ app.controller('myCtrl', function($scope, $http) {
     //hidePopup sets the showPopup variable to false
     $scope.hidePopup = function() {
         $scope.showPopup = false;
+    }
+
+    //testSportsAPI
+    $scope.testSportsAPI = function() {
+        $http({
+            method: 'GET',
+            url: "https://mlb-data.p.rapidapi.com/json/named.leader_hitting_repeater.bam?sort_column=h&season=2020",
+            headers: {
+                "rapidapi-key": "d111e2f0d6msh1f805bf26cac48bp13c744jsn26bf5382001c"
+            }
+        }).then(function success(response) {
+            var playerList = response.data.leader_hitting_repeater.leader_hitting_mux.queryResults.row;
+            var philliesList = playerList.filter(function(item) {
+                return item.team_brief == "Phillies";
+            });
+            alert(philliesList[0].name_display_first_last);
+            //alert(response.data.leader_hitting_repeater.leader_hitting_mux.queryResults.row[0].name_display_first_last);
+        },
+        function error(response){
+            alert("error!");
+        });
     }
 
 });

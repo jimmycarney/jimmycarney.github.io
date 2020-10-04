@@ -97,7 +97,7 @@
         <div id = "tabs">
             <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
             <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
-            <p class = "tab" ng-click = "loadContent('football')" id = "footballTab">Football</p>
+            <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
         </div>
 
         <div id="home" class="center-content" ng-show="home">
@@ -140,8 +140,8 @@
             </div>
         </div>
 
-        <div id="football" class="center-content" ng-show="football">
-            <p>Football Div</p>
+        <div id="sports" class="center-content" ng-show="sports">
+            <p ng-click="testSportsAPI()">Sports Div</p>
         </div>
 
         <!--ng-model binds the value of HTML controls to an application variable-->
