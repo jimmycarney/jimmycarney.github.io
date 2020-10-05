@@ -160,6 +160,13 @@ app.controller('myCtrl', function($scope, $http) {
     //empty array to later store all Phillies hitting leaders for ng-repeat
     $scope.philliesLeaders = [];
 
+    //variable that tracks the stat by which to order the Phillies stat table 
+    $scope.statTableVar = "h";
+
+    $scope.setTableVar = function(tableVar) {
+        $scope.statTableVar = tableVar;
+    }
+
     //testMLBAPI gets the hitting leaders for a certain season and filters
     //that array to contain only Phillies players
     $scope.testMLBAPI = function() {
@@ -175,6 +182,16 @@ app.controller('myCtrl', function($scope, $http) {
                 return item.team_brief == "Phillies";
             });
             $scope.philliesLeaders = philliesList;
+            for (var i = 0; i < $scope.philliesLeaders.length; i++) {
+                $scope.philliesLeaders[i].h = parseFloat($scope.philliesLeaders[i].h);
+                $scope.philliesLeaders[i].ab = parseFloat($scope.philliesLeaders[i].ab);
+                $scope.philliesLeaders[i].hr = parseFloat($scope.philliesLeaders[i].hr);
+                $scope.philliesLeaders[i].rbi = parseFloat($scope.philliesLeaders[i].rbi);
+                $scope.philliesLeaders[i].obp = parseFloat($scope.philliesLeaders[i].obp);
+                $scope.philliesLeaders[i].slg = parseFloat($scope.philliesLeaders[i].slg);
+                $scope.philliesLeaders[i].so = parseFloat($scope.philliesLeaders[i].so);
+                $scope.philliesLeaders[i].bb = parseFloat($scope.philliesLeaders[i].bb);
+            }
         },
         function error(response){
             alert("error!");

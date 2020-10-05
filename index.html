@@ -91,6 +91,9 @@
         padding: 2px;
         border-bottom: 1px solid black;
     }
+    .statsTable th{
+        cursor: pointer;
+    }
     .statsTable th, td{
         padding-right: 10px;
     }
@@ -113,9 +116,15 @@
             <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
         </div>
 
+        <!--HOME PAGE-->
+
         <div id="home" class="center-content" ng-show="home">
             <p>Home Div</p>
         </div>
+
+        <!--END OF HOME PAGE-->
+
+        <!--MOVIES PAGE-->
 
         <div id="movies" class="center-content" ng-show="movies">
             <div id = "movieTabs">
@@ -153,6 +162,10 @@
             </div>
         </div>
 
+        <!--END OF MOVIES PAGE-->
+
+        <!--SPORTS PAGE-->
+
         <div id="sports" class="center-content" ng-show="sports">
             <div id = "sportsTabs">
                 <p ng-click = "testMLBAPI(); testMLBTransactionAPI()">Phillies</p>
@@ -160,19 +173,19 @@
             <table class = "statsTable">
                 <caption>Phillies Hitting Leaders</caption>
                 <tr>
-                    <th>Player</th>
-                    <th>Position</th>
-                    <th>Avg</th>
-                    <th>Hits</th>
-                    <th>AB</th>
-                    <th>HR</th>
-                    <th>RBI</th>
-                    <th>OBP</th>
-                    <th>SLG</th>
-                    <th>SO</th>
-                    <th>BB</th>
+                    <th ng-click = "setTableVar('name_display_first_last')">Player</th>
+                    <th ng-click = "setTableVar('pos')">Position</th>
+                    <th ng-click = "setTableVar('avg')">Avg</th>
+                    <th ng-click = "setTableVar('h')">Hits</th>
+                    <th ng-click = "setTableVar('ab')">AB</th>
+                    <th ng-click = "setTableVar('hr')">HR</th>
+                    <th ng-click = "setTableVar('rbi')">RBI</th>
+                    <th ng-click = "setTableVar('obp')">OBP</th>
+                    <th ng-click = "setTableVar('slg')">SLG</th>
+                    <th ng-click = "setTableVar('so')">SO</th>
+                    <th ng-click = "setTableVar('bb')">BB</th>
                 </tr>
-                <tr ng-repeat = "player in philliesLeaders">
+                <tr ng-repeat = "player in philliesLeaders | orderBy: '-'+statTableVar">
                     <td>{{player.name_display_first_last}}</td>
                     <td>{{player.pos}}</td>
                     <td>{{player.avg}}</td>
@@ -193,6 +206,10 @@
                 <p>{{transaction.note}}</p>
             </div>
         </div>
+
+        <!--END OF SPORTS PAGE-->
+
+        <!--EXAMPLE CODE-->
 
         <!--ng-model binds the value of HTML controls to an application variable-->
         <!--the binding goes both ways, changing value in input field changes app variable-->
