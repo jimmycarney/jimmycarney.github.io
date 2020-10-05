@@ -233,9 +233,17 @@ app.controller('myCtrl', function($scope, $http) {
     //testMLBTransactionAPI gets all mlb transactions for a certain date range and filters
     //that array to contain only Phillies transactions
     $scope.testMLBTransactionAPI = function () {
+        var dateObj = new Date();
+        var month = String("0" + (dateObj.getMonth() + 1)).slice(-2);
+        var monthPrev = String("0" + dateObj.getMonth()).slice(-2);
+        var day = String("0" + dateObj.getDate()).slice(-2);
+        var year = String(dateObj.getFullYear());
+        var currDate = year+month+day;
+        var prevDate = year+monthPrev+day;
         $http({
             method: 'GET',
-            url: "https://mlb-data.p.rapidapi.com/json/named.transaction_all.bam?start_date=20200401&end_date=20201001&sport_id=1",
+            //url: "https://mlb-data.p.rapidapi.com/json/named.transaction_all.bam?start_date=20200401&end_date=2020105&sport_id=1",
+            url: "https://mlb-data.p.rapidapi.com/json/named.transaction_all.bam?start_date=" + prevDate + "&end_date=" + currDate + "&sport_id=1",
             headers: {
                 "rapidapi-key": "d111e2f0d6msh1f805bf26cac48bp13c744jsn26bf5382001c"
             }
