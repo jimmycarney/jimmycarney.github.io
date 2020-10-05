@@ -31,11 +31,11 @@
         background: #495469;
         cursor: pointer;
     }
-    #movieTabs{
+    #movieTabs, #sportsTabs{
         width: 700px;
         margin: 0 auto;
     }
-    #movieTabs p{
+    #movieTabs p, #sportsTabs p{
         text-align: center;
         border: 1px solid #495469;
         border-radius: 3px;
@@ -43,7 +43,7 @@
         padding: 3px;
         width: 105px;
     }
-    #movieTabs p:hover{
+    #movieTabs p:hover, #sportsTabs p:hover{
         background: #495469;
         cursor: pointer;
     }
@@ -168,42 +168,55 @@
 
         <div id="sports" class="center-content" ng-show="sports">
             <div id = "sportsTabs">
-                <p ng-click = "testMLBAPI(); testMLBTransactionAPI()">Phillies</p>
+                <p ng-click = "loadEaglesData()">Eagles</p>
+                <p ng-click = "loadSixersData()">Sixers</p>
+                <p ng-click = "loadPhilliesData()">Phillies</p>
+                <p ng-click = "loadFlyersData()">Flyers</p>
             </div>
-            <table class = "statsTable">
-                <caption>Phillies Hitting Leaders</caption>
-                <tr>
-                    <th ng-click = "setTableVar('name_display_first_last')">Player</th>
-                    <th ng-click = "setTableVar('pos')">Position</th>
-                    <th ng-click = "setTableVar('avg')">Avg</th>
-                    <th ng-click = "setTableVar('h')">Hits</th>
-                    <th ng-click = "setTableVar('ab')">AB</th>
-                    <th ng-click = "setTableVar('hr')">HR</th>
-                    <th ng-click = "setTableVar('rbi')">RBI</th>
-                    <th ng-click = "setTableVar('obp')">OBP</th>
-                    <th ng-click = "setTableVar('slg')">SLG</th>
-                    <th ng-click = "setTableVar('so')">SO</th>
-                    <th ng-click = "setTableVar('bb')">BB</th>
-                </tr>
-                <tr ng-repeat = "player in philliesLeaders | orderBy: statTableVar">
-                    <td>{{player.name_display_first_last}}</td>
-                    <td>{{player.pos}}</td>
-                    <td>{{player.avg}}</td>
-                    <td>{{player.h}}</td>
-                    <td>{{player.ab}}</td>
-                    <td>{{player.hr}}</td>
-                    <td>{{player.rbi}}</td>
-                    <td>{{player.obp}}</td>
-                    <td>{{player.slg}}</td>
-                    <td>{{player.so}}</td>
-                    <td>{{player.bb}}</td>
-                </tr>
-
-            </table>
-            <p>Phillies Recent Transactions</p>
-            <div class = "sportsStats" ng-repeat = "transaction in philliesTransactions | orderBy: '-trans_date'">
-                <p>{{transaction.trans_date}}</p>
-                <p>{{transaction.note}}</p>
+            <div id = "eaglesDiv" ng-show = "selectedTeam == 'eagles'">
+                <p>Eagles Div</p>
+            </div>
+            <div id = "sixersDiv" ng-show = "selectedTeam == 'sixers'">
+                <p>Sixers Div</p>
+            </div>
+            <div id = "philliesDiv" ng-show = "selectedTeam == 'phillies'">
+                <table class = "statsTable">
+                    <caption>Phillies Hitting Leaders</caption>
+                    <tr>
+                        <th ng-click = "setTableVar('name_display_first_last')">Player</th>
+                        <th ng-click = "setTableVar('pos')">Position</th>
+                        <th ng-click = "setTableVar('avg')">Avg</th>
+                        <th ng-click = "setTableVar('h')">Hits</th>
+                        <th ng-click = "setTableVar('ab')">AB</th>
+                        <th ng-click = "setTableVar('hr')">HR</th>
+                        <th ng-click = "setTableVar('rbi')">RBI</th>
+                        <th ng-click = "setTableVar('obp')">OBP</th>
+                        <th ng-click = "setTableVar('slg')">SLG</th>
+                        <th ng-click = "setTableVar('so')">SO</th>
+                        <th ng-click = "setTableVar('bb')">BB</th>
+                    </tr>
+                    <tr ng-repeat = "player in philliesLeaders | orderBy: statTableVar">
+                        <td>{{player.name_display_first_last}}</td>
+                        <td>{{player.pos}}</td>
+                        <td>{{player.avg}}</td>
+                        <td>{{player.h}}</td>
+                        <td>{{player.ab}}</td>
+                        <td>{{player.hr}}</td>
+                        <td>{{player.rbi}}</td>
+                        <td>{{player.obp}}</td>
+                        <td>{{player.slg}}</td>
+                        <td>{{player.so}}</td>
+                        <td>{{player.bb}}</td>
+                    </tr>
+                </table>
+                <p>Phillies Recent Transactions</p>
+                <div class = "sportsStats" ng-repeat = "transaction in philliesTransactions | orderBy: '-trans_date'">
+                    <p>{{transaction.trans_date}}</p>
+                    <p>{{transaction.note}}</p>
+                </div>
+            </div>
+            <div id = "flyersDiv" ng-show = "selectedTeam == 'flyers'">
+                <p>Flyers Div</p>
             </div>
         </div>
 

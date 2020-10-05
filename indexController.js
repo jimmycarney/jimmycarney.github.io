@@ -157,6 +157,28 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showPopup = false;
     }
 
+    $scope.selectedTeam = "eagles";
+
+    $scope.loadEaglesData = function() {
+        $scope.selectedTeam = "eagles";
+    }
+
+    $scope.loadSixersData = function() {
+        $scope.selectedTeam = "sixers";
+    }
+
+    $scope.loadFlyersData = function() {
+        $scope.selectedTeam = "flyers";
+    }
+
+    //loadPhilliesData calls all functions that make API calls to retrieve
+    //mlb data
+    $scope.loadPhilliesData = function() {
+        $scope.selectedTeam = "phillies";
+        $scope.testMLBAPI();
+        $scope.testMLBTransactionAPI();
+    }
+
     //empty array to later store all Phillies hitting leaders for ng-repeat
     $scope.philliesLeaders = [];
 
