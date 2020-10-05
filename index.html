@@ -185,7 +185,7 @@
                     <th ng-click = "setTableVar('so')">SO</th>
                     <th ng-click = "setTableVar('bb')">BB</th>
                 </tr>
-                <tr ng-repeat = "player in philliesLeaders | orderBy: '-'+statTableVar">
+                <tr ng-repeat = "player in philliesLeaders | orderBy: statTableVar">
                     <td>{{player.name_display_first_last}}</td>
                     <td>{{player.pos}}</td>
                     <td>{{player.avg}}</td>

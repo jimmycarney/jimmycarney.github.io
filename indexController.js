@@ -161,10 +161,17 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.philliesLeaders = [];
 
     //variable that tracks the stat by which to order the Phillies stat table 
-    $scope.statTableVar = "h";
+    $scope.statTableVar = "-h";
 
+    //setTableVar sets the variable that controls how the Phillies stat table
+    //is being sorted
     $scope.setTableVar = function(tableVar) {
-        $scope.statTableVar = tableVar;
+        if ($scope.statTableVar == ("-" + tableVar)) {
+            $scope.statTableVar = "+" + tableVar;
+        }
+        else {
+            $scope.statTableVar = "-" + tableVar;
+        }
     }
 
     //testMLBAPI gets the hitting leaders for a certain season and filters
