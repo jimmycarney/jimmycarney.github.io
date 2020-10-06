@@ -84,9 +84,6 @@
         width: 500px;
         margin: 0 auto;
     }
-    .sportsStats p{
-        display: inline-block;
-    }
     table{
         width: 600px;
         margin: 0 auto;
@@ -102,10 +99,11 @@
     .statsTable th, td{
         padding-right: 10px;
     }
-    #philliesTrans{
-        margin-top: 25px;
+    .statsTable{
+        margin-bottom: 25px;
+        text-align: left;
     }
-    #philliesTrans caption{
+    .statsTable caption{
         margin-bottom: 10px;
         font-size: 20px;
     }
@@ -194,7 +192,61 @@
                 <p ng-click = "loadFlyersData()">Flyers</p>
             </div>
             <div id = "eaglesDiv" ng-show = "selectedTeam == 'eagles'">
-                <p>Eagles Div</p>
+                <p>Eagles Record</p>
+                <p>{{eaglesStats.record.wins}}-{{eaglesStats.record.losses}}-{{eaglesStats.record.ties}}</p>
+                <table class = "statsTable">
+                    <caption>Eagles Passing Leaders</caption>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cmp</th>
+                        <th>Att</th>
+                        <th>Cmp%</th>
+                        <th>Yrds</th>
+                        <th>TD</th>
+                        <th>Int</th>
+                        <th>Rate</th>
+                    </tr>
+                    <tr ng-repeat = "player in eaglesStats.passing">
+                        <td>{{player.last_name}}, {{player.first_name}}</td>
+                        <td>{{player.cmp}}</td>
+                        <td>{{player.att}}</td>
+                        <td>{{player.cmp_perc}}</td>
+                        <td>{{player.yrds}}</td>
+                        <td>{{player.td}}</td>
+                        <td>{{player.int}}</td>
+                        <td>{{player.rate}}</td>
+                    </tr>
+                </table>
+                <table class = "statsTable">
+                    <caption>Eagles Rushing Leaders</caption>
+                    <tr>
+                        <th>Name</th>
+                        <th>Att</th>
+                        <th>Yrds</th>
+                        <th>TD</th>
+                    </tr>
+                    <tr ng-repeat = "player in eaglesStats.rushing">
+                        <td>{{player.last_name}}, {{player.first_name}}</td>
+                        <td>{{player.att}}</td>
+                        <td>{{player.yrds}}</td>
+                        <td>{{player.td}}</td>
+                    </tr>
+                </table>
+                <table class = "statsTable">
+                    <caption>Eagles Receiving Leaders</caption>
+                    <tr>
+                        <th>Name</th>
+                        <th>Rec</th>
+                        <th>Yrds</th>
+                        <th>TD</th>
+                    </tr>
+                    <tr ng-repeat = "player in eaglesStats.receiving">
+                        <td>{{player.last_name}}, {{player.first_name}}</td>
+                        <td>{{player.rec}}</td>
+                        <td>{{player.yrds}}</td>
+                        <td>{{player.td}}</td>
+                    </tr>
+                </table>
             </div>
             <div id = "sixersDiv" ng-show = "selectedTeam == 'sixers'">
                 <p>Sixers Div</p>
