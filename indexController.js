@@ -45,9 +45,14 @@ app.controller('myCtrl', function($scope, $http) {
     //JSON object containing Eagles stats leaders info
     $scope.eaglesStats = {record:{wins:1,losses:2,ties:1},passing:[{first_name:'Carson',last_name:'Wentz',cmp:97,att:160,cmp_perc:60.6,yrds:930,td:4,int:7,rate:66.9}],
     rushing:[{first_name:'Miles',last_name:'Sanders',att:51,yrds:236,td:1},
-    {first_name:'Carson',last_name:'Wentz',att:19,yrds:111,td:3}],
+    {first_name:'Carson',last_name:'Wentz',att:19,yrds:111,td:3},
+    {first_name:'Boston',last_name:'Scott',att:18,yrds:60,td:0}],
     receiving:[{first_name:'Gred',last_name:'Ward',rec:18,yrds:146,td:1},
-    {first_name:'Zach',last_name:'Ertz',rec:19,yrds:139,td:1}]};
+    {first_name:'Zach',last_name:'Ertz',rec:19,yrds:139,td:1},
+    {first_name:'Dallas',last_name:'Goedert',rec:13,yrds:138,td:1},
+    {first_name:'Desean',last_name:'Jackson',rec:10,yrds:121,td:0},
+    {first_name:'Jalen',last_name:'Reagor',rec:5,yrds:96,td:0},
+    {first_name:'Miles',last_name:'Sanders',rec:9,yrds:78,td:0}]};
 
     //variables that track which tab is selected
     $scope.home = true;
