@@ -84,6 +84,16 @@
         width: 500px;
         margin: 0 auto;
     }
+    .teamRecord{
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .teamRecord p{
+        display: inline-block;
+        font-size: 35px;
+        margin-right: 10px;
+    }
     table{
         width: 600px;
         margin: 0 auto;
@@ -192,8 +202,10 @@
                 <p ng-click = "loadFlyersData()">Flyers</p>
             </div>
             <div id = "eaglesDiv" ng-show = "selectedTeam == 'eagles'">
-                <p>Eagles Record</p>
-                <p>{{eaglesStats.record.wins}}-{{eaglesStats.record.losses}}-{{eaglesStats.record.ties}}</p>
+                <div class = "teamRecord">
+                    <p>Eagles:</p>
+                    <p>{{eaglesStats.record.wins}}-{{eaglesStats.record.losses}}-{{eaglesStats.record.ties}}</p>
+                </div>
                 <table class = "statsTable">
                     <caption>Eagles Passing Leaders</caption>
                     <tr>
@@ -249,9 +261,16 @@
                 </table>
             </div>
             <div id = "sixersDiv" ng-show = "selectedTeam == 'sixers'">
-                <p>Sixers Div</p>
+                <div class = "teamRecord">
+                    <p>Sixers:</p>
+                    <p>{{sixersRecord}}</p>
+                </div>
             </div>
             <div id = "philliesDiv" ng-show = "selectedTeam == 'phillies'">
+                <div class = "teamRecord">
+                    <p>Phillies:</p>
+                    <p>28-32</p>
+                </div>
                 <table class = "statsTable">
                     <caption>Phillies Hitting Leaders</caption>
                     <tr>
@@ -298,7 +317,10 @@
                 </div>
             </div>
             <div id = "flyersDiv" ng-show = "selectedTeam == 'flyers'">
-                <p>Flyers Div</p>
+                <div class = "teamRecord">
+                    <p>Flyers:</p>
+                    <p>{{flyersRecord}}</p>
+                </div>
             </div>
         </div>
 

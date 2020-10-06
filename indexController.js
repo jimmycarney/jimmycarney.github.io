@@ -46,13 +46,25 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.eaglesStats = {record:{wins:1,losses:2,ties:1},passing:[{first_name:'Carson',last_name:'Wentz',cmp:97,att:160,cmp_perc:60.6,yrds:930,td:4,int:7,rate:66.9}],
     rushing:[{first_name:'Miles',last_name:'Sanders',att:51,yrds:236,td:1},
     {first_name:'Carson',last_name:'Wentz',att:19,yrds:111,td:3},
-    {first_name:'Boston',last_name:'Scott',att:18,yrds:60,td:0}],
+    {first_name:'Boston',last_name:'Scott',att:18,yrds:60,td:0},
+    {first_name:'Corey',last_name:'Clement',att:11,yrds:30,td:0},
+    {first_name:'Jalen',last_name:'Hurts',att:5,yrds:26,td:0},
+    {first_name:'Jason',last_name:'Huntley',att:1,yrds:1,td:0},
+    {first_name:'Greg',last_name:'Ward',att:1,yrds:-6,td:0},
+    {first_name:'Adrian',last_name:'Killins',att:1,yrds:-12,td:0}],
     receiving:[{first_name:'Gred',last_name:'Ward',rec:18,yrds:146,td:1},
     {first_name:'Zach',last_name:'Ertz',rec:19,yrds:139,td:1},
     {first_name:'Dallas',last_name:'Goedert',rec:13,yrds:138,td:1},
     {first_name:'Desean',last_name:'Jackson',rec:10,yrds:121,td:0},
     {first_name:'Jalen',last_name:'Reagor',rec:5,yrds:96,td:0},
-    {first_name:'Miles',last_name:'Sanders',rec:9,yrds:78,td:0}]};
+    {first_name:'Miles',last_name:'Sanders',rec:9,yrds:78,td:0},
+    {first_name:'Travis',last_name:'Fulgham',rec:2,yrds:57,td:1},
+    {first_name:'Richard',last_name:'Rodgers',rec:5,yrds:50,td:0},
+    {first_name:'Boston',last_name:'Scott',rec:5,yrds:43,td:0},
+    {first_name:'John',last_name:'Hightower',rec:5,yrds:39,td:0},
+    {first_name:'Deontay',last_name:'Burnett',rec:2,yrds:19,td:0},
+    {first_name:'Corey',last_name:'Clement',rec:4,yrds:2,td:0},
+    {first_name:'Adrian',last_name:'Killins',rec:1,yrds:2,td:0}]};
 
     //variables that track which tab is selected
     $scope.home = true;
@@ -170,16 +182,26 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showPopup = false;
     }
 
+    //variable that determines which team tab has been clicked
     $scope.selectedTeam = "eagles";
 
+    //loadEaglesData displays the Eagles page contents
     $scope.loadEaglesData = function() {
         $scope.selectedTeam = "eagles";
     }
 
+    //variable that holds Sixers' record
+    $scope.sixersRecord = "43-30";
+
+    //loadSixersData displays the Sixers page contents
     $scope.loadSixersData = function() {
         $scope.selectedTeam = "sixers";
     }
 
+    //variable that holds Flyers' record
+    $scope.flyersRecord = "41-21";
+    
+    //loadFlyersData displays the Flyers page contents
     $scope.loadFlyersData = function() {
         $scope.selectedTeam = "flyers";
     }
