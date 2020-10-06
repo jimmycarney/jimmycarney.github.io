@@ -42,7 +42,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'The Fifth Element',genre:'scifi',rating:73,imageSrc:'https://m.media-amazon.com/images/M/MV5BZWFjYmZmZGQtYzg4YS00ZGE5LTgwYzAtZmQwZjQ2NDliMGVmXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg'},{title:'Independence Day',genre:'scifi',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGQwNDNkMmItYWY1Yy00YTZmLWE5OTAtODU0MGZmMzQ1NDdkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'War of the Worlds',genre:'scifi',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDUyODAzNDI1Nl5BMl5BanBnXkFtZTcwMDA2NDAzMw@@._V1_SX300.jpg'},{title:'Men in Black',genre:'scifi',rating:74,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTlhYTVkMDktYzIyNC00NzlkLTlmN2ItOGEyMWQ4OTA2NDdmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'Anchorman: The Legend of Ron Burgundy',genre:'comedy',rating:71,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX300.jpg'},
     {title:'Step Brothers',genre:'comedy',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BODViZDg3ZjYtMzhiYS00YTVkLTk4MzktYWUxMTlkYjc1NjdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'},{title:'The Hateful Eight',genre:'action',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_SX300.jpg'},{title:'Office Space',genre:'comedy',rating:71,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTA5MzQ3MzI1NV5BMl5BanBnXkFtZTgwNTcxNTYxMTE@._V1_SX300.jpg'},{title:'2001: A Space Odyssey',genre:'scifi',rating:94,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'}];
 
-    //JSON object containing Eagles stats leaders info
+    //JSON object containing Eagles stats leaders lists
     $scope.eaglesStats = {record:{wins:1,losses:2,ties:1},passing:[{first_name:'Carson',last_name:'Wentz',cmp:97,att:160,cmp_perc:60.6,yrds:930,td:4,int:7,rate:66.9}],
     rushing:[{first_name:'Miles',last_name:'Sanders',att:51,yrds:236,td:1},
     {first_name:'Carson',last_name:'Wentz',att:19,yrds:111,td:3},
@@ -95,21 +95,36 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
+    //variable that holds list of movie genres
+    $scope.movieGenreList = [{genre:'all',display:'All'},{genre:'scifi',display:'Science Fiction'},{genre:'drama',display:'Drama'},
+    {genre:'thriller',display:'Thriller'},{genre:'crime',display:'Crime'},{genre:'unique',display:'Very Unique'},{genre:'superhero',display:'Superhero'},]
+
+    //variable that tracks the minimum rating to filter movies
+    $scope.minRating = 0;
+
     //variable that tracks which movie genre tab is selected
     $scope.movieGenre = "all";
 
     //variable that tracks if a genre has been selected
-    $scope.genreFilter = false;
+    //$scope.genreFilter = false;
+
+    //movieFilter is used to determine which movies to show in the ng-repeat
+    $scope.movieFilter = function(movie) {
+        if ($scope.movieGenre == 'all') {
+            return (movie.rating >= $scope.minRating);
+        }
+        return ((movie.genre == $scope.movieGenre) && (movie.rating >= $scope.minRating));
+    }
 
     //selectGenre sets the movieGenre variable, displaying that genre content, 
     //and changes the styling of the selected tab
     $scope.selectGenre = function(genre) {
-        if (genre == 'all') {
+        /*if (genre == 'all') {
             $scope.genreFilter = false;
         }
         else{
             $scope.genreFilter = true;
-        }
+        }*/
         $scope.movieGenre = genre;
         document.getElementById('allTab').style.background = "";
         document.getElementById('scifiTab').style.background = "";

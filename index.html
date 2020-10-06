@@ -132,8 +132,6 @@
     <!--ng-init initializes and application variable (add ng-init="name='Jimmy'" to div tag)-->
     <div ng-app="myApp" ng-controller="myCtrl">
 
-        <!-- <h2>Jimmy Carney</h2> -->
-
         <div id = "header">
 
         </div>
@@ -155,6 +153,17 @@
         <!--MOVIES PAGE-->
 
         <div id="movies" class="center-content" ng-show="movies">
+            <div id = "movieDropdown">
+                <label for = "genre">Genre</label>
+                <select name = "genre" ng-model = "selectedGenre"
+                    ng-options = "genreItem as genreItem.display for genreItem in movieGenreList"
+                    ng-change = "selectGenre(selectedGenre.genre)">
+                </select>
+            </div>
+            <div id = "movieSlider">
+                <p ng-bind = "minRating"></p>
+                <input type = "range" min = "0" max = "100" value = "0" ng-model = "minRating">
+            </div>
             <div id = "movieTabs">
                 <p ng-click = "selectGenre('all')" id = "allTab">All</p>
                 <p ng-click = "selectGenre('scifi')" id = "scifiTab">Science Fiction</p>
@@ -183,7 +192,8 @@
                 <p ng-bind = "moviePlot"></p>
             </div>
             <div class = "movieList">
-                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: (genreFilter || '') && {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
+                <!-- <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: (genreFilter || '') && {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)"> -->
+                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: movieFilter" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
                     <img ng-src = "{{movie.imageSrc}}" />
                     <p>{{movie.title}} ({{movie.rating}}%)</p>
                 </div>
@@ -201,6 +211,9 @@
                 <p ng-click = "loadPhilliesData()">Phillies</p>
                 <p ng-click = "loadFlyersData()">Flyers</p>
             </div>
+
+            <!--EAGLES-->
+
             <div id = "eaglesDiv" ng-show = "selectedTeam == 'eagles'">
                 <div class = "teamRecord">
                     <p>Eagles:</p>
@@ -218,7 +231,7 @@
                         <th>Int</th>
                         <th>Rate</th>
                     </tr>
-                    <tr ng-repeat = "player in eaglesStats.passing">
+                    <tr ng-repeat = "player in eaglesStats.passing | orderBy: '-yrds'">
                         <td>{{player.last_name}}, {{player.first_name}}</td>
                         <td>{{player.cmp}}</td>
                         <td>{{player.att}}</td>
@@ -237,7 +250,7 @@
                         <th>Yrds</th>
                         <th>TD</th>
                     </tr>
-                    <tr ng-repeat = "player in eaglesStats.rushing">
+                    <tr ng-repeat = "player in eaglesStats.rushing | orderBy: '-yrds'">
                         <td>{{player.last_name}}, {{player.first_name}}</td>
                         <td>{{player.att}}</td>
                         <td>{{player.yrds}}</td>
@@ -252,7 +265,7 @@
                         <th>Yrds</th>
                         <th>TD</th>
                     </tr>
-                    <tr ng-repeat = "player in eaglesStats.receiving">
+                    <tr ng-repeat = "player in eaglesStats.receiving | orderBy: '-yrds'">
                         <td>{{player.last_name}}, {{player.first_name}}</td>
                         <td>{{player.rec}}</td>
                         <td>{{player.yrds}}</td>
@@ -260,12 +273,22 @@
                     </tr>
                 </table>
             </div>
+
+            <!--END EAGLES-->
+
+            <!--SIXERS-->
+
             <div id = "sixersDiv" ng-show = "selectedTeam == 'sixers'">
                 <div class = "teamRecord">
                     <p>Sixers:</p>
                     <p>{{sixersRecord}}</p>
                 </div>
             </div>
+
+            <!--END SIXERS-->
+
+            <!--PHILLIES-->
+
             <div id = "philliesDiv" ng-show = "selectedTeam == 'phillies'">
                 <div class = "teamRecord">
                     <p>Phillies:</p>
@@ -316,12 +339,20 @@
                     </table>
                 </div>
             </div>
+
+            <!--END PHILLIES-->
+
+            <!--FLYERS-->
+
             <div id = "flyersDiv" ng-show = "selectedTeam == 'flyers'">
                 <div class = "teamRecord">
                     <p>Flyers:</p>
                     <p>{{flyersRecord}}</p>
                 </div>
             </div>
+
+            <!--END FLYERS-->
+
         </div>
 
         <!--END OF SPORTS PAGE-->
