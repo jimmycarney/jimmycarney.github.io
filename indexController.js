@@ -253,11 +253,33 @@ app.controller('myCtrl', function($scope, $http) {
                 return item.team == "Philadelphia Phillies";
             });
             $scope.philliesTransactions = philliesList;
+            for (var i = 0; i < $scope.philliesTransactions.length; i++) {
+                $scope.philliesTransactions[i].trans_date = $scope.philliesTransactions[i].trans_date.slice(0,-9)
+            }
         },
         function error(response){
             alert("error!");
         });
     }
+
+    //Below function not working as intended, as the API seems to expect an integer
+    //for the 'name_part' despite the documentation saying that is a string field
+    //(waiting for response to my discussion post about this)
+    //getPlayerInfo
+    /*$scope.getPlayerInfo = function(playerName) {
+        $http({
+            method: 'GET',
+            url: "https://mlb-data.p.rapidapi.com/json/named.search_player_all.bam/name_part=" + playerName,
+            headers: {
+                "rapidapi-key": "d111e2f0d6msh1f805bf26cac48bp13c744jsn26bf5382001c"
+            }
+        }).then(function success(response) {
+            alert(response.data);
+        },
+        function error(response){
+            alert(response.data);
+        });
+    }*/
 
 });
 /*create directive - must use camel case when defining and use dashes

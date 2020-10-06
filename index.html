@@ -31,7 +31,7 @@
         background: #495469;
         cursor: pointer;
     }
-    #movieTabs, #sportsTabs{
+    #movieTabs{
         width: 700px;
         margin: 0 auto;
     }
@@ -59,7 +59,6 @@
         height: 100px;
     }
     #moviePopup{
-        /*position: absolute;*/
         position: fixed;
         text-align: center;
         width: 600px;
@@ -81,10 +80,16 @@
     #movieInfo, #movieScores{
         margin-top: 20px;
     }
+    #sportsTabs{
+        width: 500px;
+        margin: 0 auto;
+    }
     .sportsStats p{
         display: inline-block;
     }
     table{
+        width: 600px;
+        margin: 0 auto;
         border-collapse: collapse;
     }
     .statsTable tr{
@@ -96,6 +101,21 @@
     }
     .statsTable th, td{
         padding-right: 10px;
+    }
+    #philliesTrans{
+        margin-top: 25px;
+    }
+    #philliesTrans caption{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    #philliesTrans tbody{
+        display: inline-block;
+        height: 350px;
+        overflow-y: scroll;
+    }
+    #philliesTrans td{
+        background-color: #d0d0d0;
     }
 </style>
 <body>
@@ -209,10 +229,20 @@
                         <td>{{player.bb}}</td>
                     </tr>
                 </table>
-                <p>Phillies Recent Transactions</p>
-                <div class = "sportsStats" ng-repeat = "transaction in philliesTransactions | orderBy: '-trans_date'">
-                    <p>{{transaction.trans_date}}</p>
-                    <p>{{transaction.note}}</p>
+                <div id = "philliesTrans">
+                    <table class = "statsTable">
+                        <caption>Phillies Recent Transactions</caption>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Transaction</th>
+                        </tr>
+                        <tr ng-repeat = "transaction in philliesTransactions | orderBy: '-trans_date'">
+                            <td>{{transaction.trans_date}}</td>
+                            <td>{{transaction.type}}</td>
+                            <td>{{transaction.note}}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div id = "flyersDiv" ng-show = "selectedTeam == 'flyers'">
