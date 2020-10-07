@@ -97,13 +97,15 @@ app.controller('myCtrl', function($scope, $http) {
 
     //variable that holds list of movie genres
     $scope.movieGenreList = [{genre:'all',display:'All'},{genre:'scifi',display:'Science Fiction'},{genre:'drama',display:'Drama'},
-    {genre:'thriller',display:'Thriller'},{genre:'crime',display:'Crime'},{genre:'unique',display:'Very Unique'},{genre:'superhero',display:'Superhero'},]
+    {genre:'thriller',display:'Thriller'},{genre:'crime',display:'Crime'},{genre:'unique',display:'Very Unique'},{genre:'superhero',display:'Superhero'},
+    {genre:'fantasy',display:'Fantasy'},{genre:'action',display:'Action'},]
 
     //variable that tracks the minimum rating to filter movies
     $scope.minRating = 0;
 
     //variable that tracks which movie genre tab is selected
     $scope.movieGenre = "all";
+    $scope.genreDisplay = "All Movies";
 
     //variable that tracks if a genre has been selected
     //$scope.genreFilter = false;
@@ -118,7 +120,7 @@ app.controller('myCtrl', function($scope, $http) {
 
     //selectGenre sets the movieGenre variable, displaying that genre content, 
     //and changes the styling of the selected tab
-    $scope.selectGenre = function(genre) {
+    $scope.selectGenre = function(genre, display) {
         /*if (genre == 'all') {
             $scope.genreFilter = false;
         }
@@ -126,14 +128,15 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.genreFilter = true;
         }*/
         $scope.movieGenre = genre;
-        document.getElementById('allTab').style.background = "";
+        $scope.genreDisplay = display + " Movies";
+        /*document.getElementById('allTab').style.background = "";
         document.getElementById('scifiTab').style.background = "";
         document.getElementById('dramaTab').style.background = "";
         document.getElementById('thrillerTab').style.background = "";
         document.getElementById('crimeTab').style.background = "";
         document.getElementById('uniqueTab').style.background = "";
         document.getElementById('superheroTab').style.background = "";
-        document.getElementById(genre + 'Tab').style.background = "#495469";
+        document.getElementById(genre + 'Tab').style.background = "#495469";*/
     }
 
     //variable that tracks whether or not the movie popup is showing

@@ -38,17 +38,17 @@
                     <label for = "genre">Genre</label>
                     <select name = "genre" ng-model = "selectedGenre"
                         ng-options = "genreItem as genreItem.display for genreItem in movieGenreList"
-                        ng-change = "selectGenre(selectedGenre.genre)">
+                        ng-change = "selectGenre(selectedGenre.genre, selectedGenre.display)">
                     </select>
                 </div>
                 <div id = "movieSlider">
                     <!-- <p ng-bind = "minRating"></p> -->
                     <label for = "rating">Minimum Rating</label>
-                    <input type = "range" min = "0" max = "100" value = "0" ng-model = "minRating" id = "ratingSlider">
                     <input type = "number" min = "0" max = "100" value = "0" ng-model = "minRating" name = "rating" id = "ratingBox">
+                    <input type = "range" min = "0" max = "100" value = "0" ng-model = "minRating" id = "ratingSlider">
                 </div>
             </div>
-            <div id = "movieTabs">
+            <!-- <div id = "movieTabs">
                 <p ng-click = "selectGenre('all')" id = "allTab">All</p>
                 <p ng-click = "selectGenre('scifi')" id = "scifiTab">Science Fiction</p>
                 <p ng-click = "selectGenre('drama')" id = "dramaTab">Drama</p>
@@ -56,6 +56,9 @@
                 <p ng-click = "selectGenre('crime')" id = "crimeTab">Crime</p>
                 <p ng-click = "selectGenre('unique')" id = "uniqueTab">Very Unique</p>
                 <p ng-click = "selectGenre('superhero')" id = "superheroTab">Superhero</p>
+            </div> -->
+            <div id = "genreName">
+                <p ng-bind = "genreDisplay"></p>
             </div>
             <div id = "moviePopup" ng-show = "showPopup" ng-click = "hidePopup()">
                 <img id = "moviePoster" src="">

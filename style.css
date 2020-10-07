@@ -34,15 +34,22 @@ body{
     margin-top: 15px;
     margin-bottom: 30px;
 }
+#movieDropdown, #movieRating{
+    vertical-align: top;
+}
 #movieDropdown select{
+    display: block;
     background-color: #d0d0d0;
-    width: 120px;
-    height: 25px;
+    width: 170px;
+    height: 35px;
+    margin-top: 20px;
+    font-size: 20px;
     /*-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;*/
 }
 #ratingSlider{
+    display: block;
     -webkit-appearance: none;
     background-color: #d3d3d3;
     outline: none;
@@ -50,6 +57,7 @@ body{
     -webkit-transition: 0.2s;
     transition: 0.2s;
     height: 10px;
+    margin-top: 10px;
 }
 #ratingSlider:hover{
     opacity: 1;
@@ -62,14 +70,30 @@ body{
     cursor: pointer;
 }
 #ratingBox{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
     width: 40px;
     height: 30px;
+    font-size: 20px;
     background-color: #d3d3d3;
     text-align: center;
     border: none;
     border-radius: 3px;
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: "Lucida Console", monospace;
 }
+#ratingBox::-webkit-outer-spin-button, 
+#ratingBox::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+#genreName {
+    margin-left: 60px;
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+/*the movieTabs div has been removed for now*/
 #movieTabs{
     width: 700px;
     margin: 0 auto;
@@ -92,6 +116,7 @@ body{
     margin-left: 20px;
 }
 .movieTitle{
+    vertical-align: top;
     text-align: center;
     display: inline-block;
     width: 19%;
