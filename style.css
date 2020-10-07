@@ -1,0 +1,127 @@
+body{
+    background: rgb(146,168,209);
+    background: linear-gradient(90deg, rgba(146,168,209,1) 0%, rgba(73,84,105,1) 100%);
+}
+#tabs{
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+.center-content{
+    width: 800px;
+    margin: 0 auto;
+}
+.tab{
+    text-align: center;
+    border: 1px solid #495469;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px;
+    width: 80px;
+}
+.tab:hover{
+    background: #495469;
+    cursor: pointer;
+}
+#movieFiltering div{
+    display: inline-block;
+}
+#movieFiltering{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+#movieTabs{
+    width: 700px;
+    margin: 0 auto;
+}
+#movieTabs p, #sportsTabs p{
+    text-align: center;
+    border: 1px solid #495469;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 3px;
+    width: 105px;
+}
+#movieTabs p:hover, #sportsTabs p:hover{
+    background: #495469;
+    cursor: pointer;
+}
+.movieTitle{
+    text-align: center;
+    display: inline-block;
+    width: 19%
+}
+.movieTitle:hover{
+    cursor: pointer;
+}
+.movieTitle img{
+    height: 100px;
+}
+#moviePopup{
+    position: fixed;
+    text-align: center;
+    width: 600px;
+    height: 650px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 70px #000000;
+    cursor: pointer;
+}
+#movieInfo p, #movieScores p{
+    display: inline;
+    margin-right: 15px;
+}
+#movieInfo, #movieScores{
+    margin-top: 20px;
+}
+#sportsTabs{
+    width: 500px;
+    margin: 0 auto;
+}
+.teamRecord{
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+.teamRecord p{
+    display: inline-block;
+    font-size: 35px;
+    margin-right: 10px;
+}
+table{
+    width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.statsTable tr{
+    padding: 2px;
+    border-bottom: 1px solid black;
+}
+.statsTable th{
+    cursor: pointer;
+}
+.statsTable th, td{
+    padding-right: 10px;
+}
+.statsTable{
+    margin-bottom: 25px;
+    text-align: left;
+}
+.statsTable caption{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#philliesTrans tbody{
+    display: inline-block;
+    height: 350px;
+    overflow-y: scroll;
+}
+#philliesTrans td{
+    background-color: #d0d0d0;
+}

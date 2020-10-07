@@ -3,9 +3,10 @@
 <head>
 <!--load the AngularJS library in the head so that calls to angular.module can be compiled-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel = "stylesheet" href = "style.css">
 </head>
 <script src ="indexController.js"></script>
-<style>
+<!-- <style>
     body{
         background: rgb(146,168,209);
         background: linear-gradient(90deg, rgba(146,168,209,1) 0%, rgba(73,84,105,1) 100%);
@@ -30,6 +31,14 @@
     .tab:hover{
         background: #495469;
         cursor: pointer;
+    }
+    #movieFiltering div{
+        display: inline-block;
+    }
+    #movieFiltering{
+        width: 500px;
+        text-align: center;
+        margin: 0 auto;
     }
     #movieTabs{
         width: 700px;
@@ -125,7 +134,7 @@
     #philliesTrans td{
         background-color: #d0d0d0;
     }
-</style>
+</style> -->
 <body>
     <!--ng-app defines the AngularJS app-->
     <!--ng-controller defines the controller-->
@@ -153,16 +162,20 @@
         <!--MOVIES PAGE-->
 
         <div id="movies" class="center-content" ng-show="movies">
-            <div id = "movieDropdown">
-                <label for = "genre">Genre</label>
-                <select name = "genre" ng-model = "selectedGenre"
-                    ng-options = "genreItem as genreItem.display for genreItem in movieGenreList"
-                    ng-change = "selectGenre(selectedGenre.genre)">
-                </select>
-            </div>
-            <div id = "movieSlider">
-                <p ng-bind = "minRating"></p>
-                <input type = "range" min = "0" max = "100" value = "0" ng-model = "minRating">
+            <div id = "movieFiltering">
+                <div id = "movieDropdown">
+                    <label for = "genre">Genre</label>
+                    <select name = "genre" ng-model = "selectedGenre"
+                        ng-options = "genreItem as genreItem.display for genreItem in movieGenreList"
+                        ng-change = "selectGenre(selectedGenre.genre)">
+                    </select>
+                </div>
+                <div id = "movieSlider">
+                    <!-- <p ng-bind = "minRating"></p> -->
+                    <label for = "rating">Minimum Rating</label>
+                    <input type = "number" min = "0" max = "100" value = "0" ng-model = "minRating" name = "rating">
+                    <input type = "range" min = "0" max = "100" value = "0" ng-model = "minRating">
+                </div>
             </div>
             <div id = "movieTabs">
                 <p ng-click = "selectGenre('all')" id = "allTab">All</p>
