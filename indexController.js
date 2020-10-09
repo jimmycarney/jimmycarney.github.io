@@ -81,9 +81,15 @@ app.controller('myCtrl', function($scope, $http) {
     {first_name:'Corey',last_name:'Clement',rec:4,yrds:2,td:0},
     {first_name:'Adrian',last_name:'Killins',rec:1,yrds:2,td:0}]};
 
+    $scope.tvShowList = [{title:'Veep',genre:'comedy',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE2NDM0OTEwMl5BMl5BanBnXkFtZTgwNzgwNDI0ODE@._V1_SX300.jpg'},{title:'The Sopranos',genre:'crime',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'The End of the F***ing World',genre:'comedy',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2ZhNmQ2MjQtMmQzMi00YjE5LTlkMWMtMjk5YzIxMjk2NDc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Westworld',genre:'scifi',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTRmYzNmOTctZjMwOS00ODZlLWJiZGQtNDg5NDY5NjE3MTczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg'},{title:"It's Always Sunny in Philadelphia",genre:'comedy',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTExNGZkMWMtMmIwZC00YjA3LTgwM2ItZjQ2YmZkMzQ1YWZkXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},
+    {title:'The Wire',genre:'crime',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BZmY5ZDMxODEtNWIwOS00NjdkLTkyMjktNWRjMDhmYjJjN2RmXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg'},{title:'Mad Men',genre:'drama',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BNTgxNDZlODQtNDcwOC00NWQ5LTljNWMtMDhjY2U5YTUzMTc4XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SX300.jpg'},{title:'Black Mirror',genre:'scifi',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Mindhunter',genre:'crime',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg'},{title:'Nathan for You',genre:'comedy',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGY4ZWM1MDUtZmM3MS00ZjAxLTkyYzMtMjgxODI1YzkzNGUwXkEyXkFqcGdeQXVyNzk2NzE5Mjk@._V1_SX300.jpg'},
+    {title:'Sherlock',genre:'crime',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWY3NTljMjEtYzRiMi00NWM2LTkzNjItZTVmZjE0MTdjMjJhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTQ4NTc5OTU@._V1_SX300.jpg'},{title:'Stranger Things',genre:'scifi',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_SX300.jpg'},{title:'Breaking Bad',genre:'crime',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'Firefly',genre:'scifi',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTcwNzkwMDItZmM1OC00MmQ2LTgxYjgtOTNiNDgxZDAxMjk0XkEyXkFqcGdeQXVyNDQ0MTYzMDA@._V1_SX300.jpg'},{title:'Narcos',genre:'crime',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BNmFjODU3YzgtMGUwNC00ZGI3LWFkZjQtMjkxZDc3NmQ1MzcyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg'},
+    {title:'The Last Dance',genre:'documentary',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2U1ZTU4OWItNGU2MC00MTg1LTk4NzUtYTk3ODhjYjI0MzlmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Attack on Titan',genre:'animated',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY5ODk1NzUyMl5BMl5BanBnXkFtZTgwMjUyNzEyMTE@._V1_SX300.jpg'},{title:'Avatar: The Last Airbender',genre:'animated',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BODc5YTBhMTItMjhkNi00ZTIxLWI0YjAtNTZmOTY0YjRlZGQ0XkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg'},{title:'30 Rock',genre:'comedy',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ4NDQ4OTUzOV5BMl5BanBnXkFtZTcwMjMzMTUyNw@@._V1_SX300.jpg'},{title:'Game of Thrones',genre:'fantasy',rating:0,imageSrc:'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg'}];
+
     //variables that track which tab is selected
     $scope.home = true;
     $scope.movies = false;
+    $scope.tvShows = false;
     $scope.sports = false;
 
     //loadContent takes in a tab name and displays that tab content
@@ -91,22 +97,32 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.loadContent = function(tabName) {
         document.getElementById('homeTab').style.background = "";
         document.getElementById('moviesTab').style.background = "";
+        document.getElementById('showsTab').style.background = "";
         document.getElementById('sportsTab').style.background = "";
         document.getElementById(tabName + 'Tab').style.background = "#495469";
         if (tabName == 'home') {
             $scope.home = true;
             $scope.movies = false;
+            $scope.tvShows = false;
             $scope.sports = false;
         }
         else if (tabName == 'movies') {
             $scope.home = false;
             $scope.movies = true;
+            $scope.tvShows = false;
             $scope.sports = false;
+        }
+        else if (tabName == 'sports') {
+            $scope.home = false;
+            $scope.movies = false;
+            $scope.tvShows = false;
+            $scope.sports = true;
         }
         else{
             $scope.home = false;
             $scope.movies = false;
-            $scope.sports = true;
+            $scope.tvShows = true;
+            $scope.sports = false;
         }
     }
 
@@ -180,6 +196,30 @@ app.controller('myCtrl', function($scope, $http) {
         });
     }
 
+    $scope.showTVPopup = false;
+
+    //getShowInfo takes in a tv show title, calls the movie info API
+    //for that title, and sets the popup variables
+    $scope.getShowInfo = function(title) {
+        $http({
+            method: 'GET',
+            url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
+        }).then(function success(response) {
+            document.getElementById("tvPoster").src = response.data.Poster;
+            alert(response.data.Poster);
+            $scope.tvTitle = response.data.Title;
+            $scope.tvDate = response.data.Year;
+            $scope.tvRating = response.data.Rated;
+            $scope.tvSeasons = response.data.totalSeasons + " Seasons";
+            $scope.tvRuntime = response.data.Runtime;
+            $scope.tvIMDBScore = "IMDB: " + response.data.imdbRating;
+            $scope.tvPlot = response.data.Plot;
+            $scope.showTVPopup = true;
+        },
+        function error(response){
+            alert("error!");
+        });
+    }
 
     //Below function was not working as intended, decided to manually add image links
     //to moviesList
@@ -213,6 +253,10 @@ app.controller('myCtrl', function($scope, $http) {
     //hidePopup sets the showPopup variable to false
     $scope.hidePopup = function() {
         $scope.showPopup = false;
+    }
+
+    $scope.hideTVPopup = function() {
+        $scope.showTVPopup = false;
     }
 
     //variable that determines which team tab has been clicked

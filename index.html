@@ -19,6 +19,7 @@
         <div id = "tabs">
             <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
             <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
+            <p class = "tab" ng-click = "loadContent('shows')" id = "showsTab">TV Shows</p>
             <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
         </div>
 
@@ -88,6 +89,38 @@
         </div>
 
         <!--END OF MOVIES PAGE-->
+
+        <!--TV SHOWS PAGE-->
+
+        <div id = "shows" class = "center-content" ng-show = "tvShows">
+            <div id = "tvShowPopup" ng-show = "showTVPopup" ng-click = "hideTVPopup()">
+                <img id = "tvPoster" src="">
+                <div id = "tvInfo">
+                    <p ng-bind = "tvTitle"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "tvDate"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "tvRating"></p>
+                </div>
+                <div id = "tvInfo">
+                    <p ng-bind = "tvSeasons"></p>
+                    <p>&bull;</p>
+                    <p ng-bind = "tvRuntime"></p>
+                </div>
+                <div id = "tvScores">
+                    <p ng-bind = "tvIMDBScore"></p>
+                </div>
+                <p ng-bind = "tvPlot"></p>
+            </div>
+            <div class = "showList">
+                <div ng-repeat = "show in tvShowList | orderBy: '-rating'" class = "showTitle" ng-click = "getShowInfo(show.title)">
+                    <img ng-src = "{{show.imageSrc}}" />
+                    <p>{{show.title}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!--END OF TV SHOWS PAGE-->
 
         <!--SPORTS PAGE-->
 

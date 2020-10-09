@@ -3,7 +3,7 @@ body{
     background: linear-gradient(90deg, rgba(146,168,209,1) 0%, rgba(73,84,105,1) 100%);
 }
 #tabs{
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
     text-align: center;
 }
@@ -110,24 +110,24 @@ body{
     background: #495469;
     cursor: pointer;
 }
-.movieList{
+.movieList, .showList{
     width: 100%;
     margin: 0 auto;
     margin-left: 20px;
 }
-.movieTitle{
+.movieTitle, .showTitle{
     vertical-align: top;
     text-align: center;
     display: inline-block;
     width: 19%;
 }
-.movieTitle:hover{
+.movieTitle:hover, .showTitle:hover{
     cursor: pointer;
 }
-.movieTitle img{
+.movieTitle img, .showTitle img{
     height: 100px;
 }
-#moviePopup{
+#moviePopup, #tvShowPopup{
     position: fixed;
     text-align: center;
     width: 600px;
@@ -142,11 +142,11 @@ body{
     box-shadow: 5px 5px 70px #000000;
     cursor: pointer;
 }
-#movieInfo p, #movieScores p{
+#movieInfo p, #movieScores p, #tvInfo p, #tvScores p{
     display: inline;
     margin-right: 15px;
 }
-#movieInfo, #movieScores{
+#movieInfo, #movieScores, #tvInfo, #tvScores{
     margin-top: 20px;
 }
 #sportsTabs{
