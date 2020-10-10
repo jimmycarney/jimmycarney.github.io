@@ -126,6 +126,7 @@ body{
 }
 .movieTitle img, .showTitle img{
     height: 100px;
+    max-width: 75px;
 }
 #moviePopup, #tvShowPopup{
     position: fixed;
