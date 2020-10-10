@@ -34,7 +34,8 @@
         <!--MOVIES PAGE-->
 
         <div id="movies" class="center-content" ng-show="movies">
-            <div id = "movieFiltering">
+            <p id = "movieFilterButton" ng-click = "toggleMovieFilter()">Filters</p>
+            <div id = "movieFiltering" ng-show = "showMovieFilter">
                 <div id = "movieDropdown">
                     <label for = "genre">Genre</label>
                     <select name = "genre" ng-model = "selectedGenre"
