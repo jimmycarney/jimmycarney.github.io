@@ -440,9 +440,11 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.dndType = "";
     
     //array that holds every dnd type (api endpoint)
-    $scope.dndTypeArray = ['Spells','Monsters','Backgrounds',
+    $scope.dndTypeArray = ['Spells','Monsters',
     'Sections','Conditions','Races','Classes','Magicitems','Weapons','Other'];
 
+    //callDndAPI call the dnd api endpoint specified by $scope.dndType (dropdown menu)
+    //and searches the results for an entry with name equal to $scope.dndKey
     $scope.callDndAPI = function(page) {
         //alert($scope.dndType);
         if ($scope.dndType == 'Other') {
@@ -452,6 +454,7 @@ app.controller('myCtrl', function($scope, $http) {
             method: 'GET',
             url: "https://api.open5e.com/" + $scope.dndType.toLowerCase() + "/?page=" + page
         }).then(function success(response) {
+            //alert($scope.dndType);
             for (var i = 0; i < response.data.results.length; i++) {
                 var item = response.data.results[i];
                 if (item.name.toLowerCase().replace(/ /g,'') == $scope.dndKey.toLowerCase().replace(/ /g,'')) {
@@ -460,13 +463,35 @@ app.controller('myCtrl', function($scope, $http) {
                     return;
                 }
             }
-            $scope.callDndAPI((page + 1));
+            if (response.data.next != null) {
+                $scope.callDndAPI((page + 1));
+            }
         },
         function error(response){
             alert("Keyterm not found!");
-            return;
         });
     }
+
+    //variable that holds the list of results from the dnd api
+    $scope.dndList = [];
+
+    //getAllDndResults puts all of the results from an endpoint of the dnd api
+    //into a list
+    $scope.getAllDndResults = function(page) {
+        $http({
+            method: 'GET',
+            url: "https://api.open5e.com/" + $scope.dndType.toLowerCase() + "/?page=" + page
+        }).then(function success(response) {
+            $scope.dndList.push(...response.data.results);
+            if (response.data.next != null) {
+                $scope.getAllDndResults((page + 1));
+            }
+        },
+        function error(response){
+            alert("Gone through all pages");
+        });
+    }
+
 
 });
 /*create directive - must use camel case when defining and use dashes

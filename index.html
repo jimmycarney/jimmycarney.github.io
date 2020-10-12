@@ -287,10 +287,15 @@
                 </select>
                 <input type = "text" ng-model = "dndKey">
                 <button ng-click = "callDndAPI(1)">Search</button>
+                <button ng-click = "getAllDndResults(1)">Test Load All Items</button>
             </div>
             <div id = "dndResults">
                 <p ng-bind = "dndItemName"></p>
                 <p ng-bind = "dndItemDesc"></p>
+            </div>
+            <div ng-repeat = "item in dndList">
+                <p>{{item.name}}</p>
+                <p>{{item.desc}}</p>
             </div>
         </div>
 
