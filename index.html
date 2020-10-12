@@ -21,6 +21,7 @@
             <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
             <p class = "tab" ng-click = "loadContent('shows')" id = "showsTab">TV Shows</p>
             <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
+            <p class = "tab" ng-click = "loadContent('dnd')" id = "dndTab">D&D</p>
         </div>
 
         <!--HOME PAGE-->
@@ -277,6 +278,23 @@
         </div>
 
         <!--END OF SPORTS PAGE-->
+
+        <!--D&D PAGE-->
+
+        <div id = "dnd" class = "center-content" ng-show = "dnd">
+            <div id = "dndSearch">
+                <select ng-model = "dndType" ng-options = "type for type in dndTypeArray">
+                </select>
+                <input type = "text" ng-model = "dndKey">
+                <button ng-click = "callDndAPI(1)">Search</button>
+            </div>
+            <div id = "dndResults">
+                <p ng-bind = "dndItemName"></p>
+                <p ng-bind = "dndItemDesc"></p>
+            </div>
+        </div>
+
+        <!--END OF D&D PAGE-->
 
         <!--EXAMPLE CODE-->
 

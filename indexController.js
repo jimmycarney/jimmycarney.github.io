@@ -7,7 +7,7 @@ app.controller('myCtrl', function($scope, $http) {
     /* EXAMPLE CODE $scope.name="Jimmy";*/
     //$scope.names=[{name:'Jimmy',work:'ISC'},{name:'Randy',work:'ISC'},{name:'Zach',work:'VUMC'}];
 
-    //JSON object containing all movie names, genres, ratings, and image links
+    //JSON array containing all movie names, genres, ratings, and image links
     $scope.moviesList=[{title:'The Departed',genre:'crime',rating:99,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_SX300.jpg'},{title:'Ex Machina',genre:'scifi',rating:99,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg'},{title:'The Social Network',genre:'drama',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGUyZDUxZjEtMmIzMC00MzlmLTg4MGItZWJmMzBhZjE0Mjc1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'},{title:'Fight Club',genre:'thriller',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
     {title:'Good Will Hunting',genre:'drama',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Dead Poets Society',genre:'drama',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Terminator 2',genre:'scifi',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Star Wars: Episode V - The Empire Strikes Back',genre:'scifi',rating:96,imageSrc:'https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'The Lord of the Rings: The Return of the King',genre:'fantasy',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
     {title:'Nightcrawler',genre:'thriller',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2U1YzdhYWMtZWUzMi00OWI1LWFkM2ItNWVjM2YxMGQ2MmNhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Goodfellas',genre:'crime',rating:96,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'The Shape of Water',genre:'unique',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg'},{title:'Moon',genre:'scifi',rating:92,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_SX300.jpg'},{title:'The Godfather Part II',genre:'crime',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
@@ -81,6 +81,7 @@ app.controller('myCtrl', function($scope, $http) {
     {first_name:'Corey',last_name:'Clement',rec:4,yrds:2,td:0},
     {first_name:'Adrian',last_name:'Killins',rec:1,yrds:2,td:0}]};
 
+    //JSON array containing all tv show names, genres, ratings, and image links
     $scope.tvShowList = [{title:'Veep',genre:'comedy',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE2NDM0OTEwMl5BMl5BanBnXkFtZTgwNzgwNDI0ODE@._V1_SX300.jpg'},{title:'The Sopranos',genre:'crime',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'The End of the F***ing World',genre:'comedy',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2ZhNmQ2MjQtMmQzMi00YjE5LTlkMWMtMjk5YzIxMjk2NDc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Westworld',genre:'scifi',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTRmYzNmOTctZjMwOS00ODZlLWJiZGQtNDg5NDY5NjE3MTczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg'},{title:"It's Always Sunny in Philadelphia",genre:'comedy',rating:92,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTExNGZkMWMtMmIwZC00YjA3LTgwM2ItZjQ2YmZkMzQ1YWZkXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},
     {title:'The Wire',genre:'crime',rating:94,imageSrc:'https://m.media-amazon.com/images/M/MV5BZmY5ZDMxODEtNWIwOS00NjdkLTkyMjktNWRjMDhmYjJjN2RmXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg'},{title:'Mad Men',genre:'drama',rating:90,imageSrc:'https://m.media-amazon.com/images/M/MV5BNTgxNDZlODQtNDcwOC00NWQ5LTljNWMtMDhjY2U5YTUzMTc4XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SX300.jpg'},{title:'Black Mirror',genre:'scifi',rating:89,imageSrc:'https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Mindhunter',genre:'crime',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg'},{title:'Nathan for You',genre:'comedy',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGY4ZWM1MDUtZmM3MS00ZjAxLTkyYzMtMjgxODI1YzkzNGUwXkEyXkFqcGdeQXVyNzk2NzE5Mjk@._V1_SX300.jpg'},
     {title:'Sherlock',genre:'crime',rating:92,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWY3NTljMjEtYzRiMi00NWM2LTkzNjItZTVmZjE0MTdjMjJhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTQ4NTc5OTU@._V1_SX300.jpg'},{title:'Stranger Things',genre:'scifi',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_SX300.jpg'},{title:'Breaking Bad',genre:'crime',rating:90,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'Firefly',genre:'scifi',rating:88,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTcwNzkwMDItZmM1OC00MmQ2LTgxYjgtOTNiNDgxZDAxMjk0XkEyXkFqcGdeQXVyNDQ0MTYzMDA@._V1_SX300.jpg'},{title:'Narcos',genre:'crime',rating:89,imageSrc:'https://m.media-amazon.com/images/M/MV5BNmFjODU3YzgtMGUwNC00ZGI3LWFkZjQtMjkxZDc3NmQ1MzcyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg'},
@@ -106,6 +107,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.movies = false;
     $scope.tvShows = false;
     $scope.sports = false;
+    $scope.dnd = false;
 
     //loadContent takes in a tab name and displays that tab content
     //while hiding all other content, and changes the styling of the selected tab
@@ -114,31 +116,44 @@ app.controller('myCtrl', function($scope, $http) {
         document.getElementById('moviesTab').style.background = "";
         document.getElementById('showsTab').style.background = "";
         document.getElementById('sportsTab').style.background = "";
+        document.getElementById('dndTab').style.background = "";
         document.getElementById(tabName + 'Tab').style.background = "#495469";
         if (tabName == 'home') {
             $scope.home = true;
             $scope.movies = false;
             $scope.tvShows = false;
             $scope.sports = false;
+            $scope.dnd = false;
         }
         else if (tabName == 'movies') {
             $scope.home = false;
             $scope.movies = true;
             $scope.tvShows = false;
             $scope.sports = false;
+            $scope.dnd = false;
         }
         else if (tabName == 'sports') {
             $scope.home = false;
             $scope.movies = false;
             $scope.tvShows = false;
             $scope.sports = true;
+            $scope.dnd = false;
         }
-        else{
+        else if (tabName == 'shows'){
             $scope.home = false;
             $scope.movies = false;
             $scope.tvShows = true;
             $scope.sports = false;
+            $scope.dnd = false;
         }
+        else {
+            $scope.home = false;
+            $scope.movies = false;
+            $scope.tvShows = false;
+            $scope.sports = false;
+            $scope.dnd = true;
+        }
+        
     }
 
     //variable that holds list of movie genres
@@ -211,6 +226,7 @@ app.controller('myCtrl', function($scope, $http) {
         });
     }
 
+    //varaible that tracks whether or not the tv show popup is showing
     $scope.showTVPopup = false;
 
     //getShowInfo takes in a tv show title, calls the movie info API
@@ -221,7 +237,7 @@ app.controller('myCtrl', function($scope, $http) {
             url: "https://www.omdbapi.com/?t=" + title + "&apikey=8f59097f"
         }).then(function success(response) {
             document.getElementById("tvPoster").src = response.data.Poster;
-            alert(response.data.Poster);
+            //alert(response.data.Poster);
             $scope.tvTitle = response.data.Title;
             $scope.tvDate = response.data.Year;
             $scope.tvRating = response.data.Rated;
@@ -270,12 +286,15 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showPopup = false;
     }
 
+    //variable that tracks whether the movie filter popup is showing
     $scope.showMovieFilter = false;
 
+    //toggleMovieFilter toggles the showMovieFilter variable to display/hide the filter popup
     $scope.toggleMovieFilter = function() {
         $scope.showMovieFilter = !($scope.showMovieFilter);
     }
 
+    //hideTVPopup sets the showTVPopup variable to false
     $scope.hideTVPopup = function() {
         $scope.showTVPopup = false;
     }
@@ -413,6 +432,41 @@ app.controller('myCtrl', function($scope, $http) {
             alert(response.data);
         });
     }*/
+
+    //variable that holds the value of the D&D search bar
+    $scope.dndKey = "Barbarian";
+
+    //variable that holds the type of D&D items to search through
+    $scope.dndType = "";
+    
+    //array that holds every dnd type (api endpoint)
+    $scope.dndTypeArray = ['Spells','Monsters','Backgrounds',
+    'Sections','Conditions','Races','Classes','Magicitems','Weapons','Other'];
+
+    $scope.callDndAPI = function(page) {
+        //alert($scope.dndType);
+        if ($scope.dndType == 'Other') {
+            $scope.dndType = 'search';
+        }
+        $http({
+            method: 'GET',
+            url: "https://api.open5e.com/" + $scope.dndType.toLowerCase() + "/?page=" + page
+        }).then(function success(response) {
+            for (var i = 0; i < response.data.results.length; i++) {
+                var item = response.data.results[i];
+                if (item.name.toLowerCase().replace(/ /g,'') == $scope.dndKey.toLowerCase().replace(/ /g,'')) {
+                    $scope.dndItemName = $scope.dndKey;
+                    $scope.dndItemDesc = item.desc;
+                    return;
+                }
+            }
+            $scope.callDndAPI((page + 1));
+        },
+        function error(response){
+            alert("Keyterm not found!");
+            return;
+        });
+    }
 
 });
 /*create directive - must use camel case when defining and use dashes

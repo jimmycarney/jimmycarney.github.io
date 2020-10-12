@@ -3,7 +3,7 @@ body{
     background: linear-gradient(90deg, rgba(146,168,209,1) 0%, rgba(73,84,105,1) 100%);
 }
 #tabs{
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
     text-align: center;
 }
