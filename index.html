@@ -287,7 +287,12 @@
                 </select>
                 <input type = "text" ng-model = "dndKey">
                 <button ng-click = "callDndAPI(1)">Search</button>
-                <button ng-click = "getAllDndResults(1)">Test Load All Items</button>
+            </div>
+            <div id = "dndNav">
+                <select ng-model = "dndPage" ng-options = "type for type in dndTypeArray"
+                ng-change = "clearDndList(); getAllDndResults(1)">
+                </select>
+                <!-- <button ng-click = "clearDndList(); getAllDndResults(1)">Test Load All Items</button> -->
             </div>
             <div id = "dndResults">
                 <p ng-bind = "dndItemName"></p>
