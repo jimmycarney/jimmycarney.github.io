@@ -434,10 +434,12 @@ app.controller('myCtrl', function($scope, $http) {
     }*/
 
     //variable that holds the value of the D&D search bar
-    $scope.dndKey = "Barbarian";
+    //REMOVED - removed input this was linked to
+    //$scope.dndKey = "Barbarian";
 
     //variable that holds the type of D&D items to search through
-    $scope.dndType = "";
+    //REMOVED - removed dropdown this was linked to
+    //$scope.dndType = "";
     
     //array that holds every dnd type (api endpoint)
     $scope.dndTypeArray = ['Spells','Monsters',
@@ -445,11 +447,13 @@ app.controller('myCtrl', function($scope, $http) {
 
     //callDndAPI call the dnd api endpoint specified by $scope.dndType (dropdown menu)
     //and searches the results for an entry with name equal to $scope.dndKey
-    $scope.callDndAPI = function(page) {
+    //and populates the D&D pop scope variables
+    //REMOVED - no longer using this type of search
+    /*$scope.callDndAPI = function(page) {
         //alert($scope.dndType);
-        /*if ($scope.dndType == 'Other') {
+        if ($scope.dndType == 'Other') {
             $scope.dndType = 'search';
-        }*/
+        }
         $http({
             method: 'GET',
             url: "https://api.open5e.com/" + $scope.dndType.toLowerCase() + "/?page=" + page
@@ -470,10 +474,13 @@ app.controller('myCtrl', function($scope, $http) {
         function error(response){
             alert("Keyterm not found!");
         });
-    }
+    }*/
 
     //variable that holds the currenty 'type' of dnd page
     $scope.dndPage = "";
+
+    //variable that holds the search key for the dnd results
+    $scope.dndPageKey = "";
 
     //variable that holds the list of results from the dnd api
     $scope.dndList = [];
@@ -500,6 +507,11 @@ app.controller('myCtrl', function($scope, $http) {
         });
     }
 
+    //dndListFilter is used to determine which dnd results to show in the ng-repeat
+    //based on the value of the search bar
+    $scope.dndListFilter = function(item) {
+        return (item.name.toLowerCase().replace(/ /g,'').includes($scope.dndPageKey.toLowerCase().replace(/ /g,'')));
+    }
 
 });
 /*create directive - must use camel case when defining and use dashes

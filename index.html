@@ -282,25 +282,139 @@
         <!--D&D PAGE-->
 
         <div id = "dnd" class = "center-content" ng-show = "dnd">
-            <div id = "dndSearch">
+            <!-- <div id = "dndSearch">
                 <select ng-model = "dndType" ng-options = "type for type in dndTypeArray">
                 </select>
                 <input type = "text" ng-model = "dndKey">
                 <button ng-click = "callDndAPI(1)">Search</button>
-            </div>
+            </div> -->
             <div id = "dndNav">
                 <select ng-model = "dndPage" ng-options = "type for type in dndTypeArray"
                 ng-change = "clearDndList(); getAllDndResults(1)">
                 </select>
-                <!-- <button ng-click = "clearDndList(); getAllDndResults(1)">Test Load All Items</button> -->
+                <input type = "text" ng-model = "dndPageKey">
             </div>
-            <div id = "dndResults">
+            <!-- <div id = "dndResults">
                 <p ng-bind = "dndItemName"></p>
                 <p ng-bind = "dndItemDesc"></p>
-            </div>
-            <div ng-repeat = "item in dndList">
+            </div> -->
+            <div ng-repeat = "item in dndList | filter: dndListFilter">
                 <p>{{item.name}}</p>
-                <p>{{item.desc}}</p>
+                <div id = "spellList" class = "dndResultsList" ng-show = "(dndPage == 'Spells')">
+                    <p>Range: {{item.range}}</p>
+                    <p>Components: {{item.components}}</p>
+                    <p>Materials: {{item.material}}</p>
+                    <p>Duration: {{item.duration}}</p>
+                    <p>Casting Time: {{item.casting_time}}</p>
+                    <p>Concentration: {{item.concentration}}</p>
+                    <p>{{item.level}}</p>
+                    <p>{{item.desc}}</p>
+                    <p>{{item.higher_level}}</p>
+                </div>
+                <div id = "monsterList" class = "dndResultsList" ng-show = "(dndPage == 'Monsters')">
+                    <p>Size: {{item.size}}</p>
+                    <p>Type: {{item.type}}</p>
+                    <p>SubType: {{item.subtype}}</p>
+                    <p>Alignment: {{item.alignment}}</p>
+                    <p>Armor Class: {{item.armor_class}}</p>
+                    <p>Armor Description: {{item.armor_desc}}</p>
+                    <p>Hit Points: {{item.hit_points}}</p>
+                    <p>Hit Dice: {{item.hit_dice}}</p>
+                    <p>Speeds - Walking: {{item.speed.walk}}, Swimming: {{item.speed.swim}}, Flying: {{item.speed.fly}}</p>
+                    <p>Strength: {{item.strength}}</p>
+                    <p>Dexterity: {{item.dexterity}}</p>
+                    <p>Constitution: {{item.constitution}}</p>
+                    <p>Wisdom: {{item.wisdom}}</p>
+                    <p>Charisma: {{item.charisma}}</p>
+                    <p>Strength Save: {{item.strength_save}}</p>
+                    <p>Dexterity Save: {{item.dexterity_save}}</p>
+                    <p>Constitution Save: {{item.constitution_save}}</p>
+                    <p>Wisdom Save: {{item.wisdom_save}}</p>
+                    <p>Charisma Save: {{item.charisma_save}}</p>
+                    <p>Perception: {{item.perception}}</p>
+                    <p>Damage Vulnerabilitues: {{item.damage_vulnerabilities}}</p>
+                    <p>Damage Resistances: {{item.damage_resistances}}</p>
+                    <p>Damage Immunities: {{item.damage_immunities}}</p>
+                    <p>Condition Immunities: {{item.condition_immunities}}</p>
+                    <p>Senses: {{item.senses}}</p>
+                    <p>Languages: {{item.languages}}</p>
+                    <p>Challenge Rating: {{item.challenge_rating}}</p>
+                    <p>Actions: </p>
+                    <div ng-repeat = "action in item.actions" class = "dndSubList">
+                        <p>{{action.name}}</p>
+                        <p>{{action.attack_bonus}}</p>
+                        <p>{{action.damage_dice}}</p>
+                        <p>{{action.damage_bonus}}</p>
+                        <p>{{action.desc}}</p>
+                    </div>
+                    <p>Reactions: {{item.reactions}}</p>
+                    <p>Legendary Description: {{item.legendary_desc}}</p>
+                    <p>Legnedary Actions: </p>
+                    <div ng-repeat = "action in item.legendary_actions" class = "dndSubList">
+                        <p>{{action.name}}</p>
+                        <p>{{action.desc}}</p>
+                    </div>
+                    <p>Special Abilities: </p>
+                    <div ng-repeat = "ability in item.special_abilities" class = "dndSubList">
+                        <p>{{ability.name}}</p>
+                        <p>{{ability.desc}}</p>
+                    </div>
+                    <p>Spell List: {{item.spell_list}}</p>
+                </div>
+                <div id = "conditionList" class = "dndResultsList" ng-show = "(dndPage == 'Conditions')">
+                    <p>{{item.desc}}</p>
+                </div>
+                <div id = "raceList" class = "dndResultsList" ng-show = "(dndPage == 'Races')">
+                    <p>{{item.desc}}</p>
+                    <p>Ability Score Increase: {{item.asi_desc}}</p>
+                    <p>Age: {{item.age}}</p>
+                    <p>Alignment: {{item.alignment}}</p>
+                    <p>Size: {{item.size}}</p>
+                    <p>Speed: {{item.speed_desc}}</p>
+                    <p>Languages: {{item.languages}}</p>
+                    <p>Vision: {{item.vision}}</p>
+                    <p>Traits: {{item.traits}}</p>
+                    <p>Sub-Races:</p>
+                    <div ng-repeat = "race in item.subraces" class = "dndSubList">
+                        <p>Name: {{race.name}}</p>
+                        <p>{{race.desc}}</p>
+                        <p>Traits: {{race.traits}}</p>
+                        <p>Ability Score Increase: {{race.asi_desc}}</p>
+                    </div>
+                </div>
+                <div id = "classList" class = "dndResultsList" ng-show = "(dndPage == 'Classes')">
+                    <p>Hit Dice: {{item.hit_dice}}</p>
+                    <p>Level 1 HP: {{item.hp_at_first_level}}</p>
+                    <p>HP at Higher Levels: {{item.hp_at_higher_levels}}</p>
+                    <p>Armor Proficiencies: {{item.prof_armor}}</p>
+                    <p>Weapon Proficiencies: {{item.prof_weapons}}</p>
+                    <p>Tool Proficiencies: {{item.prof_tools}}</p>
+                    <p>Saving Throw Proficiencies: {{item.prof_saving_throws}}</p>
+                    <p>Skill Proficiencies: {{item.prof_skills}}</p>
+                    <p>Equipment: {{item.equipment}}</p>
+                    <p>{{item.table}}</p>
+                    <p>Spell Casting Ability: {{item.spellcasting_ability}}</p>
+                </div>
+                <div id = "magicitemList" class = "dndResultsList" ng-show = "(dndPage == 'Magicitems')">
+                    <p>Type: {{item.type}}</p>
+                    <p>Rarity: {{item.rarity}}</p>
+                    <p>Requires Attunement: {{item.requires_attunement}}</p>
+                    <p>{{item.desc}}</p>
+                </div>
+                <div id = "weaponList" class = "dndResultsList" ng-show = "(dndPage == 'Weapons')">
+                    <p>Category: {{item.category}}</p>
+                    <p>Damage: {{item.damage_dice}}</p>
+                    <p>Damage Type: {{item.damage_type}}</p>
+                    <p>Cost: {{item.cost}}</p>
+                    <p>Weight: {{item.weight}}</p>
+                    <p>Properties:</p>
+                    <div ng-repeat = "prop in item.properties" class = "dndSubList">
+                        <p>{{prop}}</p>
+                    </div>
+                </div>
+                <div id = "sectionList" class = "dndResultsList" ng-show = "(dndPage == 'Sections')">
+                    <p>{{item.desc}}</p>
+                </div>
             </div>
         </div>
 
