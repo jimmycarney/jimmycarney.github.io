@@ -23,7 +23,7 @@ body{
     background: #495469;
     cursor: pointer;
 }
-#movieFilterButton{
+#movieFilterButton, #tvFilterButton{
     cursor: pointer;
     text-align: center;
     width: 70px;
@@ -31,11 +31,11 @@ body{
     border: 1px solid black;
     border-radius: 2px;
 }
-#movieFiltering div{
+#movieFiltering div, #tvFiltering div{
     display: inline-block;
     margin-right: 45px;
 }
-#movieFiltering{
+#movieFiltering, #tvFiltering{
     position: absolute;
     width: 400px;
     text-align: center;
@@ -47,10 +47,10 @@ body{
     padding: 5px;
     border-radius: 3px;
 }
-#movieDropdown, #movieRating{
+#movieDropdown, #movieRating, #tvDropdown{
     vertical-align: top;
 }
-#movieDropdown select{
+#movieDropdown select, #tvDropdown select{
     display: block;
     background-color: #d0d0d0;
     width: 170px;
@@ -61,7 +61,7 @@ body{
     -moz-appearance: none;
     appearance: none;*/
 }
-#ratingSlider{
+#ratingSlider, #tvRatingSlider{
     display: block;
     -webkit-appearance: none;
     background-color: #d3d3d3;
@@ -72,17 +72,17 @@ body{
     height: 10px;
     margin-top: 10px;
 }
-#ratingSlider:hover{
+#ratingSlider:hover, #tvRatingSlider:hover{
     opacity: 1;
 }
-#ratingSlider::-webkit-slider-thumb{
+#ratingSlider::-webkit-slider-thumb, #tvRatingSlider::-webkit-slider-thumb{
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
     background-color: black;
     cursor: pointer;
 }
-#ratingBox{
+#ratingBox, #tvRatingBox{
     display: block;
     margin: 0 auto;
     margin-top: 10px;
@@ -96,11 +96,14 @@ body{
     font-family: "Lucida Console", monospace;
 }
 #ratingBox::-webkit-outer-spin-button, 
-#ratingBox::-webkit-inner-spin-button{
+#ratingBox::-webkit-inner-spin-button,
+#tvRatingBox::-webkit-outer-spin-button,
+#tvRatingBox::-webkit-inner-spin-button
+{
     -webkit-appearance: none;
     margin: 0;
 }
-#genreName {
+#genreName, #tvGenreName {
     margin-left: 60px;
     font-size: 30px;
     text-decoration: underline;

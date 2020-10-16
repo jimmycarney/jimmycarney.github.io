@@ -162,7 +162,7 @@ app.controller('myCtrl', function($scope, $http) {
     //variable that holds list of movie genres
     $scope.movieGenreList = [{genre:'all',display:'All'},{genre:'scifi',display:'Science Fiction'},{genre:'drama',display:'Drama'},
     {genre:'thriller',display:'Thriller'},{genre:'crime',display:'Crime'},{genre:'unique',display:'Very Unique'},{genre:'superhero',display:'Superhero'},
-    {genre:'fantasy',display:'Fantasy'},{genre:'action',display:'Action'},]
+    {genre:'fantasy',display:'Fantasy'},{genre:'action',display:'Action'}];
 
     //variable that tracks the minimum rating to filter movies
     $scope.minRating = 0;
@@ -231,6 +231,25 @@ app.controller('myCtrl', function($scope, $http) {
 
     //varaible that tracks whether or not the tv show popup is showing
     $scope.showTVPopup = false;
+    
+    //variable that holds list of tv genres
+    $scope.tvGenreList = [{genre:'all',display:'All'},{genre:'scifi',display:'Science Fiction'},{genre:'drama',display:'Drama'},
+    {genre:'crime',display:'Crime'},{genre:'fantasy',display:'Fantasy'},{genre:'action',display:'Action'}];
+    
+    //variable that tracks the minimum rating to filter movies
+    $scope.minTVRating = 0;
+
+    //variable that tracks which tv genre tab is selected
+    $scope.tvGenre = "all";
+    $scope.tvGenreDisplay = "All Shows";
+
+    //tvFilter is used to determine which movies to show in the ng-repeat
+    $scope.tvFilter = function(show) {
+        if ($scope.tvGenre == 'all') {
+            return (show.rating >= $scope.minTVRating);
+        }
+        return ((show.genre == $scope.tvGenre) && (show.rating >= $scope.minTVRating));
+    }
 
     //getShowInfo takes in a tv show title, calls the movie info API
     //for that title, and sets the popup variables
@@ -295,6 +314,18 @@ app.controller('myCtrl', function($scope, $http) {
     //toggleMovieFilter toggles the showMovieFilter variable to display/hide the filter popup
     $scope.toggleMovieFilter = function() {
         $scope.showMovieFilter = !($scope.showMovieFilter);
+    }
+
+    //selectTVGenre sets the tvGenre variable, displaying that genre content, 
+    //and changes the styling of the selected tab
+    $scope.selectTVGenre = function(genre, display) {
+        $scope.tvGenre = genre;
+        $scope.tvGenreDisplay = display + " Movies";
+    }
+
+    //toggleTVFilter toggles the showTVFilter variable to display/hide the filter popup
+    $scope.toggleTVFilter = function() {
+        $scope.showTVFilter = !($scope.showTVFilter);
     }
 
     //hideTVPopup sets the showTVPopup variable to false
