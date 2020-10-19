@@ -37,7 +37,7 @@ body{
 }
 #movieFiltering, #tvFiltering{
     position: absolute;
-    width: 400px;
+    width: 700px;
     text-align: center;
     margin-left: 200px;
     margin-top: -40px;
@@ -47,10 +47,10 @@ body{
     padding: 5px;
     border-radius: 3px;
 }
-#movieDropdown, #movieRating, #tvDropdown{
+#movieDropdown, #movieRating, #tvDropdown, #tvRating, #movieSearch, #showSearch{
     vertical-align: top;
 }
-#movieDropdown select, #tvDropdown select{
+#movieDropdown select, #tvDropdown select, #movieSearch input, #showSearch input{
     display: block;
     background-color: #d0d0d0;
     width: 170px;

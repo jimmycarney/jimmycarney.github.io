@@ -50,6 +50,10 @@
                     <input type = "number" min = "0" max = "100" value = "0" ng-model = "minRating" name = "rating" id = "ratingBox">
                     <input type = "range" min = "0" max = "100" value = "0" ng-model = "minRating" id = "ratingSlider">
                 </div>
+                <div id = "movieSearch">
+                    <label for = "movieTitle">Movie Title</label>
+                    <input name = "movieTitle" type = "text" ng-model = "moviePageKey">
+                </div>
             </div>
             <!-- <div id = "movieTabs">
                 <p ng-click = "selectGenre('all')" id = "allTab">All</p>
@@ -109,6 +113,10 @@
                     <label for = "rating">Minimum Rating</label>
                     <input type = "number" min = "0" max = "100" value = "0" ng-model = "minTVRating" name = "tvRating" id = "tvRatingBox">
                     <input type = "range" min = "0" max = "100" value = "0" ng-model = "minTVRating" id = "tvRatingSlider">
+                </div>
+                <div id = "showSearch">
+                    <label for = "showTitle">Show Title</label>
+                    <input name = "showTitle" type = "text" ng-model = "tvPageKey">
                 </div>
             </div>
             <div id = "tvGenreName">
