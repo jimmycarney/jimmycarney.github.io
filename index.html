@@ -87,7 +87,7 @@
             </div>
             <div class = "movieList">
                 <!-- <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: (genreFilter || '') && {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)"> -->
-                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: movieFilter" class = "movieTitle" ng-click = "testMovieAPI(movie.title)">
+                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: movieFilter" class = "movieTitle" ng-click = "testMovieAPI(movie.title, movie.year)">
                     <img ng-src = "{{movie.imageSrc}}" />
                     <p>{{movie.title}} ({{movie.rating}}%)</p>
                 </div>
@@ -142,7 +142,7 @@
                 <p ng-bind = "tvPlot"></p>
             </div>
             <div class = "showList">
-                <div ng-repeat = "show in tvShowList | orderBy: '-rating' | filter: tvFilter" class = "showTitle" ng-click = "getShowInfo(show.title)">
+                <div ng-repeat = "show in tvShowList | orderBy: '-rating' | filter: tvFilter" class = "showTitle" ng-click = "getShowInfo(show.title, show.year)">
                     <img ng-src = "{{show.imageSrc}}" />
                     <p>{{show.title}}</p>
                 </div>
