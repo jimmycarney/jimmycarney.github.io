@@ -1,11 +1,24 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
 body{
     background: rgb(146,168,209);
-    background: linear-gradient(90deg, rgba(146,168,209,1) 0%, rgba(73,84,105,1) 100%);
+    /*background: linear-gradient(90deg, rgba(146,168,209,1) 0%, rgba(73,84,105,1) 100%);*/
+}
+#header{
+    width: 100%;
+    height: 60px;
+    /*border-bottom: 2px solid #cccccc;*/
+    background: #7f91b4;
 }
 #tabs{
-    width: 500px;
-    margin: 0 auto;
+    /*width: 500px;*/
+    /*margin: 0 auto;*/
     text-align: center;
+    /*below is for new style test*/
+    width: 100%;
+    height: 100%;
 }
 .center-content{
     width: 800px;
@@ -13,15 +26,21 @@ body{
 }
 .tab{
     text-align: center;
-    border: 1px solid #495469;
-    border-radius: 3px;
+    /*border: 1px solid #495469;*/
+    /*border-radius: 3px;*/
     display: inline-block;
     padding: 5px;
-    width: 80px;
+    /*width: 80px;*/
+    /*below is for new style test*/
+    width: 17%;
+    margin-right: -5px;
 }
 .tab:hover{
-    background: #495469;
+    /*background: #495469;*/
+    /*background: #6b7a97;*/
     cursor: pointer;
+    text-underline-offset: 10px;
+    text-decoration: underline;
 }
 #movieFilterButton, #tvFilterButton{
     cursor: pointer;

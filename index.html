@@ -13,21 +13,20 @@
     <div ng-app="myApp" ng-controller="myCtrl">
 
         <div id = "header">
-
-        </div>
-
-        <div id = "tabs">
-            <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
-            <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
-            <p class = "tab" ng-click = "loadContent('shows')" id = "showsTab">TV Shows</p>
-            <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
-            <p class = "tab" ng-click = "loadContent('dnd')" id = "dndTab">D&D</p>
+            <div id = "tabs">
+                <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
+                <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
+                <p class = "tab" ng-click = "loadContent('shows')" id = "showsTab">TV Shows</p>
+                <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
+                <p class = "tab" ng-click = "loadContent('dnd')" id = "dndTab">D&D</p>
+            </div>
         </div>
 
         <!--HOME PAGE-->
 
         <div id="home" class="center-content" ng-show="home">
-            <p>Home Div</p>
+            <p>Jimmy Carney</p>
+            <p>Sales Engineer -- InterSystems Corporation</p>
         </div>
 
         <!--END OF HOME PAGE-->
@@ -487,7 +486,7 @@
             </ul>
         </div> -->
         <!--directive defined above as testDirective (use dashes in html)-->
-        <test-directive></test-directive>
+        <!-- <test-directive></test-directive> -->
     </div>
 
 </body>
