@@ -315,10 +315,16 @@
                 <button ng-click = "callDndAPI(1)">Search</button>
             </div> -->
             <div id = "dndNav">
-                <select ng-model = "dndPage" ng-options = "type for type in dndTypeArray"
-                ng-change = "clearDndList(); getAllDndResults(1)">
-                </select>
-                <input type = "text" ng-model = "dndPageKey">
+                <div>
+                    <label for = "dndCat">Category</label>
+                    <select name = "dndCat" ng-model = "dndPage" ng-options = "type for type in dndTypeArray"
+                    ng-change = "clearDndList(); getAllDndResults(1)">
+                    </select>
+                </div>
+                <div>
+                    <label for = "dndName">Name</label>
+                    <input name = "dndName" type = "text" ng-model = "dndPageKey">
+                </div>
             </div>
             <!-- <div id = "dndResults">
                 <p ng-bind = "dndItemName"></p>
