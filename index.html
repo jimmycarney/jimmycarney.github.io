@@ -315,13 +315,25 @@
                 <button ng-click = "callDndAPI(1)">Search</button>
             </div> -->
             <div id = "dndNav">
-                <div>
+                <p id = "dndHelp" ng-click = "toggleDndPopup()">&#9432;</p>
+                <div id = "dndHelpPopup" ng-show = "showDndPopup" ng-click = "toggleDndPopup()">
+                    <p>
+                        Welcome to the Dungeons & Dragons information tool!
+                    </p>
+                    <p>
+                        Select a D&D category to view (i.e. Weapons) using the dropdown menu
+                    </p>
+                    <p>
+                        Search for a specific item  (i.e. Battleaxe) using the text input bar
+                    </p>
+                </div>
+                <div class = "dndFilter">
                     <label for = "dndCat">Category</label>
                     <select name = "dndCat" ng-model = "dndPage" ng-options = "type for type in dndTypeArray"
                     ng-change = "clearDndList(); getAllDndResults(1)">
                     </select>
                 </div>
-                <div>
+                <div class = "dndFilter">
                     <label for = "dndName">Name</label>
                     <input name = "dndName" type = "text" ng-model = "dndPageKey">
                 </div>
