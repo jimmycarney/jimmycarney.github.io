@@ -47,29 +47,29 @@ body{
     text-decoration: underline;
 }
 #home{
-    width: 1200px;
+    /*width: 1200px;*/
     text-align: center;
 }
 .resumeSection{
-    display: inline-block;
-    vertical-align: top;
+    display: block;
     text-align: left;
-    width: 27%;
-    margin-right: 1%;
+    margin-top: 100px;
 }
-.resumeSection ul{
-    margin-left: -30px;
+.resumeSection{
+    font-size: 20px;
 }
 .resumeTitle{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
-#profExp{
-    width: 40%;
-}
 .jobTitle p{
     display: inline;
+}
+.skillList{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 60px;
 }
 #movieFilterButton, #tvFilterButton{
     cursor: pointer;
