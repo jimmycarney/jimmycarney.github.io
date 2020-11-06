@@ -672,14 +672,22 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.progLanguages = ["JavaScript","C++","HTML/CSS","Java","C","ObjectScript","SQL","Angular","InterSystems Products"];
 
     $scope.profExperience = [{title:"Sales Engineer",company:"InterSystems Corporation",date:"July 2019 - Present",desc:["I work with clinical software development and healthcare organizations in the U.S. to expand use and understanding of InterSystems' technologies in the areas of clinical data aggregation and exchange, analytics, artificial intelligence, and machine learning.",
-    "I provide guidance, mentoring, and support to many InterSystems’ healthcare clients including Vanderbilt University Medical Center, Rhodes Group, and Atlantic Health.",
+    "I provide guidance, mentoring, and support to many InterSystems' healthcare clients including Vanderbilt University Medical Center, Rhodes Group, and Atlantic Health.",
     "My primary responsibilities include: Recommending technical application, integration, database, and deployment architectures; Designing, building, and presenting Proofs of Concept (PoCs) to prospects and partners; Building and delivering targeted technical sales presentations and demonstrations; Coordinating with InterSystems' Account Representatives and all other departments to ensure a close, long-term relationship with our clients.",
     "All of my responsibilities relate to helping our clients solve their business, clinical, and analytics challenges."]},
-    {title:"Sales Engineering Intern",company:"InterSystems Corporation",date:"May 2017- August 2018 (Summers Only)",desc:["I designed and built Angular web applications which utilized InterSystems Natural Language Processing to enhance the experience of a clinician viewing a patient's medical records.",
+    {title:"Sales Engineering Intern",company:"InterSystems Corporation",date:"May 2017 - August 2018 (Summers Only)",desc:["I designed and built Angular web applications which utilized InterSystems Natural Language Processing to enhance the experience of a clinician viewing a patient's medical records.",
     "I presented and demonstrated the applications I built to an audience of InterSystems employees at the conclusion of each internship."]}];
 
     $scope.projectList = [{title:"Intelligent Chart Review",company:"InterSystems",desc:"I designed and built an Angular web application that utilizes InterSystems Natural Language Processing to analyze and report on both the structured and unstructured data within a patient's medical record."},
     {title:"Autonomously Docking Rover",company:"Terrafugia",desc:"Terrafugia required a way to perform the docking process between rover and the flying vehicle for the TF-2 in an automatic, repeatable, and efficient manner without GPS. With a team of two electrical engineering students and two computer science students (including myself), we built a rover with a robust sensor package and implemented a program to maneuver the rover autonomously to its docking station."}];
+
+    $scope.resumeScroll = function(targetDiv) {
+        document.getElementById(targetDiv).scrollIntoView();
+        document.getElementById("profExpCircle").style.background = "";
+        document.getElementById("skillsCircle").style.background = "";
+        document.getElementById("projectsCircle").style.background = "";
+        document.getElementById(targetDiv + "Circle").style.background = "#000000";
+    }
 
 });
 /*create directive - must use camel case when defining and use dashes

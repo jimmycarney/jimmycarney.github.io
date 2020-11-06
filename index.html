@@ -25,6 +25,20 @@
         <!--HOME PAGE-->
 
         <div id="home" class="center-content" ng-show="home">
+            <div id = "resumeNav">
+                <div class = "resumeNavItem" ng-click = "resumeScroll('profExp')">
+                    <div id = "profExpCircle" class = "resumeNavCircle"></div>
+                    <p>Professional<br />Experience</p>
+                </div>
+                <div class = "resumeNavItem" ng-click = "resumeScroll('skills')">
+                    <div id = "skillsCircle" class = "resumeNavCircle"></div>
+                    <p>Skills</p>
+                </div>
+                <div class = "resumeNavItem" ng-click = "resumeScroll('projects')">
+                    <div id = "projectsCircle" class = "resumeNavCircle"></div>
+                    <p>Projects</p>
+                </div>
+            </div>
             <p>Jimmy Carney</p>
             <div id = "profExp" class = "resumeSection">
                 <p class = "resumeTitle">Professional Experience</p>

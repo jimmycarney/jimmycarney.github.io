@@ -50,6 +50,29 @@ body{
     /*width: 1200px;*/
     text-align: center;
 }
+#resumeNav{
+    position: fixed;
+    left: 0;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+.resumeNavItem p{
+    display: inline;
+    text-align: right;
+}
+.resumeNavItem{
+    display: block;
+    margin-bottom: 10px;
+}
+.resumeNavCircle{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
 .resumeSection{
     display: block;
     text-align: left;
@@ -58,6 +81,9 @@ body{
 .resumeSection{
     font-size: 20px;
 }
+.resumeSection li{
+    margin-bottom: 10px;
+}
 .resumeTitle{
     font-size: 24px;
     font-weight: bold;
@@ -65,6 +91,7 @@ body{
 }
 .jobTitle p{
     display: inline;
+    margin-right: 20px;
 }
 .skillList{
     display: inline-block;
