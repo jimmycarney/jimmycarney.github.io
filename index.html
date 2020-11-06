@@ -26,7 +26,43 @@
 
         <div id="home" class="center-content" ng-show="home">
             <p>Jimmy Carney</p>
-            <p>Sales Engineer -- InterSystems Corporation</p>
+            <div id = "skills" class = "resumeSection">
+                <p class = "resumeTitle">Skills</p>
+                <div>
+                    <p>Professional Skills</p>
+                    <ul>
+                        <li ng-repeat = "item in profSkills">{{item}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Programming Languages & Technologies</p>
+                    <ul>
+                        <li ng-repeat = "item in progLanguages">{{item}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id = "profExp" class = "resumeSection">
+                <p class = "resumeTitle">Professional Experience</p>
+                <div ng-repeat = "job in profExperience">
+                    <div class = jobTitle>
+                        <p>{{job.title}}</p>
+                        <p>&bull;</p>
+                        <p>{{job.company}}</p>
+                        <p>&bull;</p>
+                        <p>{{job.date}}</p>
+                    </div>
+                    <ul>
+                        <li ng-repeat = "item in job.desc">{{item}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id = "projects" class = "resumeSection">
+                <p class = "resumeTitle">Projects</p>
+                <div ng-repeat = "project in projectList">
+                    <p>{{project.title}}</p>
+                    <p>{{project.desc}}</p>
+                </div>
+            </div>
         </div>
 
         <!--END OF HOME PAGE-->
