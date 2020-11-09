@@ -51,7 +51,8 @@ body{
     text-align: center;
 }
 #name{
-    font-size: 28px;
+    font-size: 54px;
+    margin-bottom: 0px;
 }
 #resumeNav{
     position: fixed;
@@ -80,6 +81,7 @@ body{
     display: block;
     text-align: left;
     margin-bottom: 100px;
+    padding-top: 20px;
 }
 .resumeSection{
     font-size: 20px;
