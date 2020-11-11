@@ -24,11 +24,11 @@
 
         <!--HOME PAGE-->
 
-        <div id="home" class="center-content" ng-show="home">
+        <div id="home" ng-show="home">
             <div id = "resumeNav">
                 <div class = "resumeNavItem" ng-click = "resumeScroll('profExp')">
                     <div id = "profExpCircle" class = "resumeNavCircle"></div>
-                    <p>Professional<br />Experience</p>
+                    <p>Experience</p>
                 </div>
                 <div class = "resumeNavItem" ng-click = "resumeScroll('skills')">
                     <div id = "skillsCircle" class = "resumeNavCircle"></div>
@@ -39,42 +39,59 @@
                     <p>Projects</p>
                 </div>
             </div>
-            <p id = "name">Jimmy Carney</p>
+            <div id = "intro">
+                <p id = "name">Jimmy Carney</p>
+                <p>Engineer</p>
+                <p>Programmer</p>
+                <p>Idiot</p>
+                <img src = "catlogo.png" />
+            </div>
             <div id = "profExp" class = "resumeSection">
-                <p class = "resumeTitle">Professional Experience</p>
-                <div ng-repeat = "job in profExperience">
-                    <div class = jobTitle>
-                        <p>{{job.title}}</p>
-                        <p>&bull;</p>
-                        <p>{{job.company}}</p>
-                        <p>&bull;</p>
-                        <p>{{job.date}}</p>
+                <div class = "center-content">
+                    <p class = "resumeTitle">Experience</p>
+                    <div ng-repeat = "job in profExperience" class = "jobDiv">
+                        <!-- <div class = jobTitle>
+                            <p>{{job.title}}</p>
+                            <p>&bull;</p>
+                            <p>{{job.company}}</p>
+                            <p>&bull;</p>
+                            <p>{{job.date}}</p>
+                        </div> -->
+                        <div class = "jobDetails">
+                            <p id = "jobCompany">{{job.company}}</p>
+                            <p id = "jobDate">{{job.date}}</p>
+                        </div>
+                        <p id = "jobPosition">{{job.title}}</p>
+                        <ul>
+                            <li ng-repeat = "item in job.desc">{{item}}</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li ng-repeat = "item in job.desc">{{item}}</li>
-                    </ul>
                 </div>
             </div>
             <div id = "skills" class = "resumeSection">
-                <p class = "resumeTitle">Skills</p>
-                <div class = "skillList">
-                    <p>Professional Skills</p>
-                    <ul>
-                        <li ng-repeat = "item in profSkills">{{item}}</li>
-                    </ul>
-                </div>
-                <div class = "skillList">
-                    <p>Programming Languages & Technologies</p>
-                    <ul>
-                        <li ng-repeat = "item in progLanguages">{{item}}</li>
-                    </ul>
+                <div class = "center-content">
+                    <p class = "resumeTitle">Skills</p>
+                    <div class = "skillList">
+                        <p>Professional Skills</p>
+                        <ul>
+                            <li ng-repeat = "item in profSkills">{{item}}</li>
+                        </ul>
+                    </div>
+                    <div class = "skillList">
+                        <p>Programming Languages & Technologies</p>
+                        <ul>
+                            <li ng-repeat = "item in progLanguages">{{item}}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id = "projects" class = "resumeSection">
-                <p class = "resumeTitle">Projects</p>
-                <div ng-repeat = "project in projectList">
-                    <p>{{project.title}}</p>
-                    <p>{{project.desc}}</p>
+                <div class = "center-content">
+                    <p class = "resumeTitle">Projects</p>
+                    <div ng-repeat = "project in projectList">
+                        <p class = "projectTitle">{{project.title}}</p>
+                        <p class = "projectDesc">{{project.desc}}</p>
+                    </div>
                 </div>
             </div>
         </div>
