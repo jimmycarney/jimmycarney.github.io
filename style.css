@@ -52,13 +52,18 @@ body{
     width: 100%;
 }
 #intro{
-    height: 600px
+    height: 600px;
 }
 #name{
     font-size: 54px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+}
+#keyWords p{
+    display: inline;
+    margin-right: 10px;
 }
 #logoImage{
+    margin-top: 20px;
     height: 250px;
 }
 #resumeNav{
