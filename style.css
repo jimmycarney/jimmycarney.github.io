@@ -49,6 +49,7 @@ body{
 #home{
     /*width: 1200px;*/
     text-align: center;
+    width: 100%;
 }
 #intro{
     height: 600px
@@ -56,6 +57,9 @@ body{
 #name{
     font-size: 54px;
     margin-bottom: 0px;
+}
+#logoImage{
+    height: 250px;
 }
 #resumeNav{
     position: fixed;
