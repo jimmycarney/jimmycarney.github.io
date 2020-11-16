@@ -26,6 +26,10 @@
 
         <div id="home" ng-show="home">
             <div id = "resumeNav">
+                <div class = "resumeNavItem" ng-click = "resumeScroll('about')">
+                    <div id = "aboutCircle" class = "resumeNavCircle"></div>
+                    <p>About Me</p>
+                </div>
                 <div class = "resumeNavItem" ng-click = "resumeScroll('profExp')">
                     <div id = "profExpCircle" class = "resumeNavCircle"></div>
                     <p>Experience</p>
@@ -39,7 +43,7 @@
                     <p>Projects</p>
                 </div>
             </div>
-            <div id = "intro">
+            <div id = "about">
                 <p id = "name">Jimmy Carney</p>
                 <div id = "keyWords">
                     <p>Engineer</p>
@@ -106,6 +110,7 @@
 
         <div id="movies" class="center-content" ng-show="movies">
             <p id = "movieFilterButton" ng-click = "toggleMovieFilter()">Filters</p>
+            <p id = "randomMovieButton" ng-click = "randomMovie()">Random</p>
             <div id = "movieFiltering" ng-show = "showMovieFilter">
                 <div id = "movieDropdown">
                     <label for = "genre">Genre</label>
@@ -138,6 +143,7 @@
                 <p ng-bind = "genreDisplay"></p>
             </div>
             <div id = "moviePopup" ng-show = "showPopup" ng-click = "hidePopup()">
+                <p id = "jimmyMovieRating" ng-bind = "jimmyMovieRating"></p>
                 <img id = "moviePoster" src="">
                 <div id = "movieInfo">
                     <p ng-bind = "movieTitle"></p>
@@ -157,7 +163,8 @@
             </div>
             <div class = "movieList">
                 <!-- <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: (genreFilter || '') && {genre:movieGenre}" class = "movieTitle" ng-click = "testMovieAPI(movie.title)"> -->
-                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: movieFilter" class = "movieTitle" ng-click = "testMovieAPI(movie.title, movie.year)">
+                <!-- <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: movieFilter" class = "movieTitle" ng-click = "testMovieAPI(movie.title, movie.year)"> -->
+                <div ng-repeat = "movie in moviesList | orderBy: '-rating' | filter: movieFilter" class = "movieTitle" ng-click = "testMovieAPI(movie)">
                     <img ng-src = "{{movie.imageSrc}}" />
                     <p>{{movie.title}} ({{movie.rating}}%)</p>
                 </div>
@@ -212,7 +219,7 @@
                 <p ng-bind = "tvPlot"></p>
             </div>
             <div class = "showList">
-                <div ng-repeat = "show in tvShowList | orderBy: '-rating' | filter: tvFilter" class = "showTitle" ng-click = "getShowInfo(show.title, show.year)">
+                <div ng-repeat = "show in tvShowList | orderBy: '-rating' | filter: tvFilter" class = "showTitle" ng-click = "getShowInfo(show)">
                     <img ng-src = "{{show.imageSrc}}" />
                     <p>{{show.title}}</p>
                 </div>

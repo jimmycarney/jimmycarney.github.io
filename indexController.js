@@ -118,7 +118,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'The Hunger Games',genre:'fantasy',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjA4NDg3NzYxMF5BMl5BanBnXkFtZTcwNTgyNzkyNw@@._V1_SX300.jpg'},{title:'The Hunger Games: Catching Fire',genre:'fantasy',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_SX300.jpg'},{title:'The Hunger Games: Mockingjay - Part 1',genre:'fantasy',rating:62,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_SX300.jpg'},{title:'The Hunger Games: Mockingjay - Part 2',genre:'fantasy',rating:55,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjQzNDI2NTU1Ml5BMl5BanBnXkFtZTgwNTAyMDQ5NjE@._V1_SX300.jpg'},{title:'Pirates of the Caribbean: The Curse of the Black Pearl',genre:'fantasy',rating:73,imageSrc:'https://m.media-amazon.com/images/M/MV5BNGYyZGM5MGMtYTY2Ni00M2Y1LWIzNjQtYWUzM2VlNGVhMDNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'},
     {title:"Pirates of the Caribbean: Dead Man's Chest",genre:'fantasy',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_SX300.jpg'},{title:"Pirates of the Caribbean: At World's End",genre:'fantasy',rating:67,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjIyNjkxNzEyMl5BMl5BanBnXkFtZTYwMjc3MDE3._V1_SX300.jpg'},{title:'Pirates of the Caribbean: On Stranger Tides',genre:'fantasy',rating:38,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE5MjkwODI3Nl5BMl5BanBnXkFtZTcwNjcwMDk4NA@@._V1_SX300.jpg'},{title:'Spy Kids',genre:'action',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2JhODU1NmQtNjllYS00ZmQwLWEwZjYtMTE5NjA1M2YyMzdjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Spy Kids 2: Island of Lost Dreams',genre:'action',rating:62,imageSrc:'https://m.media-amazon.com/images/M/MV5BNWM2N2JjYzYtYWIyNS00NDc3LWFkNDctMmYwOWQyZTcxYjZhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},
     {title:'Spy Kids 3-D: Game Over',genre:'action',rating:56,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI4MTQyNTUzMF5BMl5BanBnXkFtZTcwNzE2MDAwMQ@@._V1_SX300.jpg'},{title:'Die Hard 2',genre:'action',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BMzMzYzk3ZTEtZDg0My00MTY5LWE3ZmQtYzNhYjhjN2RhZGRjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'Big Fish',genre:'fantasy',rating:68,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmU3NzIyODctYjVhOC00NzBmLTlhNWItMzBlODEwZTlmMjUzXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg'},{title:'Van Wilder',genre:'comedy',rating:30,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTM4YjQxYzAtNzAyNy00Zjk1LTk4ZTMtNTUwNTBjMWY1M2IwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Sucker Punch',genre:'action',rating:27,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDEwNGRlNjQtZjI4OC00ZmMxLWEyYmQtNGI1NDk4YmUyYTNkXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg'},
-    {title:'Fright Night',genre:'thriller',rating:69,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU2MDc0NDY0M15BMl5BanBnXkFtZTcwOTgzMTYyNQ@@._V1_SX300.jpg'},{title:'Like Mike',genre:'comedy',rating:50,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDU4ZDdjN2EtZWE1MS00OGQ2LWEzNGEtMDhlOGE5YTg3NDlmXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_SX300.jpg'},{title:'Like Mike 2: Streetball',genre:'comedy',rating:45,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzNjMxOTMxNF5BMl5BanBnXkFtZTgwODkyNjAwNzE@._V1_SX300.jpg'},{title:'Anger Management',genre:'comedy',rating:39,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDg1YTNiODItZGYyOC00NGIwLWI3MjYtMTY3NDQ0ZDIwYjBiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Rebound',genre:'comedy',rating:20,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzMTU0ODM4MV5BMl5BanBnXkFtZTYwODY2ODM3._V1_SX300.jpg'},,
+    {title:'Fright Night',genre:'thriller',rating:69,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU2MDc0NDY0M15BMl5BanBnXkFtZTcwOTgzMTYyNQ@@._V1_SX300.jpg'},{title:'Like Mike',genre:'comedy',rating:50,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDU4ZDdjN2EtZWE1MS00OGQ2LWEzNGEtMDhlOGE5YTg3NDlmXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_SX300.jpg'},{title:'Like Mike 2: Streetball',genre:'comedy',rating:45,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzNjMxOTMxNF5BMl5BanBnXkFtZTgwODkyNjAwNzE@._V1_SX300.jpg'},{title:'Anger Management',genre:'comedy',rating:39,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDg1YTNiODItZGYyOC00NGIwLWI3MjYtMTY3NDQ0ZDIwYjBiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Rebound',genre:'comedy',rating:20,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzMTU0ODM4MV5BMl5BanBnXkFtZTYwODY2ODM3._V1_SX300.jpg'},
     {title:'Shrek',genre:'comedy',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Shrek 2',genre:'comedy',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDJhMGRjN2QtNDUxYy00NGM3LThjNGQtMmZiZTRhNjM4YzUxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Shrek the Third',genre:'comedy',rating:60,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTgyMjc3ODk2MV5BMl5BanBnXkFtZTcwMjY0MjEzMw@@._V1_SX300.jpg'},{title:'Toy Story',genre:'comedy',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_SX300.jpg'},{title:'Toy Story 3',genre:'comedy',rating:90,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg'},
     {title:'Finding Nemo',genre:'comedy',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Speed Racer',genre:'action',rating:42,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWU4Y2RhYzMtYzIxZC00NmRlLTk0OTctNDg1NTg5Yjk4YjQzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Crazy, Stupid, Love',genre:'comedy',rating:74,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1_SX300.jpg'},{title:'Foxcatcher',genre:'drama',rating:75,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ2MjQxNjYxOV5BMl5BanBnXkFtZTgwMzIwODUxMzE@._V1_SX300.jpg'},
     {title:'Get Smart',genre:'comedy',rating:55,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY0NzQ4MDU0NV5BMl5BanBnXkFtZTcwMzA2NzQ2MQ@@._V1_SX300.jpg'},{title:'The Pink Panther',genre:'comedy',rating:43,imageSrc:'https://m.media-amazon.com/images/M/MV5BNGI2MjVlNzEtZDg1ZS00MGU1LWFhNTQtNzMwZDViOWRkNzhkXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg'},{title:'8 Mile',genre:'drama',rating:79,imageSrc:'https://m.media-amazon.com/images/M/MV5BOWI3MDIzZmYtN2Y3MC00YTljLWFiYmYtNWIzMjg1ZWQ1ODlhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Little Miss Sunshine',genre:'comedy',rating:78,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzNTgzODU0NV5BMl5BanBnXkFtZTcwMjEyMjMzMQ@@._V1_SX300.jpg'},{title:'Almost Famous',genre:'drama',rating:78,imageSrc:'https://m.media-amazon.com/images/M/MV5BMzY1ZjMwMGEtYTY1ZS00ZDllLTk0ZmUtYzA3ZTA4NmYwNGNkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},
@@ -317,16 +317,23 @@ app.controller('myCtrl', function($scope, $http) {
 
     //testMovieAPI takes in a movie title, calls the movie info API
     //for that title, and sets the popup variables
-    $scope.testMovieAPI = function(title, year) {
-        if (typeof year == 'undefined') {
-            year = '';
+    $scope.testMovieAPI = function(movie) {
+        if (typeof movie.year == 'undefined') {
+            movie.year = '';
         }
         $http({
             method: 'GET',
-            url: "https://www.omdbapi.com/?t=" + title + '&y=' + year + "&apikey=8f59097f"
+            url: "https://www.omdbapi.com/?t=" + movie.title + '&y=' + movie.year + "&apikey=8f59097f"
         }).then(function success(response) {
+            var rating = $scope.moviesList.find(
+                /*item  => (item.title == movie.title)*/
+                function(item) {
+                    return (item.title == movie.title);
+                }
+            ).rating;
+            $scope.jimmyMovieRating = rating + "%";
             document.getElementById("moviePoster").src = response.data.Poster;
-            alert(response.data.Poster);
+            //alert(response.data.Poster);
             $scope.movieTitle = response.data.Title;
             $scope.movieRating = response.data.Rated;
             $scope.movieRuntime = response.data.Runtime;
@@ -344,6 +351,11 @@ app.controller('myCtrl', function($scope, $http) {
         function error(response){
             alert("error!");
         });
+    }
+
+    $scope.randomMovie = function() {
+        var movie = $scope.moviesList[Math.floor(Math.random() * $scope.moviesList.length)];
+        $scope.testMovieAPI(movie);
     }
 
     //varaible that tracks whether or not the tv show popup is showing
@@ -375,16 +387,16 @@ app.controller('myCtrl', function($scope, $http) {
 
     //getShowInfo takes in a tv show title, calls the movie info API
     //for that title, and sets the popup variables
-    $scope.getShowInfo = function(title, year) {
-        if (typeof year == 'undefined') {
-            year = '';
+    $scope.getShowInfo = function(show) {
+        if (typeof show.year == 'undefined') {
+            show.year = '';
         }
         $http({
             method: 'GET',
-            url: "https://www.omdbapi.com/?t=" + title + '&y=' + year + "&apikey=8f59097f"
+            url: "https://www.omdbapi.com/?t=" + show.title + '&y=' + show.year + "&apikey=8f59097f"
         }).then(function success(response) {
             document.getElementById("tvPoster").src = response.data.Poster;
-            alert(response.data.Poster);
+            //alert(response.data.Poster);
             $scope.tvTitle = response.data.Title;
             $scope.tvDate = response.data.Year;
             $scope.tvRating = response.data.Rated;
@@ -695,10 +707,37 @@ app.controller('myCtrl', function($scope, $http) {
 
     $scope.resumeScroll = function(targetDiv) {
         document.getElementById(targetDiv).scrollIntoView();
-        document.getElementById("profExpCircle").style.background = "";
-        document.getElementById("skillsCircle").style.background = "";
-        document.getElementById("projectsCircle").style.background = "";
-        document.getElementById(targetDiv + "Circle").style.background = "#000000";
+    }
+
+    window.addEventListener('scroll', function() {
+        $scope.homeScroll();
+    }, false);
+
+    $scope.homeScroll = function() {
+        if (window.scrollY < 600) {
+            document.getElementById("aboutCircle").style.background = "#000000";
+            document.getElementById("profExpCircle").style.background = "";
+            document.getElementById("skillsCircle").style.background = "";
+            document.getElementById("projectsCircle").style.background = "";
+        }
+        else if (window.scrollY > 600 && window.scrollY < 1400) {
+            document.getElementById("aboutCircle").style.background = "";
+            document.getElementById("profExpCircle").style.background = "#000000";
+            document.getElementById("skillsCircle").style.background = "";
+            document.getElementById("projectsCircle").style.background = "";
+        }
+        else if (window.scrollY > 1400 && window.scrollY < 2100) {
+            document.getElementById("aboutCircle").style.background = "";
+            document.getElementById("profExpCircle").style.background = "";
+            document.getElementById("skillsCircle").style.background = "#000000";
+            document.getElementById("projectsCircle").style.background = "";
+        }
+        else if (window.scrollY > 2100) {
+            document.getElementById("aboutCircle").style.background = "";
+            document.getElementById("profExpCircle").style.background = "";
+            document.getElementById("skillsCircle").style.background = "";
+            document.getElementById("projectsCircle").style.background = "#000000";
+        }
     }
 
 });
