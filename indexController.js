@@ -353,6 +353,8 @@ app.controller('myCtrl', function($scope, $http) {
         });
     }
 
+    //randomMovie selects a random movie from the moviesList array and calls the testMovieAPI
+    //function to get the movie info and populate the popup
     $scope.randomMovie = function() {
         var movie = $scope.moviesList[Math.floor(Math.random() * $scope.moviesList.length)];
         $scope.testMovieAPI(movie);
@@ -690,11 +692,14 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showDndPopup = (!$scope.showDndPopup);
     }
 
+    //array holds all professional skills
     $scope.profSkills = ["Object-Oriented Programming","Full-Stack Application Development","Technical Writing","Technical Sales",
     "Healthcare Protocols","Public Speaking"];
 
+    //array holds all programming languages and technology proficiencies 
     $scope.progLanguages = ["JavaScript","C++","HTML","CSS","Java","C","ObjectScript","SQL","JSON","XML","Angular","InterSystems Products","Command Line Interface"];
 
+    //array of professional experience objects
     $scope.profExperience = [{title:"Sales Engineer",company:"InterSystems Corporation",date:"July 2019 - Present",desc:["I work with clinical software development and healthcare organizations in the U.S. to expand use and understanding of InterSystems' technologies in the areas of clinical data aggregation and exchange, analytics, artificial intelligence, and machine learning.",
     "I provide guidance, mentoring, and support to many InterSystems' healthcare clients including Vanderbilt University Medical Center, Rhodes Group, and Atlantic Health.",
     "My primary responsibilities include: Recommending technical application, integration, database, and deployment architectures; Designing, building, and presenting Proofs of Concept (PoCs) to prospects and partners; Building and delivering targeted technical sales presentations and demonstrations; Coordinating with InterSystems' Account Representatives and all other departments to ensure a close, long-term relationship with our clients.",
@@ -702,17 +707,22 @@ app.controller('myCtrl', function($scope, $http) {
     {title:"Sales Engineering Intern",company:"InterSystems Corporation",date:"May 2017 - August 2018",desc:["I designed and built Angular web applications which utilized InterSystems Natural Language Processing to enhance the experience of a clinician viewing a patient's medical records.",
     "I presented and demonstrated the applications I built to an audience of InterSystems employees at the conclusion of each internship."]}];
 
+    //array of project objects
     $scope.projectList = [{title:"Intelligent Chart Review",company:"InterSystems",desc:"I designed and built an Angular web application that utilizes InterSystems Natural Language Processing to analyze and report on both the structured and unstructured data within a patient's medical record."},
     {title:"Autonomously Docking Rover",company:"Terrafugia",desc:"Terrafugia required a way to perform the docking process between rover and the flying vehicle for the TF-2 in an automatic, repeatable, and efficient manner without GPS. With a team of two electrical engineering students and two computer science students (including myself), we built a rover with a robust sensor package and implemented a program to maneuver the rover autonomously to its docking station."}];
 
+    //resumeScroll scrolls the window to whatever is clicked in the navigation
     $scope.resumeScroll = function(targetDiv) {
         document.getElementById(targetDiv).scrollIntoView();
     }
 
+    //on scroll call the homeScroll function
     window.addEventListener('scroll', function() {
         $scope.homeScroll();
     }, false);
 
+    //homeScroll changes which navigation circle is filled in depending on where the page
+    //is scrolled to
     $scope.homeScroll = function() {
         if (window.scrollY < 600) {
             document.getElementById("aboutCircle").style.background = "#000000";
