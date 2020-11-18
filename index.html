@@ -110,7 +110,7 @@
 
         <div id="movies" class="center-content" ng-show="movies">
             <p id = "movieFilterButton" ng-click = "toggleMovieFilter()">Filters</p>
-            <p id = "randomMovieButton" ng-click = "randomMovie()">Random</p>
+            <!-- <p id = "randomMovieButton" ng-click = "randomMovie()">Random</p> -->
             <div id = "movieFiltering" ng-show = "showMovieFilter">
                 <div id = "movieDropdown">
                     <label for = "genre">Genre</label>
@@ -129,6 +129,7 @@
                     <label for = "movieTitle">Movie Title</label>
                     <input name = "movieTitle" type = "text" ng-model = "moviePageKey">
                 </div>
+                <p id = "randomMovieButton" ng-click = "randomMovie()">Random Movie</p>
             </div>
             <!-- <div id = "movieTabs">
                 <p ng-click = "selectGenre('all')" id = "allTab">All</p>

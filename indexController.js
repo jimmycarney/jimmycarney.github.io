@@ -328,7 +328,7 @@ app.controller('myCtrl', function($scope, $http) {
             var rating = $scope.moviesList.find(
                 /*item  => (item.title == movie.title)*/
                 function(item) {
-                    return (item.title == movie.title);
+                    return (item.title == movie.title && item.year == movie.year);
                 }
             ).rating;
             $scope.jimmyMovieRating = rating + "%";
@@ -356,7 +356,9 @@ app.controller('myCtrl', function($scope, $http) {
     //randomMovie selects a random movie from the moviesList array and calls the testMovieAPI
     //function to get the movie info and populate the popup
     $scope.randomMovie = function() {
-        var movie = $scope.moviesList[Math.floor(Math.random() * $scope.moviesList.length)];
+        var filteredList = $scope.moviesList.filter($scope.movieFilter);
+        //var movie = $scope.moviesList[Math.floor(Math.random() * $scope.moviesList.length)];
+        var movie = filteredList[Math.floor(Math.random() * filteredList.length)];
         $scope.testMovieAPI(movie);
     }
 
@@ -693,7 +695,7 @@ app.controller('myCtrl', function($scope, $http) {
     }
 
     //array holds all professional skills
-    $scope.profSkills = ["Object-Oriented Programming","Full-Stack Application Development","Technical Writing","Technical Sales",
+    $scope.profSkills = ["Object-Oriented Programming","Full-Stack Application Development","Web Programming","Technical Writing","Technical Sales",
     "Healthcare Protocols","Public Speaking"];
 
     //array holds all programming languages and technology proficiencies 
