@@ -467,3 +467,16 @@ table{
     margin-right: 20px;
     margin-top: -20px;
 }
+#morseCodeEnglish{
+    width: 300px;
+    height: 100px;
+}
+#morseCodeButton{
+    display: inline;
+    cursor: pointer;
+    text-align: center;
+    width: 70px;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
