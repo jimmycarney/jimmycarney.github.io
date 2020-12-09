@@ -150,7 +150,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'Robots',genre:'comedy',rating:57,imageSrc:'https://m.media-amazon.com/images/M/MV5BZmJhNTQwY2MtYTU0Yy00NDVhLThiZTktNmMxZTk5Nzk3NzE2XkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg'},{title:'Stormbreaker',genre:'action',rating:26,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjAwODY1NzAzNF5BMl5BanBnXkFtZTYwODUxNDc3._V1_SX300.jpg'},{title:'Sex Drive',genre:'comedy',rating:31,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE0MTcyMzg5M15BMl5BanBnXkFtZTcwMDUyOTA4MQ@@._V1_SX300.jpg'},{title:'Rugrats in Paris',genre:'comedy',rating:68,imageSrc:'https://m.media-amazon.com/images/M/MV5BM2E0ZjhkM2YtZjNjMy00YjhiLWJlZDEtNDEwZThkM2VmMDU5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Aladdin',genre:'comedy',rating:84,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2Q2NDI1MjUtM2Q5ZS00MTFlLWJiYWEtNTZmNjQ3OGJkZDgxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg'},
     {title:'John Tucker Must Die',genre:'comedy',rating:29,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI3MDkwODQ3OV5BMl5BanBnXkFtZTcwNTE4NDQzMQ@@._V1_SX300.jpg'},{title:'College',genre:'comedy',rating:3,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTc4Mjc1NzIxOF5BMl5BanBnXkFtZTcwMjEzMjc3MQ@@._V1_SX300.jpg'},{title:'The Smurfs',genre:'comedy',rating:19,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDUyMmFiYTctZDcyYS00OGY4LTk1ZmYtZjBmODBlZTc1NjU4XkEyXkFqcGdeQXVyNTk1MTAyODc@._V1_SX300.jpg'},{title:'BASEketball',genre:'comedy',rating:29,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmZjZDg2ZjItYTVkNC00YWRmLThmZTMtNTYxNTI5MWM4NjU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'A Christmas Story',genre:'comedy',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BOWMyNjE0MzEtMzVjNy00NjIxLTg0ZjMtMWJhNGI1YmVjYTczL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg'},
     {title:'42',genre:'drama',rating:0,imageSrc:''},{title:'Ice Age',genre:'comedy',rating:0,imageSrc:''},{title:'Big Hero 6',genre:'scifi',rating:0,imageSrc:''},{title:'Eagle Eye',genre:'action',rating:0,imageSrc:''},{title:'Vantage Point',genre:'action',rating:0,imageSrc:''},{title:'Eragon',genre:'fantasy',rating:0,imageSrc:''},
-    {title:'Friday the 13th',genre:'thriller',rating:0,imageSrc:''},{title:'The Lego Batman Movie',genre:'comedy',rating:0,imageSrc:''},{title:'Police Academy',genre:'comedy',rating:0,imageSrc:''},{title:'Revenge of the Nerds',genre:'comedy',rating:0,imageSrc:0}];
+    {title:'Friday the 13th',genre:'thriller',rating:0,imageSrc:''},{title:'The Lego Batman Movie',genre:'comedy',rating:0,imageSrc:''},{title:'Police Academy',genre:'comedy',rating:0,imageSrc:''},{title:'Revenge of the Nerds',genre:'comedy',rating:0,imageSrc:0},{title:'Isle of Dogs',genre:'comedy',rating:81}];
 
     //alert($scope.moviesList.length);
 
@@ -212,6 +212,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.tvShows = false;
     $scope.sports = false;
     $scope.dnd = false;
+    $scope.travel = false;
 
     //loadContent takes in a tab name and displays that tab content
     //while hiding all other content, and changes the styling of the selected tab
@@ -227,6 +228,7 @@ app.controller('myCtrl', function($scope, $http) {
         document.getElementById('showsTab').style.textDecoration = "";
         document.getElementById('sportsTab').style.textDecoration = "";
         document.getElementById('dndTab').style.textDecoration = "";
+        document.getElementById('travelTab').style.textDecoration = "";
         document.getElementById(tabName + 'Tab').style.textDecoration = "underline";
         document.getElementById(tabName + 'Tab').style.textUnderlineOffset = "10px";
         if (tabName == 'home') {
@@ -235,6 +237,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.tvShows = false;
             $scope.sports = false;
             $scope.dnd = false;
+            $scope.travel = false;
         }
         else if (tabName == 'movies') {
             $scope.home = false;
@@ -242,6 +245,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.tvShows = false;
             $scope.sports = false;
             $scope.dnd = false;
+            $scope.travel = false;
         }
         else if (tabName == 'sports') {
             $scope.home = false;
@@ -249,6 +253,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.tvShows = false;
             $scope.sports = true;
             $scope.dnd = false;
+            $scope.travel = false;
         }
         else if (tabName == 'shows'){
             $scope.home = false;
@@ -256,15 +261,24 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.tvShows = true;
             $scope.sports = false;
             $scope.dnd = false;
+            $scope.travel = false;
         }
-        else {
+        else if (tabName == 'dnd') {
             $scope.home = false;
             $scope.movies = false;
             $scope.tvShows = false;
             $scope.sports = false;
             $scope.dnd = true;
+            $scope.travel = false;
         }
-        
+        else if (tabName == 'travel') {
+            $scope.home = false;
+            $scope.movies = false;
+            $scope.tvShows = false;
+            $scope.sports = false;
+            $scope.dnd = false;
+            $scope.travel = true;
+        }
     }
 
     //variable that holds list of movie genres
@@ -712,6 +726,88 @@ app.controller('myCtrl', function($scope, $http) {
         }
         document.getElementById("morseCodeTranslated").innerHTML = translated;
     }
+    
+    $scope.cities = [{name:"Wilmington, DE", lonlat:[-75.55,39.74]},{name:"Cambridge, MA", lonlat:[-71.11,42.37]},
+    {name:"Nashville, TN", lonlat:[-86.78, 36.16]}];
+
+    $scope.initMap = function() {
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+              new ol.layer.Tile({
+                source: new ol.source.OSM()
+              })
+            ],
+            view: new ol.View({
+              center: ol.proj.fromLonLat([-71.11, 42.37]),
+              zoom: 4
+            })
+          });
+        /*for (var i = 0; i < $scope.cities.length; i++) {
+            var layer = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    features: [
+                        new ol.Feature({
+                            geometry: new ol.geom.Point(ol.proj.fromLonLat($scope.cities[i].lonlat))
+                        })
+                    ]
+                })
+            })
+        }*/
+        var layer = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        //Cambridge, MA
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.11, 42.37]))
+                    }),
+                    new ol.Feature({
+                        //Wilmington, DE
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.55, 39.74]))
+                    }),
+                    new ol.Feature({
+                        //Nashville, TN
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-86.78, 36.16]))
+                    }),
+                    new ol.Feature({
+                        //Maui, HI
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-156.33, 20.80]))
+                    }),
+                    new ol.Feature({
+                        //Costa Rica
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.75, 9.75]))
+                    }),
+                    new ol.Feature({
+                        //Domincan Republic
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.16, 18.74]))
+                    }),
+                    new ol.Feature({
+                        //Montreal, CA
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.57, 45.50]))
+                    }),
+                    new ol.Feature({
+                        //Aruba
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-69.97, 12.52]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(layer);
+    }
+
+    $scope.initMap();
+
+    /*Google maps API stuff commented out for now*/
+    /*$scope.initMap = function() {
+        alert("initializing map");
+        var mapOptions = {
+            zoom: 10,
+            center: {lat: -35, lng:151}
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+    $scope.initMap();*/
 
     //array holds all professional skills
     $scope.profSkills = ["Object-Oriented Programming","Full-Stack Application Development","Web Programming","Technical Writing","Technical Sales",

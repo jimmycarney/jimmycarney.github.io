@@ -36,7 +36,7 @@ body{
     padding: 5px;
     /*width: 80px;*/
     /*below is for new style test*/
-    width: 17%;
+    width: 13%;
     margin-right: -5px;
 }
 .tab:hover{
@@ -479,4 +479,10 @@ table{
     padding: 3px;
     border: 1px solid black;
     border-radius: 2px;
+}
+#travel{
+    height: 800px;
+}
+#map{
+    height: 800px;
 }
