@@ -26,6 +26,9 @@
                 <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
                 <p class = "tab" ng-click = "loadContent('dnd')" id = "dndTab">D&D</p>
                 <p class = "tab" ng-click = "loadContent('travel')" id = "travelTab">Travel</p>
+                <div id = "moretab" class = "tab">
+                    <p ng-click = "loadContent('tools')" id = "toolsTab">Tools</p>
+                </div>
             </div>
         </div>
 
@@ -566,11 +569,6 @@
                     </div>
                 </div>
             </div>
-            <div id = "morseCodeTranslator">
-                <textarea id = "morseCodeEnglish" ng-model = "morseCodeEnglish"></textarea>
-                <p id = "morseCodeButton" ng-click = "translateMorseCode()">Translate</p>
-                <p id = "morseCodeTranslated"></p>
-            </div>
         </div>
 
         <!--END OF D&D PAGE-->
@@ -582,6 +580,18 @@
         </div>
 
         <!--END OF TRAVEL PAGE-->
+
+        <!--TOOLS PAGE-->
+        <div id = "tools" class = "center-content" ng-show = "tools">
+            <div id = "morseCodeTranslator">
+                <p>Morse Code Translator</p>
+                <textarea id = "morseCodeEnglish" ng-model = "morseCodeEnglish"></textarea>
+                <p id = "morseCodeButton" ng-click = "translateMorseCode()">Translate</p>
+                <p id = "morseCodeTranslated"></p>
+            </div>
+        </div>
+    
+        <!--END OF TOOLS PAGE-->
 
         <!--EXAMPLE CODE-->
 

@@ -98,7 +98,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'Men in Black 3',genre:'scifi',rating:56,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU2NTYxODcwMF5BMl5BanBnXkFtZTcwNDk1NDY0Nw@@._V1_SX300.jpg'},{title:'John Carter',genre:'scifi',rating:30,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDEwZmIzNjYtNjUwNS00MzgzLWJiOGYtZWMxZGQ5NDcxZjUwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg'},{title:'S.W.A.T.',genre:'action',rating:36,imageSrc:'https://m.media-amazon.com/images/M/MV5BNmIxYTVmMDEtNWU5NS00MWJhLWJjNmQtNjkxNWI3NmY4MzJlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'12 Rounds',genre:'action',rating:30,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU1MzM1ODkxM15BMl5BanBnXkFtZTcwNDY1MTA0Mg@@._V1_SX300.jpg'},{title:'Prince of Persia: The Sands of Time',genre:'fantasy',rating:33,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTMwNDg0NzcyMV5BMl5BanBnXkFtZTcwNjg4MjQyMw@@._V1_SX300.jpg'},
     {title:'Charlie Bartlett',genre:'comedy',rating:66,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUyNTgyNDI2NF5BMl5BanBnXkFtZTcwOTA2NTg1MQ@@._V1_SX300.jpg'},{title:'Due Date',genre:'comedy',rating:32,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU5MTgxODM3Nl5BMl5BanBnXkFtZTcwMjMxNDEwNA@@._V1_SX300.jpg'},{title:'2012',genre:'action',rating:38,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY0MjEyODQzMF5BMl5BanBnXkFtZTcwMTczMjQ4Mg@@._V1_SX300.jpg'},{title:'I Am Number Four',genre:'scifi',rating:18,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjI0NDI1MTMyM15BMl5BanBnXkFtZTcwMDMzMTcyNA@@._V1_SX300.jpg'},{title:'Romeo + Juliet',genre:'drama',rating:63,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGU4YmI1ZGQtZjExYi00M2E0LTgyYTAtNzQ5ZmVlMTk4NzUzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'},
     {title:'Rush Hour',genre:'action',rating:63,imageSrc:'https://m.media-amazon.com/images/M/MV5BYWM2NDZmYmYtNzlmZC00M2MyLWJmOGUtMjhiYmQ2OGU1YTE1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Rush Hour 2',genre:'action',rating:53,imageSrc:'https://m.media-amazon.com/images/M/MV5BODhlNGJjMWQtZGMyYS00MzJhLWJhZGMtY2NlNDI5Nzg5NTU2XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},{title:'Rush Hour 3',genre:'action',rating:50,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTA0Nzg5NjQ0MDBeQTJeQWpwZ15BbWU3MDE4Mzg5NDE@._V1_SX300.jpg'},{title:"Dude, Where's My Car?",genre:'comedy',rating:31,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzRmN2NjNzktOWE1My00NjVlLWFhNjYtZmFkMzM5YTA2ZTFlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:"Wayne's World",genre:'comedy',rating:73,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDAyNDY3MjUtYmJjYS00Zjc5LTlhM2MtNzgzYjNlOWVkZjkzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},
-    {title:"Wayne's World 2",genre:'comedy',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BZTdhODcyMGMtMzg3NC00MTViLWJiZjktZWIyY2NhNWZhYzUxXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg'},{title:'Last Action Hero',genre:'action',rating:36,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjdhOGY1OTktYWJkZC00OGY5LWJhY2QtZmQzZDA2MzY5MmNmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},{title:'Battle: Los Angeles',genre:'action',rating:32,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDg2NzQwOGMtMGRkNC00YjAwLTg4NjgtZWQwYzljZmM1YzA4XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg'},{title:'The Great Gatsby',genre:'drama',rating:47,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg'},{title:'The Rocker',genre:'comedy',rating:41,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTYyMTgzMTQ0MF5BMl5BanBnXkFtZTcwNTE3OTU3MQ@@._V1_SX300.jpg'},
+    {title:"Wayne's World 2",genre:'comedy',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BZTdhODcyMGMtMzg3NC00MTViLWJiZjktZWIyY2NhNWZhYzUxXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg'},{title:'Last Action Hero',genre:'action',rating:46,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjdhOGY1OTktYWJkZC00OGY5LWJhY2QtZmQzZDA2MzY5MmNmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},{title:'Battle: Los Angeles',genre:'action',rating:32,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDg2NzQwOGMtMGRkNC00YjAwLTg4NjgtZWQwYzljZmM1YzA4XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg'},{title:'The Great Gatsby',genre:'drama',rating:47,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg'},{title:'The Rocker',genre:'comedy',rating:41,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTYyMTgzMTQ0MF5BMl5BanBnXkFtZTcwNTE3OTU3MQ@@._V1_SX300.jpg'},
     {title:'The Crucible',genre:'drama',rating:60,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2ZhOTQ5NGUtNDJiYy00ZTM5LWI5MDItNDI3OGZhYzlhZDRhXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg'},{title:'Inherit the Wind',genre:'drama',rating:76,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGQ5ODNkNWYtYTgxZS00YjJkLThhODAtYzUwNGNiYjRmNjdkXkEyXkFqcGdeQXVyMTg2NTc4MzA@._V1_SX300.jpg'},{title:'Space Jam',genre:'comedy',rating:57,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDgyZTI2YmYtZmI4ZC00MzE0LWIxZWYtMWRlZWYxNjliNTJjXkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg'},{title:'Trainwreck',genre:'comedy',rating:64,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ4MjgwNTMyOV5BMl5BanBnXkFtZTgwMTc1MjI0NDE@._V1_SX300.jpg'},{title:'21 Jump Street',genre:'comedy',rating:73,imageSrc:'https://m.media-amazon.com/images/M/MV5BNTZjNzRjMTMtZDMzNy00Y2ZjLTg0OTAtZjVhNzYyZmJjOTljXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg'},
     {title:'22 Jump Street',genre:'comedy',rating:71,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTcwNzAxMDU1M15BMl5BanBnXkFtZTgwNDE2NTU1MTE@._V1_SX300.jpg'},{title:'Ted',genre:'comedy',rating:69,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_SX300.jpg'},{title:'Ted 2',genre:'comedy',rating:55,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjEwMDg3MDk1NF5BMl5BanBnXkFtZTgwNjYyODA1NTE@._V1_SX300.jpg'},{title:'9',genre:'scifi',rating:56,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY2ODE1MTgxMV5BMl5BanBnXkFtZTcwNTM1NTM2Mg@@._V1_SX300.jpg'},{title:'Man of Steel',genre:'superhero',rating:55,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX300.jpg'},
     {title:'South Park: Bigger, Longer, Uncut',genre:'comedy',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGE0ZWI0YzAtY2NkZi00YjkyLWIzYWEtNTJmMzJjODllNjdjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Sky High',genre:'superhero',rating:55,imageSrc:'https://m.media-amazon.com/images/M/MV5BZjA2NmY1OTQtMjE4Mi00NGRkLWFmODUtM2Q3ZTRlYjZhNWYwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Horrible Bosses',genre:'comedy',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzYxNDI5Njc5NF5BMl5BanBnXkFtZTcwMDUxODE1NQ@@._V1_SX300.jpg'},{title:'Horrible Bosses 2',genre:'comedy',rating:43,imageSrc:'https://m.media-amazon.com/images/M/MV5BYzFjYWVhYzYtMDZjNi00ZTc5LTk1MWQtNTBlZTA1MDFhMzY3XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg'},{title:'The Change-Up',genre:'comedy',rating:35,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTk3NTM4NDg3OF5BMl5BanBnXkFtZTcwNDk3MzEwNQ@@._V1_SX300.jpg'},
@@ -149,8 +149,8 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'Jack the Giant Slayer',genre:'fantasy',rating:49,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE1NDMxMjI0OV5BMl5BanBnXkFtZTcwMjQyMDExOQ@@._V1_SX300.jpg'},{title:'Oz the Great and Powerful',genre:'fantasy',rating:39,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjMyMzQ1ODM1MF5BMl5BanBnXkFtZTcwMjE2MTQxOQ@@._V1_SX300.jpg'},{title:'Beauty and the Beast',genre:'fantasy',rating:83,imageSrc:'https://m.media-amazon.com/images/M/MV5BMzE5MDM1NDktY2I0OC00YWI5LTk2NzUtYjczNDczOWQxYjM0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Willy Wonka + the Chocolate Factory',genre:'fantasy',rating:72,year:'1971',imageSrc:'https://m.media-amazon.com/images/M/MV5BZTllNDU0ZTItYTYxMC00OTI4LThlNDAtZjNiNzdhMWZiYjNmXkEyXkFqcGdeQXVyNzY1NDgwNjQ@._V1_SX300.jpg'},{title:'Sinister',genre:'thriller',rating:59,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_SX300.jpg'},
     {title:'Robots',genre:'comedy',rating:57,imageSrc:'https://m.media-amazon.com/images/M/MV5BZmJhNTQwY2MtYTU0Yy00NDVhLThiZTktNmMxZTk5Nzk3NzE2XkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg'},{title:'Stormbreaker',genre:'action',rating:26,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjAwODY1NzAzNF5BMl5BanBnXkFtZTYwODUxNDc3._V1_SX300.jpg'},{title:'Sex Drive',genre:'comedy',rating:31,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE0MTcyMzg5M15BMl5BanBnXkFtZTcwMDUyOTA4MQ@@._V1_SX300.jpg'},{title:'Rugrats in Paris',genre:'comedy',rating:68,imageSrc:'https://m.media-amazon.com/images/M/MV5BM2E0ZjhkM2YtZjNjMy00YjhiLWJlZDEtNDEwZThkM2VmMDU5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Aladdin',genre:'comedy',rating:84,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2Q2NDI1MjUtM2Q5ZS00MTFlLWJiYWEtNTZmNjQ3OGJkZDgxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg'},
     {title:'John Tucker Must Die',genre:'comedy',rating:29,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI3MDkwODQ3OV5BMl5BanBnXkFtZTcwNTE4NDQzMQ@@._V1_SX300.jpg'},{title:'College',genre:'comedy',rating:3,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTc4Mjc1NzIxOF5BMl5BanBnXkFtZTcwMjEzMjc3MQ@@._V1_SX300.jpg'},{title:'The Smurfs',genre:'comedy',rating:19,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDUyMmFiYTctZDcyYS00OGY4LTk1ZmYtZjBmODBlZTc1NjU4XkEyXkFqcGdeQXVyNTk1MTAyODc@._V1_SX300.jpg'},{title:'BASEketball',genre:'comedy',rating:29,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmZjZDg2ZjItYTVkNC00YWRmLThmZTMtNTYxNTI5MWM4NjU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'A Christmas Story',genre:'comedy',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BOWMyNjE0MzEtMzVjNy00NjIxLTg0ZjMtMWJhNGI1YmVjYTczL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg'},
-    {title:'42',genre:'drama',rating:0,imageSrc:''},{title:'Ice Age',genre:'comedy',rating:0,imageSrc:''},{title:'Big Hero 6',genre:'scifi',rating:0,imageSrc:''},{title:'Eagle Eye',genre:'action',rating:0,imageSrc:''},{title:'Vantage Point',genre:'action',rating:0,imageSrc:''},{title:'Eragon',genre:'fantasy',rating:0,imageSrc:''},
-    {title:'Friday the 13th',genre:'thriller',rating:0,imageSrc:''},{title:'The Lego Batman Movie',genre:'comedy',rating:0,imageSrc:''},{title:'Police Academy',genre:'comedy',rating:0,imageSrc:''},{title:'Revenge of the Nerds',genre:'comedy',rating:0,imageSrc:0},{title:'Isle of Dogs',genre:'comedy',rating:81}];
+    {title:'42',genre:'drama',rating:65,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQwMDU4MDI3MV5BMl5BanBnXkFtZTcwMjU1NDgyOQ@@._V1_SX300.jpg'},{title:'Ice Age',genre:'comedy',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmYxZWY2NzgtYzJjZC00MDFmLTgxZTctMjRiYjdjY2FhODg3XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg'},{title:'Big Hero 6',genre:'scifi',rating:79,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDliOTIzNmUtOTllOC00NDU3LWFiNjYtMGM0NDc1YTMxNjYxXkEyXkFqcGdeQXVyNTM3NzExMDQ@._V1_SX300.jpg'},{title:'Eagle Eye',genre:'action',rating:35,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjA5MTMzMDMzNl5BMl5BanBnXkFtZTcwMzUwNDUzMw@@._V1_SX300.jpg'},{title:'Vantage Point',genre:'action',rating:34,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTg3MjQ5OTY4M15BMl5BanBnXkFtZTcwNjk1MDU1MQ@@._V1_SX300.jpg'},{title:'Eragon',genre:'fantasy',rating:20,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzMyMGI1N2UtNzc5YS00OGNkLTg1OTktMTNkMmY2Zjk1NTQxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg'},
+    {title:'Friday the 13th',genre:'thriller',rating:26,year:'2009',imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ5ODI5NTMzN15BMl5BanBnXkFtZTcwNzY4MTYxMg@@._V1_SX300.jpg'},{title:'The Lego Batman Movie',genre:'comedy',rating:72,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg'},{title:'Police Academy',genre:'comedy',rating:40,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjNiMWVhNjAtMzgyYS00NzRhLWJmNGUtNzdiOGFhMmY5NDUwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Revenge of the Nerds',genre:'comedy',rating:50,imageSrc:'https://m.media-amazon.com/images/M/MV5BODU1NzM4NTA4Nl5BMl5BanBnXkFtZTgwMTkxMzcxMTE@._V1_SX300.jpg'},{title:'Isle of Dogs',genre:'comedy',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTYyOTUwNjAxM15BMl5BanBnXkFtZTgwODcyMzE0NDM@._V1_SX300.jpg'}];
 
     //alert($scope.moviesList.length);
 
@@ -213,6 +213,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.sports = false;
     $scope.dnd = false;
     $scope.travel = false;
+    $scope.tools = false;
 
     //loadContent takes in a tab name and displays that tab content
     //while hiding all other content, and changes the styling of the selected tab
@@ -229,6 +230,7 @@ app.controller('myCtrl', function($scope, $http) {
         document.getElementById('sportsTab').style.textDecoration = "";
         document.getElementById('dndTab').style.textDecoration = "";
         document.getElementById('travelTab').style.textDecoration = "";
+        document.getElementById('toolsTab').style.textDecoration = "";
         document.getElementById(tabName + 'Tab').style.textDecoration = "underline";
         document.getElementById(tabName + 'Tab').style.textUnderlineOffset = "10px";
         if (tabName == 'home') {
@@ -238,6 +240,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.sports = false;
             $scope.dnd = false;
             $scope.travel = false;
+            $scope.tools = false;
         }
         else if (tabName == 'movies') {
             $scope.home = false;
@@ -246,6 +249,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.sports = false;
             $scope.dnd = false;
             $scope.travel = false;
+            $scope.tools = false;
         }
         else if (tabName == 'sports') {
             $scope.home = false;
@@ -254,6 +258,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.sports = true;
             $scope.dnd = false;
             $scope.travel = false;
+            $scope.tools = false;
         }
         else if (tabName == 'shows'){
             $scope.home = false;
@@ -262,6 +267,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.sports = false;
             $scope.dnd = false;
             $scope.travel = false;
+            $scope.tools = false;
         }
         else if (tabName == 'dnd') {
             $scope.home = false;
@@ -270,6 +276,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.sports = false;
             $scope.dnd = true;
             $scope.travel = false;
+            $scope.tools = false;
         }
         else if (tabName == 'travel') {
             $scope.home = false;
@@ -278,6 +285,16 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.sports = false;
             $scope.dnd = false;
             $scope.travel = true;
+            $scope.tools = false;
+        }
+        else if (tabName == 'tools') {
+            $scope.home = false;
+            $scope.movies = false;
+            $scope.tvShows = false;
+            $scope.sports = false;
+            $scope.dnd = false;
+            $scope.travel = false;
+            $scope.tools = true;
         }
     }
 
