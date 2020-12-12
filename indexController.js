@@ -805,7 +805,27 @@ app.controller('myCtrl', function($scope, $http) {
                     new ol.Feature({
                         //Aruba
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-69.97, 12.52]))
-                    })
+                    }),
+                    new ol.Feature({
+                        //St. Louis, MO
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-90.20, 38.63]))
+                    }),
+                    new ol.Feature({
+                        //San Francisco, CA
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.42, 37.77]))
+                    }),
+                    new ol.Feature({
+                        //San Diego, CA
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-117.16, 32.72]))
+                    }),
+                    new ol.Feature({
+                        //Seattle, WA
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.33, 47.61]))
+                    }),
+                    new ol.Feature({
+                        //Sandpoint, ID
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-116.62, 48.39]))
+                    }),
                 ]
             })
         });
