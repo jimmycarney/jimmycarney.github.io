@@ -38,6 +38,7 @@ body{
     /*below is for new style test*/
     width: 13%;
     margin-right: -5px;
+    height: 100%;
 }
 .tab:hover, .dropTab:hover{
     /*background: #495469;*/
@@ -56,6 +57,7 @@ body{
     display: none;
     position: absolute;
     width: 13%;
+    margin-top: -42px;
 }
 .dropTab{
     text-align: center;
@@ -64,7 +66,7 @@ body{
     margin-right: -5px;
     margin-top: 0px;
     margin-bottom: 0px;
-    background: #00000030;
+    background: #00000040;
     height: 30px;
     width: 100%;
 }
