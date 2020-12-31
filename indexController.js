@@ -694,9 +694,18 @@ app.controller('myCtrl', function($scope, $http) {
     //variable that holds the list of results from the dnd api
     $scope.dndList = [];
 
+    //variable that holds the selected dnd page
+    $scope.selectedDnd = "reference";
+
     //clearDndList sets the $scope.dndList to an empty array
     $scope.clearDndList = function() {
         $scope.dndList = [];
+    }
+
+    //selectDndPage changes the dnd page that is shown based on the dropdown tab
+    //that is clicked
+    $scope.selectDndPage = function(pageName) {
+        $scope.selectedDnd = pageName;
     }
 
     //getAllDndResults puts all of the results from an endpoint of the dnd api

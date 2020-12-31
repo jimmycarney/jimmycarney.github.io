@@ -39,12 +39,40 @@ body{
     width: 13%;
     margin-right: -5px;
 }
-.tab:hover{
+.tab:hover, .dropTab:hover{
     /*background: #495469;*/
     /*background: #6b7a97;*/
     cursor: pointer;
     text-underline-offset: 10px;
     text-decoration: underline;
+}
+.dropdown{
+    display: inline;
+}
+.dropdown:hover .tabDropdown{
+    display: block;
+}
+.tabDropdown{
+    display: none;
+    position: absolute;
+    width: 13%;
+}
+.dropTab{
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+    margin-right: -5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: #00000030;
+    height: 30px;
+    width: 100%;
+}
+#dndDropdown{
+    margin-left: 57.5%;
+}
+#moreDropdown{
+    margin-left: 84.8%;
 }
 #home{
     /*width: 1200px;*/
