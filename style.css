@@ -497,8 +497,54 @@ table{
     margin-right: 20px;
     margin-top: -20px;
 }
+#dndCharacters{
+    margin-top: 30px;
+}
+#characterNamePic{
+    margin-top: 20px;
+}
 #characterPicture{
+    width: 100%;
+    align-self: center;
+}
+#characterName{
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+}
+#characterNamePic{
     width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+#characterInfo{
+    margin-top: 60px;
+    width: 60%;
+    display: inline-block;
+    margin-left: 8%;
+}
+#characterInfoTop p{
+    display: inline-block;
+    width: 19%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 13px;
+    vertical-align: top;
+}
+#characterTraitTitles p, #characterTopTitles p{
+    display: inline-block;
+    width: 19%;
+    margin-left: 5%;
+}
+#characterTraits, #characterInfoTop{
+    margin-top: -20px;
+}
+#characterTraits p{
+    display: inline-block;
+    width: 19%;
+    margin-left: 5%;
+    font-size: 11px;
+    vertical-align: top;
 }
 #morseCodeEnglish{
     width: 300px;

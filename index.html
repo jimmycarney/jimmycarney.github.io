@@ -596,16 +596,36 @@
                         ng-change = "selectCharacter(selectedCharacter)">
                     </select>
                 </div>
-                <p id = "characterName" ng-bind = "selectedCharacterName"></p>
-                <img id = "characterPicture" src = "">
-                <p id = "characterRace" ng-bind = "selectedCharacterRace"></p>
-                <p id = "characterClass" ng-bind = "selectedCharacterClass"></p>
-                <p id = "characterBackground" ng-bind = "selectedCharacterBackground"></p>
-                <p id = "characterAlignment" ng-bind = "selectedCharacterAlignment"></p>
-                <p id = "characterPersonality" ng-bind = "selectedCharacterPersonality"></p>
-                <p id = "characterIdeals" ng-bind = "selectedCharacterIdeals"></p>
-                <p id = "characterBond" ng-bind = "selectedCharacterBond"></p>
-                <p id = "characterFlaws" ng-bind = "selectedCharacterFlaws"></p>
+                <div id = "characterNamePic">
+                    <p id = "characterName" ng-bind = "selectedCharacterName"></p>
+                    <img id = "characterPicture" src = "">
+                </div>
+                <div id = "characterInfo">
+                    <div id = "characterTopTitles">
+                        <p>Race</p>
+                        <p>Class</p>
+                        <p>Background</p>
+                        <p>Alignment</p>
+                    </div>
+                    <div id = "characterInfoTop">
+                        <p id = "characterRace" ng-bind = "selectedCharacterRace"></p>
+                        <p id = "characterClass" ng-bind = "selectedCharacterClass"></p>
+                        <p id = "characterBackground" ng-bind = "selectedCharacterBackground"></p>
+                        <p id = "characterAlignment" ng-bind = "selectedCharacterAlignment"></p>
+                    </div>
+                    <div id = "characterTraitTitles">
+                        <p>Personality</p>
+                        <p>Ideals</p>
+                        <p>Bond</p>
+                        <p>Flaws</p>
+                    </div>
+                    <div id = "characterTraits">
+                        <p id = "characterPersonality" ng-bind = "selectedCharacterPersonality"></p>
+                        <p id = "characterIdeals" ng-bind = "selectedCharacterIdeals"></p>
+                        <p id = "characterBond" ng-bind = "selectedCharacterBond"></p>
+                        <p id = "characterFlaws" ng-bind = "selectedCharacterFlaws"></p>
+                    </div>
+                </div>
                 <p id = "characterDescription" ng-bind = "selectedCharacterDesc"></p>
             </div>
         </div>

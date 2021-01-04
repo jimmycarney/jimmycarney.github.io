@@ -191,7 +191,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'Band of Brothers',genre:'drama',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI3ODc2ODc0M15BMl5BanBnXkFtZTYwMjgzNjc3._V1_SX300.jpg'},{title:"Schitt's Creek",genre:'comedy',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},{title:'Arrested Development',genre:'comedy',rating:88,imageSrc:'https://m.media-amazon.com/images/M/MV5BNTFlYTE2YTItZmQ1NS00ZWQ5LWI3OGUtYTQzNDMyZmEyYTZjXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg'},{title:'Community',genre:'comedy',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BNDQ5NDZiYjktZmFmMy00MjAxLTk1MDktOGZjYTY5YTE1ODdmXkEyXkFqcGdeQXVyNjcwMzEzMTU@._V1_SX300.jpg'},{title:'Orange is the New Black',genre:'drama',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BYjYyM2FmMmMtZDgyZi00NGU3LWI3NzktODllZDY0YzQyNzgyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},
     {title:'The Office',genre:'comedy',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},{title:'Sex Education',genre:'comedy',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BZjgyMzFiMDgtNWNmMS00ZDEyLTkzYzgtMjMzZjk4YjhjZWUxXkEyXkFqcGdeQXVyNDg4MjkzNDk@._V1_SX300.jpg'},{title:'Better Call Saul',genre:'drama',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGE4YzY4NGEtOWYyYS00ZDk2LWExMmMtZDIyODhiMmNlMGE0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Heroes',genre:'scifi',rating:79,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjI3ODU0OTQ1MV5BMl5BanBnXkFtZTgwNzI0MTQ2MzE@._V1_SX300.jpg'},{title:'The Mandalorian',genre:'scifi',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWI0OTJlYTItNzMwZi00YzRiLWJhMjItMWRlMDNhZjNiMzJkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},
     {title:'Love, Death, & Robots',genre:'scifi',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTc1MjIyNDI3Nl5BMl5BanBnXkFtZTgwMjQ1OTI0NzM@._V1_SX300.jpg'},{title:'Curb Your Enthusiasm',genre:'comedy',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BZjYyMmJjYWUtZjBjMS00MWQzLTk0OWYtYzU1MmE3NzFhZjJkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'The Kominsky Method',genre:'comedy',rating:79,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDg1NDNiNTUtOWQyMi00ZmFhLTg0YTEtNzgyYjBiMjhhOWE3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'The Boys',genre:'action',rating:86,imageSrc:'https://m.media-amazon.com/images/M/MV5BNGEyOGJiNWEtMTgwMi00ODU4LTlkMjItZWI4NjFmMzgxZGY2XkEyXkFqcGdeQXVyNjcyNjcyMzQ@._V1_SX300.jpg'},{title:'The Walking Dead',genre:'action',rating:79,imageSrc:'https://m.media-amazon.com/images/M/MV5BYTUwOTM3ZGUtMDZiNy00M2I3LWI1ZWEtYzhhNGMyZjI3MjBmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},
-    {title:'Supernatural',genre:'fantasy',rating:76,imageSrc:'https://m.media-amazon.com/images/M/MV5BYWZlYjYzYTctNTliMy00YzMzLWI2NDEtYWZhZjRlZTM2MGQ2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Travelers',genre:'scifi',rating:82,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjUzOTQwOTg1MF5BMl5BanBnXkFtZTgwNzE4NzQ3NjM@._V1_SX300.jpg'},{title:'New Girl',genre:'comedy',rating:83,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjA0MDc1NTk0Ml5BMl5BanBnXkFtZTgwMTk2ODA5NDM@._V1_SX300.jpg'},{title:'Silicon Valley',genre:'comedy',rating:83,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTcwNzU2MGEtMzUzNC00MzMwLWJhZGItNDY3NDllYjU5YzAyXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},{title:'Big Mouth',genre:'comedy',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BYzRlYzczMTQtNjdjZi00NzU3LTliZWEtMDRlNzhiZTVmYmNjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},
+    {title:'Supernatural',genre:'fantasy',rating:76,imageSrc:'https://m.media-amazon.com/images/M/MV5BYWZlYjYzYTctNTliMy00YzMzLWI2NDEtYWZhZjRlZTM2MGQ2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Travelers',genre:'scifi',rating:82,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjUzOTQwOTg1MF5BMl5BanBnXkFtZTgwNzE4NzQ3NjM@._V1_SX300.jpg'},{title:'New Girl',genre:'comedy',rating:83,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjA0MDc1NTk0Ml5BMl5BanBnXkFtZTgwMTk2ODA5NDM@._V1_SX300.jpg'},{title:'Silicon Valley',genre:'comedy',rating:83,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTcwNzU2MGEtMzUzNC00MzMwLWJhZGItNDY3NDllYjU5YzAyXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},{title:'Big Mouth',genre:'comedy',rating:88,imageSrc:'https://m.media-amazon.com/images/M/MV5BYzRlYzczMTQtNjdjZi00NzU3LTliZWEtMDRlNzhiZTVmYmNjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},
     {title:'The Legend of Korra',genre:'animated',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BNTRmM2E5OWYtYmYzMi00MDRiLTg2ZTYtZGQyZTNhZDMxYTgzXkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg'},{title:'Shameless',genre:'comedy',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BYzFmODNkNDMtOTgzMy00NzQ1LWEwNDItNzU1MmYyYThhYzUwXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_SX300.jpg'},{title:'Grimm',genre:'fantasy',rating:73,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTkyODg2MzQwMV5BMl5BanBnXkFtZTgwNTA2MjE1MDI@._V1_SX300.jpg'},{title:'Californication',genre:'comedy',rating:83,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjAyMDM2ODExNF5BMl5BanBnXkFtZTgwNTI2MjkzMTE@._V1_SX300.jpg'},{title:'Daredevil',genre:'action',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BODcwOTg2MDE3NF5BMl5BanBnXkFtZTgwNTUyNTY1NjM@._V1_SX300.jpg'},
     {title:'One Punch Man',genre:'animated',rating:78,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTNmZDE2NDEtNTg3MS00OTE1LThlZGUtOGZkZTg0NTUyNGVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg'},{title:'House of Cards',genre:'drama',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BODM1MDU2NjY5NF5BMl5BanBnXkFtZTgwMDkxNTcwNjM@._V1_SX300.jpg'},{title:'Trailer Park Boys',genre:'comedy',rating:75,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTA0NTAwMTc1MF5BMl5BanBnXkFtZTgwODk2NjY0ODE@._V1_SX300.jpg'},{title:'Brooklyn Nine-Nine',genre:'comedy',rating:82,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg'},
     {title:'Dexter',genre:'drama',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTM5MjkwMTI0MV5BMl5BanBnXkFtZTcwODQwMTc0OQ@@._V1_SX300.jpg'},{title:"Bob's Burgers",genre:'animated',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGJiNmM1NDctNWUxYS00YzE4LWJjNTgtYTJhYzE0NjFmMTMwXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'Rick and Morty',genre:'animated',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg'},{title:'Atlanta',genre:'comedy',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzk5NDE5NDY1Ml5BMl5BanBnXkFtZTgwNTk0MTc3NDM@._V1_SX300.jpg'},{title:'Master of None',genre:'comedy',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTk3ODYxNjQ3OV5BMl5BanBnXkFtZTgwNzA1MDQ5MTI@._V1_SX300.jpg'},
@@ -742,7 +742,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.dndCharacters = [{name:"Thokk",race:"Half-Orc",class:"Barbarian",subclass:"Storm Herald",background:"Criminal",alignment:"Chaotic Neutral",
     personality:"I don't pay attention to the risks in a situation. Never tell me the odds",ideals:"Freedom - chains are meant to be broken, as are those who would forge them.",bond:"I will become the greatest thief that ever lived.",flaws:"When I see something valuable, I won't think twice about anything but how to steal it.",
     desc:"INCOMPLETE", imageSrc:"thokk.jpg"},{name:"Quave Zauvirr",race:"Drow",class:"Ranger",subclass:"Gloom Stalker",background:"Noble",alignment:"Lawful Neutral",
-    personality:"Despite my noble birth, I do not place myself above other folk. We all have the same blood.",ideals:"Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",bond:"I will face any challenge to win the approval of my family.",flaws:"I too often hear veiled insults and threats in every word addressed to me, and I’m quick to anger.",
+    personality:"Despite my noble birth, I do not place myself above other folk. We all have the same blood.",ideals:"Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",bond:"I will face any challenge to win the approval of my family.",flaws:"I too often hear veiled insults and threats in every word addressed to me, and I'm quick to anger.",
     desc:"Quave grew up as the youngest child in a very toxic family environment. He is a loner, without any friends outside of the family. His father mysteriously disappeared when Quave was young. As a child, Quave would frequently escape his bad home situation by disappearing to the Underdark to hunt. He became a hunter to feel some sort of power and to gain skills necessary to become useful to the family. Quave has only experienced any sort of respect when performing tasks for the family and knows no other form of affection, so he has committed to serving the family to earn the respect of the Matron Mother.",imageSrc:"quave.jpg"},
     {name:"Chant Moonridge",race:"Tiefling",class:"Fatebender",subclass:"Mascot",background:"Athlete",alignment:"Chaotic Good",
     personality:"I love to trade friendly banter and gibes.",ideals:"Winning. I will do whatever it takes to win, even if that means cheating",bond:"I strive to inspire my spectators by having fun while winning.",flaws:"I am overly confident because everything always seems to work out for me.",
@@ -815,55 +815,55 @@ app.controller('myCtrl', function($scope, $http) {
             source: new ol.source.Vector({
                 features: [
                     new ol.Feature({
-                        //Cambridge, MA
+                        //Cambridge, MA (college and post-grad)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.11, 42.37]))
                     }),
                     new ol.Feature({
-                        //Wilmington, DE
+                        //Wilmington, DE (born and raised)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.55, 39.74]))
                     }),
                     new ol.Feature({
-                        //Nashville, TN
+                        //Nashville, TN (Vanderbilt University Medical Center for ISC work)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-86.78, 36.16]))
                     }),
                     new ol.Feature({
-                        //Maui, HI
+                        //Maui, HI (McCaffrey's house 2005 and 2015)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-156.33, 20.80]))
                     }),
                     new ol.Feature({
-                        //Costa Rica
+                        //Costa Rica (WFS Service trip)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.75, 9.75]))
                     }),
                     new ol.Feature({
-                        //Domincan Republic
+                        //Domincan Republic (WFS service trip)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.16, 18.74]))
                     }),
                     new ol.Feature({
-                        //Montreal, CA
+                        //Montreal, CA (Rugby trip and vacation with Rachel)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.57, 45.50]))
                     }),
                     new ol.Feature({
-                        //Aruba
+                        //Aruba (Senior year college spring break)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-69.97, 12.52]))
                     }),
                     new ol.Feature({
-                        //St. Louis, MO
+                        //St. Louis, MO (Mercy Health for ISC work)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-90.20, 38.63]))
                     }),
                     new ol.Feature({
-                        //San Francisco, CA
+                        //San Francisco, CA (McCaffrey's house)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.42, 37.77]))
                     }),
                     new ol.Feature({
-                        //San Diego, CA
+                        //San Diego, CA (Rady's Childrens Hospital for ISC Work)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-117.16, 32.72]))
                     }),
                     new ol.Feature({
-                        //Seattle, WA
+                        //Seattle, WA (Rachel's house)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.33, 47.61]))
                     }),
                     new ol.Feature({
-                        //Sandpoint, ID
+                        //Sandpoint, ID (Rachel's skiing condo)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-116.62, 48.39]))
                     }),
                 ]
