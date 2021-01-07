@@ -167,7 +167,8 @@
             <div id = "genreName">
                 <p ng-bind = "genreDisplay"></p>
             </div>
-            <div id = "moviePopup" ng-show = "showPopup" ng-click = "hidePopup()">
+            <div id = "moviePopup" ng-show = "showPopup">
+                <p class = "popupX" ng-click = "hidePopup()">X</p>
                 <p id = "jimmyMovieRating" ng-bind = "jimmyMovieRating"></p>
                 <img id = "moviePoster" src="">
                 <div id = "movieInfo">
@@ -224,24 +225,38 @@
             <div id = "tvGenreName">
                 <p ng-bind = "tvGenreDisplay"></p>
             </div>
-            <div id = "tvShowPopup" ng-show = "showTVPopup" ng-click = "hideTVPopup()">
-                <img id = "tvPoster" src="">
-                <div id = "tvInfo">
-                    <p ng-bind = "tvTitle"></p>
-                    <p>&bull;</p>
-                    <p ng-bind = "tvDate"></p>
-                    <p>&bull;</p>
-                    <p ng-bind = "tvRating"></p>
+            <div id = "tvShowPopup" ng-show = "showTVPopup">
+                <p class = "popupX" ng-click = "hideTVPopup()">X</p>
+                <div ng-show = "!showEpisodeRankings">
+                    <img id = "tvPoster" src="">
+                    <div id = "tvInfo">
+                        <p ng-bind = "tvTitle"></p>
+                        <p>&bull;</p>
+                        <p ng-bind = "tvDate"></p>
+                        <p>&bull;</p>
+                        <p ng-bind = "tvRating"></p>
+                    </div>
+                    <div id = "tvInfo">
+                        <p ng-bind = "tvSeasons"></p>
+                        <p>&bull;</p>
+                        <p ng-bind = "tvRuntime"></p>
+                    </div>
+                    <div id = "tvScores">
+                        <p ng-bind = "tvIMDBScore"></p>
+                    </div>
+                    <p ng-bind = "tvPlot"></p>
+                    <p id = "episodeRankingsButton" ng-click = "getEpisodeRankings()" ng-show = "episodesRanked">Episode Rankings</p>  
                 </div>
-                <div id = "tvInfo">
-                    <p ng-bind = "tvSeasons"></p>
-                    <p>&bull;</p>
-                    <p ng-bind = "tvRuntime"></p>
+                <div id = "tvEpisodeRankings" ng-show = "showEpisodeRankings" ng-click = "hideEpisodeRankings()">
+                    <p id = "rankingsBackArrow">&#8617;</p>
+                    <div id = "episodeRankingsHeader">
+                        <p ng-bind = "tvTitle"></p>
+                        <p>Episodes Ranked</p>
+                    </div> 
+                    <div ng-repeat = "episode in episodeRankList | orderBy: '-rating'">
+                        <p>#{{episode.rank}}) {{episode.episode}}</p>
+                    </div>
                 </div>
-                <div id = "tvScores">
-                    <p ng-bind = "tvIMDBScore"></p>
-                </div>
-                <p ng-bind = "tvPlot"></p>
             </div>
             <div class = "showList">
                 <div ng-repeat = "show in tvShowList | orderBy: '-rating' | filter: tvFilter" class = "showTitle" ng-click = "getShowInfo(show)">

@@ -378,15 +378,48 @@ body{
     padding: 10px;
     padding-top: 50px;
     box-shadow: 5px 5px 70px #000000;
+    overflow-y: scroll;
+}
+.popupX{
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    font-size: 25px;
+    color: #5c5b5b;
+    border-left: 1px solid #5c5b5b;
+    border-bottom: 1px solid #5c5b5b;
+    padding: 5px;
     cursor: pointer;
+}
+#episodeRankingsButton{
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    color: #001b74;
+    text-underline-offset: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#tvEpisodeRankings{
+    text-align: left;
+}
+#rankingsBackArrow{
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#episodeRankingsHeader p{
+    display: inline;
+    font-size: 25px;
+    font-weight: bold;
 }
 #jimmyMovieRating{
     position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 40px;
+    top: -25px;
+    left: 10px;
+    font-size: 30px;
     color: #254b7c;
 }
 #movieInfo p, #movieScores p, #tvInfo p, #tvScores p{
