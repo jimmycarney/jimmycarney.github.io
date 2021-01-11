@@ -921,6 +921,76 @@ app.controller('myCtrl', function($scope, $http) {
                         //Sandpoint, ID (Rachel's skiing condo)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-116.62, 48.39]))
                     }),
+                    new ol.Feature({
+                        //Houston, TX (Carol and Caitlin's old house)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-95.37, 29.76]))
+                    }),
+                    new ol.Feature({
+                        //Denver, CO (NSCRO national championship)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-104.99, 39.74]))
+                    }),
+                    new ol.Feature({
+                        //Minneapolis, MN (Super Bowl LII and Brian's Vikings game)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-93.27, 44.98]))
+                    }),
+                    new ol.Feature({
+                        //Outer Banks, NC (Senior week after high school)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.47, 35.56]))
+                    }),
+                    new ol.Feature({
+                        //Cleveland, OH (Cam's house)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-81.69, 41.50]))
+                    }),
+                    new ol.Feature({
+                        //New York, NY (Sam's apartment, college spring break freshman and sophomore year, and more)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.01, 40.71]))
+                    }),
+                    new ol.Feature({
+                        //Clemson, SC (Visiting Sam in college)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-82.84, 34.68]))
+                    }),
+                    new ol.Feature({
+                        //Charleston, SC (Jake's house)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-79.93, 32.78]))
+                    }),
+                    new ol.Feature({
+                        //Fairfield, CT (Rugby games and Jake's old house)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.26, 41.14]))
+                    }),
+                    new ol.Feature({
+                        //Orono, ME (Rugby playoffs freshman year)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-68.67, 44.88]))
+                    }),
+                    new ol.Feature({
+                        //South Kingstown, RI (University of Rhode Island rugby game)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.52, 41.45]))
+                    }),
+                    new ol.Feature({
+                        //Washington DC (JC in congress, Cam and Gil's apartments for NYE 2019/2020)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-77.04, 38.91]))
+                    }),
+                    new ol.Feature({
+                        //Baltimore, MD (ESPN Zone and aquarium)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-76.61, 39.29]))
+                    }),
+                    new ol.Feature({
+                        //Puerto Rico (8th grade WFS service trip)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-66.59, 18.22]))
+                    }),
+                    new ol.Feature({
+                        //Bakersfield, VT (Air B&B with Zach, Mal, and Sinclair)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.80, 44.78]))
+                    }),
+                    new ol.Feature({
+                        //West Dover, VT (Mount Snow with Jake, Scott, Morgan, Merch, Tim, etc.)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.92, 42.96]))
+                    }),
+                    new ol.Feature({
+                        //Ocean City, NJ (Pink House)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.57, 39.28]))
+                    }),
+                    //add next: Pittsburgh (CMU), Sioux Falls (ISC), Philadelphia (Sports), Wilmington and Chapel Hill NC (ISC and Sam college)
+                    //Stamford (Rosen family), Cape Cod (rugby friends), Columbus (Ohio State),
                 ]
             })
         });
