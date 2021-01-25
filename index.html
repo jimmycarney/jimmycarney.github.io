@@ -601,7 +601,24 @@
                 </div>
             </div>
             <div id = "dndCampaigns" ng-show = "selectedDnd == 'campaigns'">
-                <p>My Campaigns</p>
+                <div id = "campaignDropdown">
+                    <label for = "campaign">Campaign</label>
+                    <select name = "campaign" ng-model = "selectedCampaign"
+                        ng-options = "campaign as campaign.title for campaign in dndCampaigns"
+                        ng-change = "selectCampaign(selectedCampaign)">
+                    </select>
+                </div>
+                <div id = "campaignInfo">
+                    <div id = campaignTitlePic>
+                        <p ng-bind = "selectedCampaignTitle"></p>
+                        <img id = "campaignPicture" src = "">
+                    </div>
+                    <div id = "campaignSpecs">
+                        <p ng-bind = "selectedCampaignDate"></p>
+                        <p ng-bind = "selectedCampaignCharacter" ng-click = "gotoDndCharacter(selectedCampaignCharacter)" id = "campaignCharacterName"></p>
+                        <p ng-bind = "selectedCampaignDesc"></p>
+                    </div>
+                </div>
             </div>
             <div id = "dndCharacters" ng-show = "selectedDnd == 'characters'">
                 <div id = "characterDropdown">

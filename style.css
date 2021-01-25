@@ -530,8 +530,20 @@ table{
     margin-right: 20px;
     margin-top: -20px;
 }
-#dndCharacters{
+#dndCharacters, #dndCampaigns{
     margin-top: 30px;
+}
+#campaignInfo div{
+    width: 45%;
+    margin-left: 2%;
+    display: inline-block;
+    vertical-align: top;
+}
+#campaignPicture{
+    width: 100%;
+}
+#campaignCharacterName{
+    cursor: pointer;
 }
 #characterNamePic{
     margin-top: 20px;

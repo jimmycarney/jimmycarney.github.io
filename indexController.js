@@ -156,7 +156,7 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'Anchorman 2: The Legend Continues',genre:'comedy',rating:64,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE5ODk0NjQzNV5BMl5BanBnXkFtZTgwODk4MDA1MDE@._V1_SX300.jpg'},{title:'Brüno',genre:'comedy',rating:35,year:'2009',imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUwNDIwNDE5MV5BMl5BanBnXkFtZTcwMDA2MzA1Mg@@._V1_SX300.jpg'},{title:'Road Trip: Beer Pong',genre:'comedy',rating:14,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI4MTU5OTg4NF5BMl5BanBnXkFtZTcwNjc0NTU2Mg@@._V1_SX300.jpg'},{title:'Meet the Fockers',genre:'comedy',rating:41,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWZjODQxMWMtZmIzYS00YjMwLWFiZTctYmFiZmJiNjljYWVmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Little Fockers',genre:'comedy',rating:26,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTkwNjE3NjQwOV5BMl5BanBnXkFtZTcwNzAyNTMwNA@@._V1_SX300.jpg'},
     {title:'Meet the Spartans',genre:'comedy',rating:5,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjAxMDE3NDQwMF5BMl5BanBnXkFtZTcwMjA0MzU1MQ@@._V1_SX300.jpg'},{title:'Epic Movie',genre:'comedy',rating:11,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTA3NDM5ODU3NzleQTJeQWpwZ15BbWU3MDgyMjgyNDE@._V1_SX300.jpg'},{title:'The Pacifier',genre:'comedy',rating:30,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTE5MTcxOTQxNl5BMl5BanBnXkFtZTYwMzk3Nzg2._V1_SX300.jpg'},{title:'Bucky Larson: Born to be a Star',genre:'comedy',rating:4,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjIzMjY4MTk2M15BMl5BanBnXkFtZTcwNzQ3ODg3NQ@@._V1_SX300.jpg'},{title:'The Incredible Hulk',genre:'superhero',rating:55,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX300.jpg'},
     {title:'The Transporter',genre:'action',rating:58,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTk2NDc2MDAxN15BMl5BanBnXkFtZTYwNDc1NDY2._V1_SX300.jpg'},{title:'The Mechanic',genre:'action',rating:49,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjEyMjk1NjI1M15BMl5BanBnXkFtZTcwODcyNjAxNA@@._V1_SX300.jpg'},{title:'eXistenZ',genre:'scifi',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmU1MTJkYWItMzM5Ny00NDgxLTgxOGEtNTkzNDdkZjkwNGI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},{title:'Kicking + Screaming',genre:'comedy',rating:40,year:'2005',imageSrc:'https://m.media-amazon.com/images/M/MV5BMTA5Njk1MjEzMzZeQTJeQWpwZ15BbWU3MDY3NjY4MjE@._V1_SX300.jpg'},{title:'Mr. 3000',genre:'comedy',rating:47,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTg5NTk2MTQ0NV5BMl5BanBnXkFtZTcwNjMyNTUyMQ@@._V1_SX300.jpg'},
-    {title:'The Sandlot 2',genre:'comedy',rating:38,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI5MjY1NjE4MV5BMl5BanBnXkFtZTcwOTcwMjgyMQ@@._V1_SX300.jpg'},{title:'Soul',genre:'comedy',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGE1MDg5M2MtNTkyZS00MTY5LTg1YzUtZTlhZmM1Y2EwNmFmXkEyXkFqcGdeQXVyNjA3OTI0MDc@._V1_SX300.jpg'}];
+    {title:'The Sandlot 2',genre:'comedy',rating:38,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI5MjY1NjE4MV5BMl5BanBnXkFtZTcwOTcwMjgyMQ@@._V1_SX300.jpg'},{title:'Soul',genre:'comedy',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGE1MDg5M2MtNTkyZS00MTY5LTg1YzUtZTlhZmM1Y2EwNmFmXkEyXkFqcGdeQXVyNjA3OTI0MDc@._V1_SX300.jpg'},{title:'Borat Subsequent Moviefilm',genre:'comedy',rating:61,imageSrc:'https://m.media-amazon.com/images/M/MV5BNmY3OTdkOWEtNjc2ZC00OTZmLWI5OWItMjdjYjRkNTExNDNhXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg'},{title:'Our Idiot Brother',genre:'comedy',rating:51,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU3NjM3Mzg0Ml5BMl5BanBnXkFtZTcwOTk4MDI3NQ@@._V1_SX300.jpg'},{title:'Are You Here',genre:'comedy',rating:22,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjY3NzM2NDg0MV5BMl5BanBnXkFtZTgwOTE2MjU5MTE@._V1_SX300.jpg'}];
 
     //alert($scope.moviesList.length);
 
@@ -373,7 +373,7 @@ app.controller('myCtrl', function($scope, $http) {
             ).rating;
             $scope.jimmyMovieRating = rating + "%";
             document.getElementById("moviePoster").src = response.data.Poster;
-            //alert(response.data.Poster);
+            alert(response.data.Poster);
             $scope.movieTitle = response.data.Title;
             $scope.movieRating = response.data.Rated;
             $scope.movieRuntime = response.data.Runtime;
@@ -790,10 +790,40 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showDndPopup = (!$scope.showDndPopup);
     }
 
+    //array that holds all dnd campaign information
+    $scope.dndCampaigns = [{title:"Princes of the Apocalypes",character:"Thokk",date:"9/7/19 - 5/24/20",desc:"Called by the Elder Elemental Eye to serve, four corrupt prophets have risen from the depths of anonymity to claim mighty weapons with direct links to the power of the elemental princes. Each of these prophets has assembled a cadre of cultists and creatures to serve them in the construction of four elemental temples of lethal design. It is up to adventurers from heroic factions such as the Emerald Enclave and the Order of the Gauntlet to discover where the true power of each prophet lay, and dismantle it before it comes boiling up to obliterate the Realms.",imageSrc:"princes.jpg"},
+    {title:"Tomb of Annihilation",character:"Chant Moonridge",date:"9/3/20 - ",desc:"The talk of the streets and taverns has all been about the so-called death curse: a wasting disease afflicting everyone who's ever been raised from the dead. Victims grow thinner and weaker each day, slowly but steadily sliding toward the death they once denied. When they finally succumb, they can't be raised, and neither can anyone else, regardless of whether they've ever received that miracle in the past. Temples and scholars of divine magic are at a loss to explain a curse that has affected the entire region, and possibly the entire world. The cause is a necromantic artifact called the Soulmonger, which is located somewhere in Chult, a mysterious peninsula far to the south, ringed with mountains and choked with rainforests.",imageSrc:"tomb.jpg"},
+    {title:"Descent into Avernus",character:"Quave Zauvirr",date:"11/15/20 - ",desc:"Welcome to Baldur's Gate, a city of ambition and corruption. You've just started your adventuring career, but already find yourself embroiled in a plot that sprawls from the shadows of Baldur's Gate to the front lines of the planes-spanning Blood War! Do you have what it takes to turn infernal war machines and nefarious contracts against the archdevil Zariel and her diabolical hordes? And can you ever hope to find your way home safely when pitted against the infinite evils of the Nine Hells?",imageSrc:"descent.jpg"}];
+
+    //selectCampaign updates the variables displayed on the campaigns page to display
+    //the information for the selected campaign
+    $scope.selectCampaign = function(campaign) {
+        $scope.selectedCampaignTitle = campaign.title;
+        $scope.selectedCampaignCharacter = campaign.character;
+        $scope.selectedCampaignDate = campaign.date;
+        $scope.selectedCampaignDesc = campaign.desc;
+        document.getElementById("campaignPicture").src = campaign.imageSrc;
+    }
+
+    //initialize to display infor for first campaign in array (Princes of the Apocalypes)
+    $scope.selectCampaign($scope.dndCampaigns[0]);
+
+    //change to characters page and call function to load info for whichever
+    //character's name was clicked
+    $scope.gotoDndCharacter = function(name) {
+        $scope.selectedDnd = "characters";
+        $scope.selectCharacter($scope.dndCharacters.find(
+            function(character) {
+                return (character.name == name);
+            }
+        ));
+    }
+
     //array that holds all dnd character information
     $scope.dndCharacters = [{name:"Thokk",race:"Half-Orc",class:"Barbarian",subclass:"Storm Herald",background:"Criminal",alignment:"Chaotic Neutral",
     personality:"I don't pay attention to the risks in a situation. Never tell me the odds",ideals:"Freedom - chains are meant to be broken, as are those who would forge them.",bond:"I will become the greatest thief that ever lived.",flaws:"When I see something valuable, I won't think twice about anything but how to steal it.",
-    desc:"INCOMPLETE", imageSrc:"thokk.jpg"},{name:"Quave Zauvirr",race:"Drow",class:"Ranger",subclass:"Gloom Stalker",background:"Noble",alignment:"Lawful Neutral",
+    desc:"Thokk is the greatest thief the world has ever known! Once just a lowly barbarian, he now lives as lord of Feathergail Spire (renamed to Dwayne 'The Thokk' Johnson). After finishing a tumultuous year, which started with the goal of stealing some valuable books (which Thokk succeeded in doing, as he always does) and ended with the killing of Imix the Eternal Flame, Thokk returned to Feathergail Spire to propose to Savra Belabranta and create his own thieves guild. Thokk now lives comfortably with his wife and his best friend, an ancient Lich, and he has become a legend for his part in preventing the apocalypse. His deeds included, but were not limited to, becoming a werewolf and wreaking havoc on a cultist lair; slaying the leader of the Cult of the Howling Hatred, Aerisi Kalinoth, to become the wielder of Windvane; killing knights of elemental fire, air, and water; and saving his companions Garrut, Veit Fireforge, and, reluctantly Wellby Tosscobble.", imageSrc:"thokk.jpg"},
+    {name:"Quave Zauvirr",race:"Drow",class:"Ranger",subclass:"Gloom Stalker",background:"Noble",alignment:"Lawful Neutral",
     personality:"Despite my noble birth, I do not place myself above other folk. We all have the same blood.",ideals:"Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",bond:"I will face any challenge to win the approval of my family.",flaws:"I too often hear veiled insults and threats in every word addressed to me, and I'm quick to anger.",
     desc:"Quave grew up as the youngest child in a very toxic family environment. He is a loner, without any friends outside of the family. His father mysteriously disappeared when Quave was young. As a child, Quave would frequently escape his bad home situation by disappearing to the Underdark to hunt. He became a hunter to feel some sort of power and to gain skills necessary to become useful to the family. Quave has only experienced any sort of respect when performing tasks for the family and knows no other form of affection, so he has committed to serving the family to earn the respect of the Matron Mother.",imageSrc:"quave.jpg"},
     {name:"Chant Moonridge",race:"Tiefling",class:"Fatebender",subclass:"Mascot",background:"Athlete",alignment:"Chaotic Good",
@@ -802,10 +832,12 @@ app.controller('myCtrl', function($scope, $http) {
     {name:"Dario Steele",race:"Human",class:"Fighter",subclass:"Gunslinger",background:"Detective",alignment:"Neutral",
     personality:"I am very stern with and distrustful of all people involved in whatever case I'm investigating.",ideals:"Justice - I want my own idea of the law to triumph.",bond:"I can't turn down a case.",flaws:"I refuse to accept supernatural explanations to my cases.",
     desc:"Dario Steele has always been somewhat of an outsider. As a youth, he never seemed to get along with anyone else his age and spent most of his time with his father, Dane. Dane was a private detective who investigated violent crimes for anyone who could pay, but he was murdered during one of his investigations right in front of Dario. Dario saw the killer's face, and was even able to identify him to local authorities. But the man claimed he had also witnessed the murder, and it was a lich that killed Dane. He claimed that Dario was just a boy and was confused by what he had witnessed. Based on the marks on Dane's body, the authorities had to agree, and the real murderer was let go. Ever since, Dario has had not only a hunger for revenge, but also a strong disbelief in anything supernatural. He took up his father's private detective practice and has solved a variety of supernatural-seeming murders which turned out to just be clever humans, but not clever enough. One day, he was investigating the slums of the city, as there had been a string of murders, similar to his father's, when he came across Cadogan Kane. Kane also seemed like an outsider, and for the first time since his father died, Dario found someone who he didn't mind spending time with. The two formed a partnership, solving violent murders for pay while pursuing the lich-imitating murderer.",imageSrc:"dario.jpg"},
-    {name:"Theren Astorio",race:"",class:"",subclass:"",background:"",alignment:"",
-    personality:"",ideals:"",bond:"",flaws:"",
-    desc:"",imageSrc:"theren.png"}];
+    {name:"Theren Astorio",race:"Half-Elf",class:"Paladin",subclass:"Oath of Devotion",background:"Acolyte",alignment:"Lawful Good",
+    personality:"Nothing can shake my undying faith.",ideals:"Faith - I trust that my deity will guide my actions, I have faith that if I work hard, things will go well. (Lawful)",bond:"I will do anything to protect the temple where I served.",flaws:"I am inflexible in my thinking.",
+    desc:"Theren is a servant of Bhamut, the god of life, order, and war. Bhamut teaches that one should smite evil and show compassion to the righteous, and this is the teaching by which Theren lives his life. Theren was abandoned by his elf father at birth and raised by his human mother, whose last name he bears. Theren's mother was killed by goblin bandits when he was a child, and as a result, Theren was adopted and raised by the church of Bhamut. He was taught to be strong and to enforce the laws of his religion, and from a young age his combat capabilities were recognized. Theren became a knight of the church, and his mission became to smite evil and spread order. He recognizes no empire or government, only the law of Bhamut.",imageSrc:"theren.png"}];
 
+    //selectCharacter updates the variables displayed on the characters page to display
+    //the information for the selected character
     $scope.selectCharacter = function(character) {
         $scope.selectedCharacterName = character.name;
         $scope.selectedCharacterRace = character.race;
@@ -823,12 +855,15 @@ app.controller('myCtrl', function($scope, $http) {
     //initialize selected character Thokk
     $scope.selectCharacter($scope.dndCharacters[0]);
 
+    //array to hold translation table for text to morse code
     $scope.morseCodeTable = {a:".-",b:"-...",c:"-.-.",d:"-..",e:".",f:"..-.",g:"--.",
     h:"....",i:"..",j:".---",k:"-.-",l:".-..",m:"--",n:"-.",o:"---",p:".--.",
     q:"--.-",r:".-.",s:"...",t:"-",u:"..-",v:"...-",w:"-..-",x:"-..-",y:"-.--",
     z:"--..",1:".----",2:"..---",3:"...--",4:"....-",5:".....",6:"-....",7:"--...",8:"---..",
     9:"----.",0:"-----",".":".-.-.-",",":"--..--","?":"..--.."," ":"/"};
 
+    //translateMorseCode loops through the characters in the english text box and
+    //converts each one to morse code using the translation table
     $scope.translateMorseCode = function() {
         //alert($scope.morseCodeEnglish);
         var english = $scope.morseCodeEnglish.toLowerCase();
@@ -842,6 +877,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.cities = [{name:"Wilmington, DE", lonlat:[-75.55,39.74]},{name:"Cambridge, MA", lonlat:[-71.11,42.37]},
     {name:"Nashville, TN", lonlat:[-86.78, 36.16]}];
 
+    //initMap creates the map and all of the points
     $scope.initMap = function() {
         var map = new ol.Map({
             target: 'map',
@@ -997,6 +1033,7 @@ app.controller('myCtrl', function($scope, $http) {
         map.addLayer(layer);
     }
 
+    //initialize map when page is first opened
     $scope.initMap();
 
     /*Google maps API stuff commented out for now*/
