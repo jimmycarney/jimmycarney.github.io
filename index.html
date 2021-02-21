@@ -285,6 +285,38 @@
                     <p>Eagles:</p>
                     <p>{{eaglesStats.record.wins}}-{{eaglesStats.record.losses}}-{{eaglesStats.record.ties}}</p>
                 </div>
+
+                <table ng-repeat = "player in eaglesQBStats" class = "statsTable">
+                    <caption>{{player.last_name}}, {{player.first_name}}</caption>
+                    <tr>
+                        <th>Year</th>
+                        <th>GS</th>
+                        <th>Rating</th>
+                        <th>TD</th>
+                        <th>Int</th>
+                        <th>Comp%</th>
+                        <th>Yards</th>
+                    </tr>
+                    <tr ng-repeat = "year in player.stats">
+                        <td>{{year.year}}</td>
+                        <td>{{year.gs}}</td>
+                        <td>{{year.rating}}</td>
+                        <td>{{year.td}}</td>
+                        <td>{{year.int}}</td>
+                        <td>{{year.cmp_perc}}</td>
+                        <td>{{year.yrds}}</td>
+                    </tr>
+                    <tr>
+                        <td>Playoffs Total</td>
+                        <td>{{player.playoff_stats.gs}}</td>
+                        <td>{{player.playoff_stats.rating}}</td>
+                        <td>{{player.playoff_stats.td}}</td>
+                        <td>{{player.playoff_stats.int}}</td>
+                        <td>{{player.playoff_stats.cmp_perc}}</td>
+                        <td>{{player.playoff_stats.yrds}}</td>
+                    </tr>
+                </table>
+
                 <table class = "statsTable">
                     <caption>Eagles Passing Leaders</caption>
                     <tr>
