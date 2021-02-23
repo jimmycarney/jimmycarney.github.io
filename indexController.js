@@ -191,49 +191,51 @@ app.controller('myCtrl', function($scope, $http) {
 
     $scope.eaglesQBStats = [{first_name:"Carson",last_name:"Wentz",
     stats:[
-        {year:2016,td:16,int:14,rating:79.3,gs:16,yrds:3782,cmp_perc:62.4},
-        {year:2017,td:33,int:7,rating:101.9,gs:13,yrds:3296,cmp_perc:60.2},
-        {year:2018,td:21,int:7,rating:102.2,gs:11,yrds:3074,cmp_perc:69.6},
-        {year:2019,td:27,int:7,rating:93.1,gs:16,yrds:4039,cmp_perc:63.9},
-        {year:2020,td:16,int:15,rating:72.8,gs:12,yrds:2620,cmp_perc:57.4},
-        {year:"Regular Season Total",td:113,int:50,rating:89.2,gs:68,yrds:16811,cmp_perc:62.7}],
-    playoff_stats:{td:0,int:0,rating:39.6,gs:1,yrds:3,cmp_perc:25.0}},
+        {year:2016,td:16,int:14,rating:79.3,gs:16,yrds:3782,cmp_perc:62.4,g:16,cmp:379,att:607,ypg:236.4},
+        {year:2017,td:33,int:7,rating:101.9,gs:13,yrds:3296,cmp_perc:60.2,g:13,cmp:265,att:440,ypg:253.5},
+        {year:2018,td:21,int:7,rating:102.2,gs:11,yrds:3074,cmp_perc:69.6,g:11,cmp:279,att:401,ypg:279.5},
+        {year:2019,td:27,int:7,rating:93.1,gs:16,yrds:4039,cmp_perc:63.9,g:16,cmp:388,att:607,ypg:252.4},
+        {year:2020,td:16,int:15,rating:72.8,gs:12,yrds:2620,cmp_perc:57.4,g:12,cmp:251,att:437,ypg:218.3},
+        {year:"Regular Season Total",td:113,int:50,rating:89.2,gs:68,yrds:16811,cmp_perc:62.7,g:68,cmp:1562,att:2492,ypg:247.2}],
+    playoff_stats:{td:0,int:0,rating:39.6,gs:1,yrds:3,cmp_perc:25.0,g:1,cmp:1,att:4,ypg:1}},
     {first_name:"Nick",last_name:"Foles",
     stats:[
-        {year:2012,td:6,int:5,rating:79.1,gs:6,yrds:1699,cmp_perc:60.8},
-        {year:2013,td:27,int:2,rating:119.2,gs:10,yrds:2891,cmp_perc:64.0},
-        {year:2014,td:13,int:10,rating:81.4,gs:8,yrds:2163,cmp_perc:59.8},
-        {year:2017,td:5,int:2,rating:79.5,gs:3,yrds:537,cmp_perc:56.4},
-        {year:2018,td:7,int:4,rating:96.0,gs:5,yrds:1413,cmp_perc:72.3},
-        {year:"Regular Season Total",td:58,int:23,rating:93.2,gs:32,yrds:8703,cmp_perc:62.9}
+        {year:2012,td:6,int:5,rating:79.1,gs:6,yrds:1699,cmp_perc:60.8,g:7,cmp:161,att:265,ypg:242.7},
+        {year:2013,td:27,int:2,rating:119.2,gs:10,yrds:2891,cmp_perc:64.0,g:13,cmp:203,att:317,ypg:222.4},
+        {year:2014,td:13,int:10,rating:81.4,gs:8,yrds:2163,cmp_perc:59.8,g:8,cmp:186,att:311,ypg:270.4},
+        {year:2017,td:5,int:2,rating:79.5,gs:3,yrds:537,cmp_perc:56.4,g:7,cmp:57,att:101,ypg:76.7},
+        {year:2018,td:7,int:4,rating:96.0,gs:5,yrds:1413,cmp_perc:72.3,g:5,cmp:141,att:195,ypg:282.6},
+        {year:"Regular Season Total",td:58,int:23,rating:93.2,gs:32,yrds:8703,cmp_perc:62.9,g:40,cmp:748,att:1189,ypg:217.6}
     ],
-    playoff_stats:{td:11,int:5,rating:98.8,gs:6,yrds:1633,cmp_perc:68.1}},
+    playoff_stats:{td:11,int:5,rating:98.8,gs:6,yrds:1633,cmp_perc:68.1,g:6,cmp:143,att:210,ypg:272.2}},
     {first_name:"Donovan",last_name:"McNabb",
     stats:[
-        {year:1999,td:8,int:7,rating:60.1,gs:6,yrds:948,cmp_perc:49.1},
-        {year:2000,td:21,int:13,rating:77.8,gs:16,yrds:3365,cmp_perc:58.0},
-        {year:2001,td:25,int:12,rating:84.3,gs:16,yrds:3233,cmp_perc:57.8},
-        {year:2002,td:17,int:6,rating:86.0,gs:10,yrds:2289,cmp_perc:58.4},
-        {year:2003,td:16,int:11,rating:79.6,gs:16,yrds:3216,cmp_perc:57.5},
-        {year:2004,td:31,int:8,rating:104.7,gs:15,yrds:3875,cmp_perc:64.0},
-        {year:2005,td:16,int:9,rating:85.0,gs:9,yrds:2507,cmp_perc:59.1},
-        {year:2006,td:18,int:60,rating:95.5,gs:10,yrds:2647,cmp_perc:57.0},
-        {year:2007,td:19,int:7,rating:89.9,gs:14,yrds:3324,cmp_perc:61.5},
-        {year:2008,td:23,int:11,rating:86.4,gs:16,yrds:3916,cmp_perc:60.4},
-        {year:2009,td:22,int:10,rating:92.9,gs:14,yrds:3553,cmp_perc:60.3},
-        {year:"Regular Season Total",td:216,int:100,rating:86.5,gs:142,yrds:32873,cmp_perc:59.0}
+        {year:1999,td:8,int:7,rating:60.1,gs:6,yrds:948,cmp_perc:49.1,g:12,cmp:106,att:216,ypg:79.0},
+        {year:2000,td:21,int:13,rating:77.8,gs:16,yrds:3365,cmp_perc:58.0,g:16,cmp:330,att:569,ypg:210.3},
+        {year:2001,td:25,int:12,rating:84.3,gs:16,yrds:3233,cmp_perc:57.8,g:16,cmp:285,att:493,ypg:202.1},
+        {year:2002,td:17,int:6,rating:86.0,gs:10,yrds:2289,cmp_perc:58.4,g:10,cmp:211,att:361,ypg:228.9},
+        {year:2003,td:16,int:11,rating:79.6,gs:16,yrds:3216,cmp_perc:57.5,g:16,cmp:275,att:478,ypg:201.0},
+        {year:2004,td:31,int:8,rating:104.7,gs:15,yrds:3875,cmp_perc:64.0,g:15,cmp:300,att:469,ypg:258.3},
+        {year:2005,td:16,int:9,rating:85.0,gs:9,yrds:2507,cmp_perc:59.1,g:9,cmp:211,att:375,ypg:278.6},
+        {year:2006,td:18,int:60,rating:95.5,gs:10,yrds:2647,cmp_perc:57.0,g:10,cmp:180,att:316,ypg:264.7},
+        {year:2007,td:19,int:7,rating:89.9,gs:14,yrds:3324,cmp_perc:61.5,g:14,cmp:291,att:473,ypg:237.4},
+        {year:2008,td:23,int:11,rating:86.4,gs:16,yrds:3916,cmp_perc:60.4,g:16,cmp:345,att:571,ypg:244.8},
+        {year:2009,td:22,int:10,rating:92.9,gs:14,yrds:3553,cmp_perc:60.3,g:14,cmp:267,att:443,ypg:253.8},
+        {year:"Regular Season Total",td:216,int:100,rating:86.5,gs:142,yrds:32873,cmp_perc:59.0,g:148,cmp:2801,att:4746,ypg:222.1}
     ],
-    playoff_stats:{td:24,int:17,rating:80.0,gs:16,yrds:3752,cmp_perc:59.1}},
+    playoff_stats:{td:24,int:17,rating:80.0,gs:16,yrds:3752,cmp_perc:59.1,g:16,cmp:341,att:577,ypg:234.5}},
     {first_name:"Michael",last_name:"Vick",
     stats:[
-        {year:2009,td:1,int:0,rating:93.7,gs:1,yrds:86,cmp_perc:46.2},
-        {year:2010,td:21,int:6,rating:100.2,gs:12,yrds:3018,cmp_perc:62.6},
-        {year:2011,td:18,int:14,rating:84.9,gs:13,yrds:3303,cmp_perc:59.8},
-        {year:2012,td:12,int:10,rating:78.1,gs:10,yrds:2362,cmp_perc:58.1},
-        {year:2013,td:5,int:3,rating:86.5,gs:6,yrds:1215,cmp_perc:54.6},
-        {year:"Regular Season Total",td:216,int:100,rating:86.5,gs:142,yrds:32873,cmp_perc:55.3}
+        {year:2009,td:1,int:0,rating:93.7,gs:1,yrds:86,cmp_perc:46.2,g:12,cmp:6,att:13,ypg:7.2},
+        {year:2010,td:21,int:6,rating:100.2,gs:12,yrds:3018,cmp_perc:62.6,g:12,cmp:233,att:372,ypg:251.5},
+        {year:2011,td:18,int:14,rating:84.9,gs:13,yrds:3303,cmp_perc:59.8,g:13,cmp:253,att:423,ypg:254.1},
+        {year:2012,td:12,int:10,rating:78.1,gs:10,yrds:2362,cmp_perc:58.1,g:10,cmp:204,att:351,ypg:236.2},
+        {year:2013,td:5,int:3,rating:86.5,gs:6,yrds:1215,cmp_perc:54.6,g:7,cmp:77,att:141,ypg:173.6},
+        {year:"Regular Season Total",td:57,int:33,rating:87.7,gs:42,yrds:9984,cmp_perc:59.5,g:54,cmp:773,att:1300,ypg:184.9}
     ],
-    playoff_stats:{td:2,int:1,rating:79.9,gs:1,yrds:368,cmp_perc:55.3}},]
+    playoff_stats:{td:2,int:1,rating:79.9,gs:1,yrds:368,cmp_perc:55.3,g:2,cmp:21,att:38,ypg:184.0}}];
+
+    $scope.eaglesQBComparison = [];
 
     //JSON array containing all tv show names, genres, ratings, and image links
     $scope.tvShowList = [{title:'Veep',genre:'comedy',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE2NDM0OTEwMl5BMl5BanBnXkFtZTgwNzgwNDI0ODE@._V1_SX300.jpg'},{title:'The Sopranos',genre:'crime',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'The End of the F***ing World',genre:'comedy',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2ZhNmQ2MjQtMmQzMi00YjE5LTlkMWMtMjk5YzIxMjk2NDc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Westworld',genre:'scifi',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTRmYzNmOTctZjMwOS00ODZlLWJiZGQtNDg5NDY5NjE3MTczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg'},{title:"It's Always Sunny in Philadelphia",genre:'comedy',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTExNGZkMWMtMmIwZC00YjA3LTgwM2ItZjQ2YmZkMzQ1YWZkXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},
@@ -616,6 +618,33 @@ app.controller('myCtrl', function($scope, $http) {
     //loadEaglesData displays the Eagles page contents
     $scope.loadEaglesData = function() {
         $scope.selectedTeam = "eagles";
+    }
+
+    //compareQBs combines all of the stats for each QB into a single array
+    $scope.compareQBs = function() {
+        for (i = 0; i < $scope.eaglesQBStats.length; i++) {
+            for (j = 0; j < $scope.eaglesQBStats[i].stats.length; j++) {
+                $scope.eaglesQBStats[i].stats[j].player = $scope.eaglesQBStats[i].last_name;
+            }
+            $scope.eaglesQBComparison = $scope.eaglesQBComparison.concat($scope.eaglesQBStats[i].stats);
+        }
+    }
+
+    //populate the comparison array with all QB stats initially
+    $scope.compareQBs();
+
+    //variable that tracks the stat by which to order the Phillies stat table 
+    $scope.eaglesQBTableVar = "+year";
+
+    //setQBTableVar sets the variable that controls how the Eagles QB comparison table
+    //is being sorted
+    $scope.setQBTableVar = function(tableVar) {
+        if ($scope.eaglesQBTableVar == ("-" + tableVar)) {
+            $scope.eaglesQBTableVar = "+" + tableVar;
+        }
+        else {
+            $scope.eaglesQBTableVar = "-" + tableVar;
+        }
     }
 
     //variable that holds Sixers' record

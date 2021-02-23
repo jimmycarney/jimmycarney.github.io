@@ -286,37 +286,81 @@
                     <p>{{eaglesStats.record.wins}}-{{eaglesStats.record.losses}}-{{eaglesStats.record.ties}}</p>
                 </div>
 
+                <table class = "statsTable">
+                    <caption>Starting QB Comparison 1999-2020</caption>
+                    <tr>
+                        <th ng-click = "setQBTableVar('year')">Year</th>
+                        <th ng-click = "setQBTableVar('g')">G</th>
+                        <th ng-click = "setQBTableVar('gs')">GS</th>
+                        <th ng-click = "setQBTableVar('cmp')">Cmp</th>
+                        <th ng-click = "setQBTableVar('att')">Att</th>
+                        <th ng-click = "setQBTableVar('cmp_perc')">Comp%</th>
+                        <th ng-click = "setQBTableVar('td')">TD</th>
+                        <th ng-click = "setQBTableVar('int')">Int</th>
+                        <th ng-click = "setQBTableVar('yrds')">Yards</th>
+                        <th ng-click = "setQBTableVar('ypg')">Y/G</th>
+                        <th ng-click = "setQBTableVar('rating')">Rating</th>
+                    </tr>
+                    <tr ng-repeat = "year in eaglesQBComparison | orderBy: eaglesQBTableVar">
+                        <td>{{year.year}} ({{year.player}})</td>
+                        <td>{{year.g}}</td>
+                        <td>{{year.gs}}</td>
+                        <td>{{year.cmp}}</td>
+                        <td>{{year.att}}</td>
+                        <td>{{year.cmp_perc}}</td>
+                        <td>{{year.td}}</td>
+                        <td>{{year.int}}</td>
+                        <td>{{year.yrds}}</td>
+                        <td>{{year.ypg}}</td>
+                        <td>{{year.rating}}</td>
+                    </tr>
+                </table>
+
                 <table ng-repeat = "player in eaglesQBStats" class = "statsTable">
                     <caption>{{player.last_name}}, {{player.first_name}}</caption>
                     <tr>
                         <th>Year</th>
+                        <th>G</th>
                         <th>GS</th>
-                        <th>Rating</th>
+                        <th>Cmp</th>
+                        <th>Att</th>
+                        <th>Comp%</th>
                         <th>TD</th>
                         <th>Int</th>
-                        <th>Comp%</th>
                         <th>Yards</th>
+                        <th>Y/G</th>
+                        <th>Rating</th>
                     </tr>
                     <tr ng-repeat = "year in player.stats">
                         <td>{{year.year}}</td>
+                        <td>{{year.g}}</td>
                         <td>{{year.gs}}</td>
-                        <td>{{year.rating}}</td>
+                        <td>{{year.cmp}}</td>
+                        <td>{{year.att}}</td>
+                        <td>{{year.cmp_perc}}</td>
                         <td>{{year.td}}</td>
                         <td>{{year.int}}</td>
-                        <td>{{year.cmp_perc}}</td>
                         <td>{{year.yrds}}</td>
+                        <td>{{year.ypg}}</td>
+                        <td>{{year.rating}}</td>
                     </tr>
                     <tr>
                         <td>Playoffs Total</td>
+                        <td>{{player.playoff_stats.g}}</td>
                         <td>{{player.playoff_stats.gs}}</td>
-                        <td>{{player.playoff_stats.rating}}</td>
+                        <td>{{player.playoff_stats.cmp}}</td>
+                        <td>{{player.playoff_stats.att}}</td>
+                        <td>{{player.playoff_stats.cmp_perc}}</td>
                         <td>{{player.playoff_stats.td}}</td>
                         <td>{{player.playoff_stats.int}}</td>
-                        <td>{{player.playoff_stats.cmp_perc}}</td>
                         <td>{{player.playoff_stats.yrds}}</td>
+                        <td>{{player.playoff_stats.ypg}}</td>
+                        <td>{{player.playoff_stats.rating}}</td>
                     </tr>
                 </table>
 
+                <!--Commenting out current team stats (not up to date anyway)-->
+                <!--
                 <table class = "statsTable">
                     <caption>Eagles Passing Leaders</caption>
                     <tr>
@@ -370,6 +414,8 @@
                         <td>{{player.td}}</td>
                     </tr>
                 </table>
+            -->
+
             </div>
 
             <!--END EAGLES-->
