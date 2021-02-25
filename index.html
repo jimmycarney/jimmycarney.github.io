@@ -285,7 +285,15 @@
                     <p>Eagles:</p>
                     <p>{{eaglesStats.record.wins}}-{{eaglesStats.record.losses}}-{{eaglesStats.record.ties}}</p>
                 </div>
-
+                <div id = "qbSelection">
+                    <p id = "qbDropdownLabel">Select Quarterbacks</p>
+                    <div id = "qbDropdown">
+                        <div id = "qbDropdownItem" ng-repeat = "qb in eaglesQBNames">
+                            <input  type = "checkbox" name = "qbName" checked = "checked" ng-click = "filterQB(qb.last_name)">
+                            <label for = "qbName">{{qb.first_name}} {{qb.last_name}}</label>
+                        </div>
+                    </div>
+                </div>
                 <table class = "statsTable">
                     <caption>Starting QB Comparison 1999-2020</caption>
                     <tr>
@@ -301,8 +309,8 @@
                         <th ng-click = "setQBTableVar('ypg')">Y/G</th>
                         <th ng-click = "setQBTableVar('rating')">Rating</th>
                     </tr>
-                    <tr ng-repeat = "year in eaglesQBComparison | orderBy: eaglesQBTableVar">
-                        <td>{{year.year}} ({{year.player}})</td>
+                    <tr ng-repeat = "year in eaglesQBComparison | orderBy: eaglesQBTableVar | filter: qbFilter">
+                        <td>{{year.year}} ({{year.last_name}})</td>
                         <td>{{year.g}}</td>
                         <td>{{year.gs}}</td>
                         <td>{{year.cmp}}</td>
