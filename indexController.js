@@ -456,7 +456,7 @@ app.controller('myCtrl', function($scope, $http) {
             ).rating;
             $scope.jimmyMovieRating = rating + "%";
             document.getElementById("moviePoster").src = response.data.Poster;
-            alert(response.data.Poster);
+            //alert(response.data.Poster);
             $scope.movieTitle = response.data.Title;
             $scope.movieRating = response.data.Rated;
             $scope.movieRuntime = response.data.Runtime;
