@@ -9,7 +9,7 @@ app.controller('myCtrl', function($scope, $http) {
 
     //JSON array containing all movie names, genres, ratings, and image links
     $scope.moviesList=[{title:'The Departed',genre:'crime',rating:99,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_SX300.jpg'},{title:'Ex Machina',genre:'scifi',rating:99,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg'},{title:'The Social Network',genre:'drama',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGUyZDUxZjEtMmIzMC00MzlmLTg4MGItZWJmMzBhZjE0Mjc1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'},{title:'Fight Club',genre:'thriller',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
-    {title:'Good Will Hunting',genre:'drama',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Dead Poets Society',genre:'drama',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Terminator 2',genre:'scifi',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Star Wars: Episode V - The Empire Strikes Back',genre:'scifi',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'The Lord of the Rings: The Return of the King',genre:'fantasy',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
+    {title:'Good Will Hunting',genre:'drama',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Dead Poets Society',genre:'drama',rating:96,imageSrc:'https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Terminator 2',genre:'scifi',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Star Wars: Episode V - The Empire Strikes Back',genre:'scifi',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'The Lord of the Rings: The Return of the King',genre:'fantasy',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
     {title:'Nightcrawler',genre:'thriller',rating:96,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2U1YzdhYWMtZWUzMi00OWI1LWFkM2ItNWVjM2YxMGQ2MmNhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Goodfellas',genre:'crime',rating:97,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},{title:'The Shape of Water',genre:'unique',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg'},{title:'Moon',genre:'scifi',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_SX300.jpg'},{title:'The Godfather Part II',genre:'crime',rating:96,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'},
     {title:'Blade Runner',genre:'scifi',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Memento',genre:'thriller',rating:96,imageSrc:'https://m.media-amazon.com/images/M/MV5BZTcyNjk1MjgtOWI3Mi00YzQwLWI5MTktMzY4ZmI2NDAyNzYzXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Birdman or (the Unexpected Virtue of Ignorance)',genre:'drama',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_SX300.jpg'},{title:'Spotlight',genre:'drama',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjIyOTM5OTIzNV5BMl5BanBnXkFtZTgwMDkzODE2NjE@._V1_SX300.jpg'},{title:'Hell or High Water',genre:'crime',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTg4NDA1OTA5NF5BMl5BanBnXkFtZTgwMDQ2MDM5ODE@._V1_SX300.jpg'},
     {title:'The Silence of the Lambs',genre:'thriller',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Rocky',genre:'drama',rating:92,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY5MDMzODUyOF5BMl5BanBnXkFtZTcwMTQ3NTMyNA@@._V1_SX300.jpg'},{title:'A Clockwork Orange',genre:'scifi',rating:90,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SX300.jpg'},{title:'Children of Men',genre:'scifi',rating:90,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ5NTI2NTI4NF5BMl5BanBnXkFtZTcwNjk2NDA2OQ@@._V1_SX300.jpg'},
@@ -158,7 +158,8 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'The Transporter',genre:'action',rating:58,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTk2NDc2MDAxN15BMl5BanBnXkFtZTYwNDc1NDY2._V1_SX300.jpg'},{title:'The Mechanic',genre:'action',rating:49,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjEyMjk1NjI1M15BMl5BanBnXkFtZTcwODcyNjAxNA@@._V1_SX300.jpg'},{title:'eXistenZ',genre:'scifi',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmU1MTJkYWItMzM5Ny00NDgxLTgxOGEtNTkzNDdkZjkwNGI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},{title:'Kicking + Screaming',genre:'comedy',rating:40,year:'2005',imageSrc:'https://m.media-amazon.com/images/M/MV5BMTA5Njk1MjEzMzZeQTJeQWpwZ15BbWU3MDY3NjY4MjE@._V1_SX300.jpg'},{title:'Mr. 3000',genre:'comedy',rating:47,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTg5NTk2MTQ0NV5BMl5BanBnXkFtZTcwNjMyNTUyMQ@@._V1_SX300.jpg'},
     {title:'The Sandlot 2',genre:'comedy',rating:38,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTI5MjY1NjE4MV5BMl5BanBnXkFtZTcwOTcwMjgyMQ@@._V1_SX300.jpg'},{title:'Soul',genre:'comedy',rating:81,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGE1MDg5M2MtNTkyZS00MTY5LTg1YzUtZTlhZmM1Y2EwNmFmXkEyXkFqcGdeQXVyNjA3OTI0MDc@._V1_SX300.jpg'},{title:'Borat Subsequent Moviefilm',genre:'comedy',rating:61,imageSrc:'https://m.media-amazon.com/images/M/MV5BNmY3OTdkOWEtNjc2ZC00OTZmLWI5OWItMjdjYjRkNTExNDNhXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg'},{title:'Our Idiot Brother',genre:'comedy',rating:51,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTU3NjM3Mzg0Ml5BMl5BanBnXkFtZTcwOTk4MDI3NQ@@._V1_SX300.jpg'},{title:'Are You Here',genre:'comedy',rating:22,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjY3NzM2NDg0MV5BMl5BanBnXkFtZTgwOTE2MjU5MTE@._V1_SX300.jpg'},
     {title:'Freejack',genre:'scifi',rating:22,imageSrc:'https://m.media-amazon.com/images/M/MV5BYWM2NjVmOWMtNDVmOS00ZWUwLWEyNTctZGQyMzJiMWVhNDQxXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg'},{title:'Wanderlust',genre:'comedy',rating:30,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjA5NjIyOTY1Nl5BMl5BanBnXkFtZTcwMDY3NjQ0Nw@@._V1_SX300.jpg'},{title:'Parasite',genre:'drama',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg'},{title:'Get Hard',genre:'comedy',rating:22,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTc3OTc1NjM0M15BMl5BanBnXkFtZTgwNjAyMzE1MzE@._V1_SX300.jpg'},{title:'Think Like a Man',genre:'comedy',rating:44,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjExNTc4NDg3OV5BMl5BanBnXkFtZTcwNTMzNDAxNw@@._V1_SX300.jpg'},{title:'Clockstoppers',genre:'comedy',rating:39,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTQ1Njc5MjgwNF5BMl5BanBnXkFtZTYwNTE3MTQ5._V1_SX300.jpg'},
-    {title:'Red Riding Hood',genre:'fantasy',rating:21,year:'2011',imageSrc:'https://m.media-amazon.com/images/M/MV5BMTc4NjYyMzQ5MV5BMl5BanBnXkFtZTcwNjE5Mjc3NA@@._V1_SX300.jpg'},{title:"Logan's Run",genre:'scifi',rating:64,imageSrc:'https://m.media-amazon.com/images/M/MV5BZjFiY2IyMmItNmUwZi00ZGYxLThiZGItMWZiZjE0NGVhNWNmXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg'},{title:'L.A. Confidential',genre:'crime',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDQ2YzEyZGItYWRhOS00MjBmLTkzMDUtMTdjYzkyMmQxZTJlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'}];
+    {title:'Red Riding Hood',genre:'fantasy',rating:21,year:'2011',imageSrc:'https://m.media-amazon.com/images/M/MV5BMTc4NjYyMzQ5MV5BMl5BanBnXkFtZTcwNjE5Mjc3NA@@._V1_SX300.jpg'},{title:"Logan's Run",genre:'scifi',rating:64,imageSrc:'https://m.media-amazon.com/images/M/MV5BZjFiY2IyMmItNmUwZi00ZGYxLThiZGItMWZiZjE0NGVhNWNmXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg'},{title:'L.A. Confidential',genre:'crime',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BMDQ2YzEyZGItYWRhOS00MjBmLTkzMDUtMTdjYzkyMmQxZTJlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Lottery Ticket',genre:'comedy',rating:34,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTM0ODA2NjcxM15BMl5BanBnXkFtZTcwNTA3NTI0Mw@@._V1_SX300.jpg'},{title:'Zack and Miri Make a Porno',genre:'comedy',rating:51,imageSrc:'https://m.media-amazon.com/images/M/MV5BY2I1N2Y0ODEtNzZmZS00NzBjLWFkZjEtMTVkOTY1Y2UzZGE1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},
+    {title:'The Sitter',genre:'comedy',rating:26,imageSrc:'https://m.media-amazon.com/images/M/MV5BZDU1ZWJmMmUtM2Q5Ny00MjdhLWE0OTMtMWJkMjg1OTc2YTgxXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'},{title:'I Care A Lot',genre:'comedy',rating:69,imageSrc:'https://m.media-amazon.com/images/M/MV5BYWU2ZTRhNDMtMWYxMC00ZTVkLThjZmItZGY4MGU0YmZlMjJlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'}];
 
     //alert($scope.moviesList.length);
 
@@ -235,7 +236,8 @@ app.controller('myCtrl', function($scope, $http) {
     ],
     playoff_stats:{td:2,int:1,rating:79.9,gs:1,yrds:368,cmp_perc:55.3,g:2,cmp:21,att:38,ypg:184.0}}];
 
-    $scope.eaglesQBNames = [{last_name:"Wentz",first_name:"Carson"},{last_name:"Foles",first_name:"Nick"},{last_name:"Vick",first_name:"Michael"},{last_name:"McNabb",first_name:"Donovan"}];
+    $scope.eaglesQBNames = [{last_name:"Wentz",first_name:"Carson"},{last_name:"Foles",first_name:"Nick"},{last_name:"Vick",first_name:"Michael"},{last_name:"McNabb",first_name:"Donovan"},
+    {last_name:"Hurts",first_name:"Jalen"}];
 
     $scope.eaglesQBComparison = [
         {last_name:"Wentz",first_name:"Carson",year:2016,td:16,int:14,rating:79.3,gs:16,yrds:3782,cmp_perc:62.4,g:16,cmp:379,att:607,ypg:236.4},
@@ -267,7 +269,8 @@ app.controller('myCtrl', function($scope, $http) {
         {last_name:"Vick",first_name:"Michael",year:2011,td:18,int:14,rating:84.9,gs:13,yrds:3303,cmp_perc:59.8,g:13,cmp:253,att:423,ypg:254.1},
         {last_name:"Vick",first_name:"Michael",year:2012,td:12,int:10,rating:78.1,gs:10,yrds:2362,cmp_perc:58.1,g:10,cmp:204,att:351,ypg:236.2},
         {last_name:"Vick",first_name:"Michael",year:2013,td:5,int:3,rating:86.5,gs:6,yrds:1215,cmp_perc:54.6,g:7,cmp:77,att:141,ypg:173.6},
-        {last_name:"Vick",first_name:"Michael",year:"Regular Season Total",td:57,int:33,rating:87.7,gs:42,yrds:9984,cmp_perc:59.5,g:54,cmp:773,att:1300,ypg:184.9}];
+        {last_name:"Vick",first_name:"Michael",year:"Regular Season Total",td:57,int:33,rating:87.7,gs:42,yrds:9984,cmp_perc:59.5,g:54,cmp:773,att:1300,ypg:184.9},
+        {last_name:"Hurts",first_name:"Jalen",year:2020,td:6,int:4,rating:77.6,gs:4,yrds:1061,cmp_perc:52.0,g:15,cmp:77,att:148,ypg:70.7}];
 
     //JSON array containing all tv show names, genres, ratings, and image links
     $scope.tvShowList = [{title:'Veep',genre:'comedy',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BMjE2NDM0OTEwMl5BMl5BanBnXkFtZTgwNzgwNDI0ODE@._V1_SX300.jpg'},{title:'The Sopranos',genre:'crime',rating:98,imageSrc:'https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'},{title:'The End of the F***ing World',genre:'comedy',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2ZhNmQ2MjQtMmQzMi00YjE5LTlkMWMtMjk5YzIxMjk2NDc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Westworld',genre:'scifi',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTRmYzNmOTctZjMwOS00ODZlLWJiZGQtNDg5NDY5NjE3MTczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg'},{title:"It's Always Sunny in Philadelphia",genre:'comedy',rating:93,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTExNGZkMWMtMmIwZC00YjA3LTgwM2ItZjQ2YmZkMzQ1YWZkXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'},
@@ -681,7 +684,7 @@ app.controller('myCtrl', function($scope, $http) {
     }
 
     //array to hold list of QBs to display in comparison table
-    $scope.displayQBList = ["Wentz","Foles","Vick","McNabb"];
+    $scope.displayQBList = ["Wentz","Foles","Vick","McNabb","Hurts"];
 
     //filter out QBs whose names are not in the display list (unchecked in dropdown)
     $scope.qbFilter = function(qb) {
@@ -1156,8 +1159,54 @@ app.controller('myCtrl', function($scope, $http) {
                         //Ocean City, NJ (Pink House)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.57, 39.28]))
                     }),
-                    //add next: Pittsburgh (CMU), Sioux Falls (ISC), Philadelphia (Sports), Wilmington and Chapel Hill NC (ISC and Sam college)
-                    //Stamford (Rosen family), Cape Cod (rugby friends), Columbus (Ohio State),
+                    new ol.Feature({
+                        //Pittburgh, PA (Carnegie Mellon)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-80.00, 40.44]))
+                    }),
+                    new ol.Feature({
+                        //Sioux Falls, SD (ISC Work Trip)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.73, 43.55]))
+                    }),
+                    new ol.Feature({
+                        //Philadelphia, PA (Philly sports and many times)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.17, 39.95]))
+                    }),
+                    new ol.Feature({
+                        //Chapel Hill, NC (Sam college visits)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-79.06, 35.91]))
+                    }),
+                    new ol.Feature({
+                        //Wilmington, NC (First ISC Work Trip)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-77.89, 34.21]))
+                    }),
+                    new ol.Feature({
+                        //Stamford, CT (Rosen household)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.54, 41.05]))
+                    }),
+                    new ol.Feature({
+                        //Cape Cod, MA (Rugby friends trip after graduation)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.30, 41.67]))
+                    }),
+                    new ol.Feature({
+                        //Columbus, OH (OSU with Cam, Sam, Dana, and Dan)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.00, 39.96]))
+                    }),
+                    new ol.Feature({
+                        //Dover, DE (Governor's Mansion)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.52, 39.16]))
+                    }),
+                    new ol.Feature({
+                        //Atlantic City, NJ (Night at the Casino)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.42, 39.36]))
+                    }),
+                    new ol.Feature({
+                        //Syracuse, NY (Rugby game vs Ithaca)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-76.15, 43.05]))
+                    }),
+                    new ol.Feature({
+                        //New Haven, CT (Yale Art Museum with Isaac)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.93, 41.31]))
+                    }),
                 ]
             })
         });
@@ -1195,8 +1244,8 @@ app.controller('myCtrl', function($scope, $http) {
     "I presented and demonstrated the applications I built to an audience of InterSystems employees at the conclusion of each internship."]}];
 
     //array of project objects
-    $scope.projectList = [{title:"Intelligent Chart Review",company:"InterSystems",desc:"I designed and built an Angular web application that utilizes InterSystems Natural Language Processing to analyze and report on both the structured and unstructured data within a patient's medical record."},
-    {title:"Autonomously Docking Rover",company:"Terrafugia",desc:"Terrafugia required a way to perform the docking process between rover and the flying vehicle for the TF-2 in an automatic, repeatable, and efficient manner without GPS. With a team of two electrical engineering students and two computer science students (including myself), we built a rover with a robust sensor package and implemented a program to maneuver the rover autonomously to its docking station."}];
+    $scope.projectList = [{title:"Intelligent Chart Review",company:"InterSystems",desc:"I designed and built an Angular web application that utilizes InterSystems Natural Language Processing to analyze and report on both the structured and unstructured data within a patient's medical record.",imageSrc:"icr.png"},
+    {title:"Autonomously Docking Rover",company:"Terrafugia",desc:"Terrafugia required a way to perform the docking process between rover and the flying vehicle for the TF-2 in an automatic, repeatable, and efficient manner without GPS. With a team of two electrical engineering students and two computer science students (including myself), we built a rover with a robust sensor package and implemented a program to maneuver the rover autonomously to its docking station.",imageSrc:"tf2.jpg"}];
 
     //resumeScroll scrolls the window to whatever is clicked in the navigation
     $scope.resumeScroll = function(targetDiv) {

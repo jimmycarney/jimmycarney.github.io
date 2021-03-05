@@ -201,6 +201,12 @@ body{
 .projectDesc{
     font-size: 17px;
 }
+#projects img, .projectDesc{
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3%;
+}
 #movieFilterButton, #tvFilterButton{
     display: block;
     cursor: pointer;
