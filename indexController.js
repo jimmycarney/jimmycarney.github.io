@@ -710,26 +710,72 @@ app.controller('myCtrl', function($scope, $http) {
     //loadSixersData displays the Sixers page contents
     $scope.loadSixersData = function() {
         $scope.selectedTeam = "sixers";
+        $scope.initializeSixersDates();
         $scope.loadSixersGames();
     }
 
     $scope.sixersGames = [];
+    $scope.sixersUpcomingGames = [];
+    $scope.sixersPastGames = [];
+    $scope.sixersStartDate = "";
+    $scope.sixersEndDate = "";
 
-    //loadSixersGames calls the NBA API to get all upcoming Sixers games
-    $scope.loadSixersGames = function() {
+    //initialize start date for game schedule to today
+    $scope.initializeSixersDates = function() {
         var today = new Date();
-        var dd = String(today.getDate()).padStart(2,"0");
+        var dd1 = String(today.getDate()).padStart(2,"0");
         var mm = String((today.getMonth() + 1)).padStart(2,"0");
         var yyyy = today.getFullYear();
-        $http({
-            method: 'GET',
-            url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&start_date=" + yyyy+"-"+mm+"-"+dd
-        }).then(function success(response) {
-            $scope.sixersGames = response.data.data;
-        },
-        function error(response){
-            alert("error!");
-        });
+        document.getElementById("sixersStartDate").value = yyyy+"-"+mm+"-"+dd1;
+    }
+
+    //loadSixersGames calls the NBA API to get all upcoming and past Sixers games
+    //for the current season
+    $scope.loadSixersGames = function() {
+        var startDate = document.getElementById("sixersStartDate").value;
+        var endDate = document.getElementById("sixersEndDate").value;
+        alert(startDate);
+        alert(endDate);
+        $scope.loadSixersGamesByDate(startDate, endDate);
+    }
+
+    $scope.loadSixersGamesByDate = function(startDate, endDate) {
+        if ((startDate != "") && (endDate != "")) {
+            $http({
+                method: 'GET',
+                url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&start_date=" + startDate + "&end_date=" + endDate + "&per_page=200" 
+            }).then(function success(response) {
+                $scope.sixersGames = response.data.data;
+            },
+            function error(response){
+                alert("error!");
+            });
+        }
+        else if ((startDate != "") && (endDate == "")) {
+            $http({
+                method: 'GET',
+                url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&start_date=" + startDate + "&per_page=200" 
+            }).then(function success(response) {
+                $scope.sixersGames = response.data.data;
+            },
+            function error(response){
+                alert("error!");
+            });
+        }
+        else if ((startDate == "") && (endDate != "")){
+            $http({
+                method: 'GET',
+                url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&end_date=" + endDate + "&per_page=200" 
+            }).then(function success(response) {
+                $scope.sixersGames = response.data.data;
+            },
+            function error(response){
+                alert("error!");
+            });
+        }
+        else{
+            alert("Please define a range of dates");
+        }
     }
 
     //variable that holds Flyers' record
