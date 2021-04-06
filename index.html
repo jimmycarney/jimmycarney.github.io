@@ -23,7 +23,16 @@
                 <p class = "tab" ng-click = "loadContent('home')" id = "homeTab">Home</p>
                 <p class = "tab" ng-click = "loadContent('movies')" id = "moviesTab">Movies</p>
                 <p class = "tab" ng-click = "loadContent('shows')" id = "showsTab">TV Shows</p>
-                <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p>
+                <!-- <p class = "tab" ng-click = "loadContent('sports')" id = "sportsTab">Sports</p> -->
+                <div class = "dropdown" ng-click = "loadContent('sports')">
+                    <p class = "tab" id = "sportsTab">Sports</p>
+                    <div id = "sportsDropdown" class = "tabDropdown">
+                        <p class = "dropTab" ng-click = "loadEaglesData()">Eagles</p>
+                        <p class = "dropTab" ng-click = "loadSixersData()">Sixers</p>
+                        <p class = "dropTab" ng-click = "loadPhilliesData()">Phillies</p>
+                        <p class = "dropTab" ng-click = "loadFlyersData()">Flyers</p>
+                    </div>
+                </div>
                 <div class = "dropdown" ng-click = "loadContent('dnd')">
                     <p class = "tab" id = "dndTab">D&D</p>
                     <div id = "dndDropdown" class = "tabDropdown">
@@ -272,12 +281,12 @@
         <!--SPORTS PAGE-->
 
         <div id="sports" class="center-content" ng-show="sports">
-            <div id = "sportsTabs">
+            <!-- <div id = "sportsTabs">
                 <p ng-click = "loadEaglesData()">Eagles</p>
                 <p ng-click = "loadSixersData()">Sixers</p>
                 <p ng-click = "loadPhilliesData()">Phillies</p>
                 <p ng-click = "loadFlyersData()">Flyers</p>
-            </div>
+            </div> -->
 
             <!--EAGLES-->
 
@@ -435,6 +444,12 @@
                 <div class = "teamRecord">
                     <p>Sixers:</p>
                     <p>{{sixersRecord}}</p>
+                </div>
+                <div id = "sixersGames">
+                    <p>Upcoming Games</p>
+                    <div ng-repeat = "game in sixersGames | orderBy: '+date'">
+                        <p>{{game.home_team.full_name}}</p>
+                    </div>
                 </div>
             </div>
 

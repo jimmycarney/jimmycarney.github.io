@@ -70,6 +70,9 @@ body{
     height: 30px;
     width: 100%;
 }
+#sportsDropdown{
+    margin-left: 43.7%;
+}
 #dndDropdown{
     margin-left: 57.5%;
 }

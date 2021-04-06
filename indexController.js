@@ -710,6 +710,26 @@ app.controller('myCtrl', function($scope, $http) {
     //loadSixersData displays the Sixers page contents
     $scope.loadSixersData = function() {
         $scope.selectedTeam = "sixers";
+        $scope.loadSixersGames();
+    }
+
+    $scope.sixersGames = [];
+
+    //loadSixersGames calls the NBA API to get all upcoming Sixers games
+    $scope.loadSixersGames = function() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2,"0");
+        var mm = String((today.getMonth() + 1)).padStart(2,"0");
+        var yyyy = today.getFullYear();
+        $http({
+            method: 'GET',
+            url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&start_date=" + yyyy+"-"+mm+"-"+dd
+        }).then(function success(response) {
+            $scope.sixersGames = response.data.data;
+        },
+        function error(response){
+            alert("error!");
+        });
     }
 
     //variable that holds Flyers' record
