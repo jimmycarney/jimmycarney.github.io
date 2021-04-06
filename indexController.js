@@ -734,8 +734,6 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.loadSixersGames = function() {
         var startDate = document.getElementById("sixersStartDate").value;
         var endDate = document.getElementById("sixersEndDate").value;
-        alert(startDate);
-        alert(endDate);
         $scope.loadSixersGamesByDate(startDate, endDate);
     }
 
@@ -1353,6 +1351,32 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
+    var url = window.location.href;
+    $scope.loadURLPage = function() {
+        if(url.search('home') > 0) {
+            $scope.loadContent("home");
+        }
+        else if(url.search('movies') > 0) {
+            $scope.loadContent("movies");
+        }
+        else if(url.search('shows') > 0) {
+            $scope.loadContent("shows");
+        }
+        else if(url.search('sports') > 0) {
+            $scope.loadContent("sports");
+        }
+        else if(url.search('dnd') > 0) {
+            $scope.loadContent("dnd");
+        }
+        else if(url.search('travel') > 0) {
+            $scope.loadContent("travel");
+        }
+        else if(url.search('tools') > 0) {
+            $scope.loadContent("tools");
+        }
+    }
+
+    $scope.loadURLPage();
 });
 /*create directive - must use camel case when defining and use dashes
 with all lowercase in the html*/
