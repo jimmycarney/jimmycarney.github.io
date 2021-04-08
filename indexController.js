@@ -693,7 +693,7 @@ app.controller('myCtrl', function($scope, $http) {
         if ((startDate != "") && (endDate != "")) {
             $http({
                 method: 'GET',
-                url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&start_date=" + startDate + "&end_date=" + endDate + "&per_page=200" 
+                url: "https://www.balldontlie.io/api/v1/games?team_ids[]=23&start_date=" + startDate + "&end_date=" + endDate + "&per_page=200" 
             }).then(function success(response) {
                 $scope.sixersGames = response.data.data;
             },
@@ -704,7 +704,7 @@ app.controller('myCtrl', function($scope, $http) {
         else if ((startDate != "") && (endDate == "")) {
             $http({
                 method: 'GET',
-                url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&start_date=" + startDate + "&per_page=200" 
+                url: "https://www.balldontlie.io/api/v1/games?team_ids[]=23&start_date=" + startDate + "&per_page=200" 
             }).then(function success(response) {
                 $scope.sixersGames = response.data.data;
             },
@@ -715,7 +715,7 @@ app.controller('myCtrl', function($scope, $http) {
         else if ((startDate == "") && (endDate != "")){
             $http({
                 method: 'GET',
-                url: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=23&end_date=" + endDate + "&per_page=200" 
+                url: "https://www.balldontlie.io/api/v1/games?team_ids[]=23&end_date=" + endDate + "&per_page=200" 
             }).then(function success(response) {
                 $scope.sixersGames = response.data.data;
             },
