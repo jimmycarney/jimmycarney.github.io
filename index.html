@@ -456,6 +456,11 @@
                         <p>{{game.home_team.full_name}}: {{game.home_team_score}} @ {{game.visitor_team.full_name}}: {{game.visitor_team_score}}</p>
                     </div>
                 </div>
+                <div id = "sixersPlayers">
+                    <div ng-repeat = "player in sixersPlayers">
+
+                    </div>
+                </div>
             </div>
 
             <!--END SIXERS-->
@@ -469,6 +474,13 @@
                 </div>
                 <table class = "statsTable">
                     <caption>Phillies Hitting Leaders</caption>
+                    <div class = "seasonDropdown">
+                        <label for = "philliesSeason">Season</label>
+                        <select name = "philliesSeason" ng-model = "philliesSeason"
+                            ng-options = "season for season in philliesSeasonList"
+                            ng-change = "testMLBAPI()">
+                        </select>
+                    </div>
                     <tr>
                         <th ng-click = "setTableVar('name_display_first_last')">Player</th>
                         <th ng-click = "setTableVar('pos')">Position</th>

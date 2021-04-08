@@ -429,14 +429,6 @@ app.controller('myCtrl', function($scope, $http) {
         }*/
         $scope.movieGenre = genre;
         $scope.genreDisplay = display + " Movies";
-        /*document.getElementById('allTab').style.background = "";
-        document.getElementById('scifiTab').style.background = "";
-        document.getElementById('dramaTab').style.background = "";
-        document.getElementById('thrillerTab').style.background = "";
-        document.getElementById('crimeTab').style.background = "";
-        document.getElementById('uniqueTab').style.background = "";
-        document.getElementById('superheroTab').style.background = "";
-        document.getElementById(genre + 'Tab').style.background = "#495469";*/
     }
 
     //variable that tracks whether or not the movie popup is showing
@@ -588,35 +580,6 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.showEpisodeRankings = false;
     }
 
-    //Below function was not working as intended, decided to manually add image links
-    //to moviesList
-
-    //loadMoviePosters calls the movie API for each movive in the moviesList array
-    //and sets the imageSrc field to the Poster link returned
-    /*$scope.loadMoviePosters = function(){
-        for(var i = 0; i < $scope.moviesList.length; i++) {
-            var movie = $scope.moviesList[i];
-            $http({
-                method: 'GET',
-                url: "https://www.omdbapi.com/?t=" + movie.title + "&apikey=8f59097f"
-            }).then(function success(response) {
-                if (response.data.Poster != "N/A") {
-                    movie.imageSrc = response.data.Poster;
-                }
-                else {
-                    movie.imageSrc = '';
-                }
-                $scope.moviesList[i] = movie;
-            },
-            function error(response) {
-                //do nothing
-            })
-        }
-    }
-    
-    //initially load all image links into the movieLists JSON array
-    //$scope.loadMoviePosters();*/
-
     //hidePopup sets the showPopup variable to false
     $scope.hidePopup = function() {
         $scope.showPopup = false;
@@ -655,20 +618,6 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.loadEaglesData = function() {
         $scope.selectedTeam = "eagles";
     }
-
-    //compareQBs combines all of the stats for each QB into a single array
-    /*$scope.compareQBs = function() {
-        for (i = 0; i < $scope.eaglesQBStats.length; i++) {
-            for (j = 0; j < $scope.eaglesQBStats[i].stats.length; j++) {
-                $scope.eaglesQBStats[i].stats[j].player = $scope.eaglesQBStats[i].last_name;
-            }
-            //$scope.eaglesQBComparison = $scope.eaglesQBComparison.concat($scope.eaglesQBStats[i].stats.pop());
-            $scope.eaglesQBComparison = $scope.eaglesQBComparison.concat($scope.eaglesQBStats[i].stats.slice(0,-1));
-        }
-    }
-
-    //populate the comparison array with all QB stats initially
-    $scope.compareQBs();*/
 
     //variable that tracks the stat by which to order the Phillies stat table 
     $scope.eaglesQBTableVar = "+year";
@@ -712,11 +661,12 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.selectedTeam = "sixers";
         $scope.initializeSixersDates();
         $scope.loadSixersGames();
+        //having problems with asynchronously loading players
+        //$scope.loadSixersPlayers();
     }
 
+    //variables to store array of Sixers games and date range
     $scope.sixersGames = [];
-    $scope.sixersUpcomingGames = [];
-    $scope.sixersPastGames = [];
     $scope.sixersStartDate = "";
     $scope.sixersEndDate = "";
 
@@ -729,14 +679,16 @@ app.controller('myCtrl', function($scope, $http) {
         document.getElementById("sixersStartDate").value = yyyy+"-"+mm+"-"+dd1;
     }
 
-    //loadSixersGames calls the NBA API to get all upcoming and past Sixers games
-    //for the current season
+    //loadSixersGames gets the startDate and endDate values from the date inputs and passes
+    //those values to the loadSixersGamesByDate function
     $scope.loadSixersGames = function() {
         var startDate = document.getElementById("sixersStartDate").value;
         var endDate = document.getElementById("sixersEndDate").value;
         $scope.loadSixersGamesByDate(startDate, endDate);
     }
 
+    //loadSixersGamesByDate calls the NBA API to get all Sixers games between the startDate
+    //and the endDate
     $scope.loadSixersGamesByDate = function(startDate, endDate) {
         if ((startDate != "") && (endDate != "")) {
             $http({
@@ -776,6 +728,39 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
+    //variable to store array of Sixers players
+    $scope.sixersPlayers = [];
+
+    //loadSixersPlayers calls the NBA API to get all players and filters the results
+    //to store all sixers players in the sixersPlayers array
+    $scope.loadSixersPlayers = function() {
+        var page = 0;
+        var pageCount = 1;
+        while (page < pageCount) {
+            page = page + 1;
+            try {
+                $http({
+                    method: 'GET',
+                    url: "https://www.balldontlie.io/api/v1/players?page=" + page 
+                }).then(function success(response) {
+                    $scope.sixersPlayers = response.data.data;
+                    alert($scope.sixersPlayers.length);
+                    $scope.sixersPlayers.filter(function(item) {
+                        return item.team.city == "Philadelphia";
+                    });
+                    //pageCount = response.meta.total_pages;
+                },
+                function error(response){
+                    alert("error!");
+                });
+            }
+            catch{
+                alert("error!");
+            }
+        }
+        alert($scope.sixersPlayers[0].last_name);
+    }
+
     //variable that holds Flyers' record
     $scope.flyersRecord = "41-21";
     
@@ -788,6 +773,7 @@ app.controller('myCtrl', function($scope, $http) {
     //mlb data
     $scope.loadPhilliesData = function() {
         $scope.selectedTeam = "phillies";
+        $scope.initPhilliesSeasonList();
         $scope.testMLBAPI();
         $scope.testMLBTransactionAPI();
     }
@@ -809,12 +795,20 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
+    $scope.philliesSeason = 2021;
+    $scope.philliesSeasonList = [];
+    $scope.initPhilliesSeasonList = function() {
+        for(var i = 1900; i < 2022; i++){
+            $scope.philliesSeasonList.push(i);
+        }
+    }
+
     //testMLBAPI gets the hitting leaders for a certain season and filters
     //that array to contain only Phillies players
     $scope.testMLBAPI = function() {
         $http({
             method: 'GET',
-            url: "https://mlb-data.p.rapidapi.com/json/named.leader_hitting_repeater.bam?sort_column=h&season=2020",
+            url: "https://mlb-data.p.rapidapi.com/json/named.leader_hitting_repeater.bam?sort_column=h&season=" + $scope.philliesSeason,
             headers: {
                 "rapidapi-key": "d111e2f0d6msh1f805bf26cac48bp13c744jsn26bf5382001c"
             }
@@ -874,68 +868,10 @@ app.controller('myCtrl', function($scope, $http) {
             alert("error!");
         });
     }
-
-    //Below function not working as intended, as the API seems to expect an integer
-    //for the 'name_part' despite the documentation saying that is a string field
-    //(waiting for response to my discussion post about this)
-    //getPlayerInfo
-    /*$scope.getPlayerInfo = function(playerName) {
-        $http({
-            method: 'GET',
-            url: "https://mlb-data.p.rapidapi.com/json/named.search_player_all.bam/name_part=" + playerName,
-            headers: {
-                "rapidapi-key": "d111e2f0d6msh1f805bf26cac48bp13c744jsn26bf5382001c"
-            }
-        }).then(function success(response) {
-            alert(response.data);
-        },
-        function error(response){
-            alert(response.data);
-        });
-    }*/
-
-    //variable that holds the value of the D&D search bar
-    //REMOVED - removed input this was linked to
-    //$scope.dndKey = "Barbarian";
-
-    //variable that holds the type of D&D items to search through
-    //REMOVED - removed dropdown this was linked to
-    //$scope.dndType = "";
     
     //array that holds every dnd type (api endpoint)
     $scope.dndTypeArray = ['Spells','Monsters',
     'Sections','Conditions','Races','Classes','Magicitems','Weapons'];
-
-    //callDndAPI call the dnd api endpoint specified by $scope.dndType (dropdown menu)
-    //and searches the results for an entry with name equal to $scope.dndKey
-    //and populates the D&D pop scope variables
-    //REMOVED - no longer using this type of search
-    /*$scope.callDndAPI = function(page) {
-        //alert($scope.dndType);
-        if ($scope.dndType == 'Other') {
-            $scope.dndType = 'search';
-        }
-        $http({
-            method: 'GET',
-            url: "https://api.open5e.com/" + $scope.dndType.toLowerCase() + "/?page=" + page
-        }).then(function success(response) {
-            //alert($scope.dndType);
-            for (var i = 0; i < response.data.results.length; i++) {
-                var item = response.data.results[i];
-                if (item.name.toLowerCase().replace(/ /g,'') == $scope.dndKey.toLowerCase().replace(/ /g,'')) {
-                    $scope.dndItemName = $scope.dndKey;
-                    $scope.dndItemDesc = item.desc;
-                    return;
-                }
-            }
-            if (response.data.next != null) {
-                $scope.callDndAPI((page + 1));
-            }
-        },
-        function error(response){
-            alert("Keyterm not found!");
-        });
-    }*/
 
     //variable that holds the currenty 'type' of dnd page
     $scope.dndPage = "";
@@ -1281,17 +1217,6 @@ app.controller('myCtrl', function($scope, $http) {
     //initialize map when page is first opened
     $scope.initMap();
 
-    /*Google maps API stuff commented out for now*/
-    /*$scope.initMap = function() {
-        alert("initializing map");
-        var mapOptions = {
-            zoom: 10,
-            center: {lat: -35, lng:151}
-        };
-        map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    }
-
-    $scope.initMap();*/
 
     //array holds all professional skills
     $scope.profSkills = ["Object-Oriented Programming","Full-Stack Application Development","Web Programming","Technical Writing","Technical Sales",
