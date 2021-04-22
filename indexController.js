@@ -542,7 +542,7 @@ app.controller('myCtrl', function($scope, $http) {
             url: "https://www.omdbapi.com/?t=" + show.title + '&y=' + show.year + "&apikey=8f59097f"
         }).then(function success(response) {
             document.getElementById("tvPoster").src = response.data.Poster;
-            alert(response.data.Poster);
+            //alert(response.data.Poster);
             $scope.tvTitle = response.data.Title;
             $scope.tvDate = response.data.Year;
             $scope.tvRating = response.data.Rated;
