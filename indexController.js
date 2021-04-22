@@ -1216,7 +1216,7 @@ app.controller('myCtrl', function($scope, $http) {
     }
 
     //initialize map when page is first opened
-    $scope.initMap();
+    //$scope.initMap();
 
 
     //array holds all professional skills
