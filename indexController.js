@@ -1215,12 +1215,16 @@ app.controller('myCtrl', function($scope, $http) {
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.93, 41.31]))
                     }),
                     new ol.Feature({
-                        //Chicago, IL (4th of July with Pam)
+                        //Chicago, IL (4th of July with Pam, Cam visit with Jack)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-87.63, 41.88]))
                     }),
                     new ol.Feature({
                         //Capitola, CA (Fallers' wedding)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-121.95, 36.96]))
+                    }),
+                    new ol.Feature({
+                        //Louisville, KY (Pam's house)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-85.76, 32.25]))
                     }),
                 ]
             })
