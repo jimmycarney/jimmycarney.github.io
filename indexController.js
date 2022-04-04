@@ -1231,11 +1231,42 @@ app.controller('myCtrl', function($scope, $http) {
                         //Louisville, KY (Pam's house)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-85.76, 32.25]))
                     }),
+                    new ol.Feature({
+                        //Winnipeg, CA (Nathab northern lights)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-97.14, 49.90]))
+                    }),
+                    new ol.Feature({
+                        //Churchill, CA (Nathab northern lights)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-94.17, 58.77]))
+                    }),
+                    new ol.Feature({
+                        //Bar Harbor, ME (Presidents' Day with Pam)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-68.21, 44.38])),
+                        name: "Bar Harbor, ME"
+                    }),
                 ]
             })
         });
         map.addLayer(layer);
+
+        let selected = null;
+
+        map.on('pointermove', function (e) {
+            if (selected !== null) {
+              selected.setStyle(undefined);
+              selected = null;
+            }
+          
+            map.forEachFeatureAtPixel(e.pixel, function (f) {
+              selected = f;
+              $scope.selectedPlace = f.get("name");
+              $scope.$apply();
+              return true;
+            });
+        });
     }
+
+
 
     //initialize map when page is first opened
     $scope.initMap();

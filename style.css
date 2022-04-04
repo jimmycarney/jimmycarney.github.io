@@ -650,5 +650,16 @@ table{
     height: 800px;
 }
 #map{
+    position: relative;
     height: 800px;
+    z-index: 1;
+}
+#selectedPlaceP{
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    /*margin-top: -50px;*/
+    margin-left: 100px;
+    background-color: white;
+    z-index: 2;
 }
