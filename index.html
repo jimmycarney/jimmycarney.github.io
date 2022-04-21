@@ -39,6 +39,7 @@
                         <p class = "dropTab" ng-click = "selectDndPage('reference')">Reference</p>
                         <p class = "dropTab" ng-click = "selectDndPage('campaigns')">My Campaigns</p>
                         <p class = "dropTab" ng-click = "selectDndPage('characters')">My Characters</p>
+                        <p class = "dropTab" ng-click = "selectDndPage('pointbuy')">Point Buy</p>
                     </div>
                 </div>
                 <p class = "tab" ng-click = "loadContent('travel')" id = "travelTab">Travel</p>
@@ -778,6 +779,38 @@
                     </div>
                 </div>
                 <p id = "characterDescription" ng-bind = "selectedCharacterDesc"></p>
+            </div>
+            <div id = "dndPointBuy" ng-show = "selectedDnd == 'pointbuy'">
+                <div class = "pointbuyrow">
+                    <div class = "pointbuystat">
+                        <p>Strength</p>
+                        <p ng-bind = "strengthVal"></p>
+                    </div>
+                    <div class = "pointbuystat">
+                        <p>Dexterity</p>
+                        <p ng-bind = "dexterityVal"></p>
+                    </div>
+                    <div class = "pointbuystat">
+                        <p>Constitution</p>
+                        <p ng-bind = "constitutionVal"></p>
+                    </div>
+                </div>
+                <div class = "pointbuyrow">
+                    <div class = "pointbuystat">
+                        <p>Intelligence</p>
+                        <p ng-bind = "intelligenceVal"></p>
+                    </div>
+                    <div class = "pointbuystat">
+                        <p>Wisdom</p>
+                        <p ng-bind = "wisdomVal"></p>
+                    </div>
+                    <div class = "pointbuystat">
+                        <p>Charisma</p>
+                        <p ng-bind = "charismaVal"></p>
+                    </div>
+                </div>
+                <p>Total Points:</p>
+                <p id = "pointbuytotal" ng-bind = "totalpoints"></p><p>/27</p>
             </div>
         </div>
 

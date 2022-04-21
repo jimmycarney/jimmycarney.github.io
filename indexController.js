@@ -166,7 +166,8 @@ app.controller('myCtrl', function($scope, $http) {
     {title:'Dune',year:'2021',genre:'scifi',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Promare',genre:'scifi',rating:75,imageSrc:'https://m.media-amazon.com/images/M/MV5BZTc5NGFmOTQtZWE2Ni00NGNiLTlhYWYtMjFiNzYwNjIzN2E1XkEyXkFqcGdeQXVyMjI0MDI5Mg@@._V1_SX300.jpg'},{title:'The Three Musketeers',year:'2011',genre:'action',rating:40,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTM3OTc2OTM2OF5BMl5BanBnXkFtZTcwMDM1MjU1NQ@@._V1_SX300.jpg'},{title:'Spider-Man: No Way Home',genre:'superhero',rating:85,imageSrc:'https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg'},{title:'The Lost Daughter',genre:'drama',rating:60,imageSrc:'https://m.media-amazon.com/images/M/MV5BZTJmYTJmYTktMzU1Yy00ZTZlLTgzNjItYmY4ZDFjZGFjYjZhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_SX300.jpg'},
     {title:'Nerve',genre:'scifi',rating:40,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUzOTg1OTM4NV5BMl5BanBnXkFtZTgwMTg2Mjg0OTE@._V1_SX300.jpg'},{title:'Battle of the Year',genre:'drama',rating:5,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTY2OTcyNzM3NF5BMl5BanBnXkFtZTgwNzgxMjkxMDE@._V1_SX300.jpg'},{title:'Brazil',genre:'scifi',rating:87,imageSrc:'https://m.media-amazon.com/images/M/MV5BMzIwM2IwYTItYmM4Zi00OWMzLTkwNjAtYWRmYWNmY2RhMDk0XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'},{title:'Black Widow',genre:'superhero',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BNjRmNDI5MjMtMmFhZi00YzcwLWI4ZGItMGI2MjI0N2Q3YmIwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:"Kiki's Delivery Service",genre:'fantasy',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BOTc0ODM1Njk1NF5BMl5BanBnXkFtZTcwMDI5OTEyNw@@._V1_SX300.jpg'},
     {title:'The Suicide Squad',genre:'superhero',rating:69,imageSrc:'https://m.media-amazon.com/images/M/MV5BMWU4NDQ2NjEtNjhkOS00Y2MwLWJkODItZmJhZGE0MDU1OWM4XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg'},{title:'Shang Chi and the Legend of the Ten Rings',genre:'superhero',rating:80,imageSrc:'https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg'},{title:'Tucker and Dale vs. Evil',genre:'comedy',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BODQ5NDQ0MjkwMF5BMl5BanBnXkFtZTcwNDg1OTU4NQ@@._V1_SX300.jpg'},{title:'Iverson',genre:'documentary',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTUyNDAxMDYwMF5BMl5BanBnXkFtZTgwMzQ0NzAwODE@._V1_SX300.jpg'},{title:'Miss March',genre:'comedy',rating:3,imageSrc:'https://m.media-amazon.com/images/M/MV5BMTY0MDg5NzY1N15BMl5BanBnXkFtZTcwMDYyNjUyMg@@._V1_SX300.jpg'},
-    {title:'Reservoir Dogs',genre:'crime',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BZmExNmEwYWItYmQzOS00YjA5LTk2MjktZjEyZDE1Y2QxNjA1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Everything, Everywhere, All At Once',genre:'scifi',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_SX300.jpg'},{title:'My Hero Academia: Heroes Rising',genre:'superhero',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmFjMTA1NWMtZWRiYy00OTViLTk1ZmItZDk3NzM2NzA4ODBjXkEyXkFqcGdeQXVyNzEyMDQ1MDA@._V1_SX300.jpg'},{title:'In The Heights',genre:'comedy',rating:71,imageSrc:'https://m.media-amazon.com/images/M/MV5BMzM1ZDY0YTktZTYzZi00MjZjLTllMDMtMmNlMmM5NmY4ZjllXkEyXkFqcGdeQXVyMTA1OTcyNDQ4._V1_SX300.jpg'}];
+    {title:'Reservoir Dogs',genre:'crime',rating:91,imageSrc:'https://m.media-amazon.com/images/M/MV5BZmExNmEwYWItYmQzOS00YjA5LTk2MjktZjEyZDE1Y2QxNjA1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'},{title:'Everything, Everywhere, All At Once',genre:'scifi',rating:95,imageSrc:'https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_SX300.jpg'},{title:'My Hero Academia: Heroes Rising',genre:'superhero',rating:70,imageSrc:'https://m.media-amazon.com/images/M/MV5BMmFjMTA1NWMtZWRiYy00OTViLTk1ZmItZDk3NzM2NzA4ODBjXkEyXkFqcGdeQXVyNzEyMDQ1MDA@._V1_SX300.jpg'},{title:'In The Heights',genre:'comedy',rating:71,imageSrc:'https://m.media-amazon.com/images/M/MV5BMzM1ZDY0YTktZTYzZi00MjZjLTllMDMtMmNlMmM5NmY4ZjllXkEyXkFqcGdeQXVyMTA1OTcyNDQ4._V1_SX300.jpg'},
+    {title:'Jujutsu Kaisen 0',genre:'fantasy',rating:79,imageSrc:'https://m.media-amazon.com/images/M/MV5BYzFmMjAwMDYtNzM0Zi00NjY2LWFjMjYtMGQ1OTRiZjk5YjJkXkEyXkFqcGdeQXVyMTMwODY5NDc2._V1_SX300.jpg'}];
 
     //JSON object containing Eagles stats leaders lists (not kept up-to-date)
     $scope.eaglesStats = {record:{wins:4,losses:11,ties:1},
@@ -1002,6 +1003,15 @@ app.controller('myCtrl', function($scope, $http) {
     //initialize selected character Thokk
     $scope.selectCharacter($scope.dndCharacters[0]);
 
+    $scope.strengthVal = 8;
+    $scope.dexterityVal = 8;
+    $scope.constitutionVal = 8;
+    $scope.intelligenceVal = 8;
+    $scope.wisdomVal = 8;
+    $scope.charismaVal = 8;
+    $scope.totalpoints = 0;
+    //TO DO: write function to increment
+
     //array to hold translation table for text to morse code
     $scope.morseCodeTable = {a:".-",b:"-...",c:"-.-.",d:"-..",e:".",f:"..-.",g:"--.",
     h:"....",i:"..",j:".---",k:"-.-",l:".-..",m:"--",n:"-.",o:"---",p:".--.",
@@ -1021,8 +1031,6 @@ app.controller('myCtrl', function($scope, $http) {
         document.getElementById("morseCodeTranslated").innerHTML = translated;
     }
     
-    $scope.cities = [{name:"Wilmington, DE", lonlat:[-75.55,39.74]},{name:"Cambridge, MA", lonlat:[-71.11,42.37]},
-    {name:"Nashville, TN", lonlat:[-86.78, 36.16]}];
 
     //initMap creates the map and all of the points
     $scope.initMap = function() {
@@ -1038,207 +1046,263 @@ app.controller('myCtrl', function($scope, $http) {
               zoom: 4
             })
           });
-        /*for (var i = 0; i < $scope.cities.length; i++) {
-            var layer = new ol.layer.Vector({
-                source: new ol.source.Vector({
-                    features: [
-                        new ol.Feature({
-                            geometry: new ol.geom.Point(ol.proj.fromLonLat($scope.cities[i].lonlat))
-                        })
-                    ]
-                })
-            })
-        }*/
         var layer = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
                     new ol.Feature({
                         //Cambridge, MA (college and post-grad)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.11, 42.37]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.11, 42.37])),
+                        name: "Cambridge, MA"
+                    }),
+                    new ol.Feature({
+                        //Boston, MA (college and post-grad)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.06, 42.36])),
+                        name: "Boston, MA"
+                    }),
+                    new ol.Feature({
+                        //Somerville, MA (college and post-grad)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.10, 42.39])),
+                        name: "Somerville, MA"
+                    }),
+                    new ol.Feature({
+                        //Medford, MA (college and post-grad)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.11, 42.42])),
+                        name: "Meford, MA"
                     }),
                     new ol.Feature({
                         //Wilmington, DE (born and raised)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.55, 39.74]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.55, 39.74])),
+                        name: "Wilmington, DE"
                     }),
                     new ol.Feature({
                         //Nashville, TN (Vanderbilt University Medical Center for ISC work)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-86.78, 36.16]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-86.78, 36.16])),
+                        name: "Nashville, TN"
                     }),
                     new ol.Feature({
                         //Maui, HI (McCaffrey's house 2005 and 2015)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-156.33, 20.80]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-156.33, 20.80])),
+                        name: "Maui, HI"
                     }),
                     new ol.Feature({
                         //Costa Rica (WFS Service trip)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.75, 9.75]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.75, 9.75])),
+                        name: "Costa Rica"
                     }),
                     new ol.Feature({
                         //Domincan Republic (WFS service trip)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.16, 18.74]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.16, 18.74])),
+                        name: "Dominican Republic"
                     }),
                     new ol.Feature({
                         //Montreal, CA (Rugby trip and vacation with Rachel)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.57, 45.50]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.57, 45.50])),
+                        name: "Montreal, CA"
                     }),
                     new ol.Feature({
                         //Aruba (Senior year college spring break)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-69.97, 12.52]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-69.97, 12.52])),
+                        name: "Aruba"
                     }),
                     new ol.Feature({
                         //St. Louis, MO (Mercy Health for ISC work)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-90.20, 38.63]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-90.20, 38.63])),
+                        name: "St. Louis, MO"
                     }),
                     new ol.Feature({
                         //San Francisco, CA (McCaffrey's house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.42, 37.77]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.42, 37.77])),
+                        name: "San Francisco, CA"
                     }),
                     new ol.Feature({
                         //San Diego, CA (Rady's Childrens Hospital for ISC Work)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-117.16, 32.72]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-117.16, 32.72])),
+                        name: "San Diego, CA"
                     }),
                     new ol.Feature({
                         //Seattle, WA (Rachel's house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.33, 47.61]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-122.33, 47.61])),
+                        name: "Seattle, WA"
                     }),
                     new ol.Feature({
                         //Sandpoint, ID (Rachel's skiing condo)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-116.62, 48.39]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-116.62, 48.39])),
+                        name: "Sandpoint, ID"
                     }),
                     new ol.Feature({
                         //Houston, TX (Carol and Caitlin's old house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-95.37, 29.76]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-95.37, 29.76])),
+                        name: "Houston, TX"
                     }),
                     new ol.Feature({
                         //Denver, CO (NSCRO national championship)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-104.99, 39.74]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-104.99, 39.74])),
+                        name: "Denver, CO"
                     }),
                     new ol.Feature({
                         //Minneapolis, MN (Super Bowl LII and Brian's Vikings game)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-93.27, 44.98]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-93.27, 44.98])),
+                        name: "Minneapolis, MN"
                     }),
                     new ol.Feature({
                         //Outer Banks, NC (Senior week after high school)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.47, 35.56]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.47, 35.56])),
+                        name: "Outer Banks, NC"
                     }),
                     new ol.Feature({
                         //Cleveland, OH (Cam's house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-81.69, 41.50]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-81.69, 41.50])),
+                        name: "Cleveland, OH"
                     }),
                     new ol.Feature({
                         //New York, NY (Sam's apartment, college spring break freshman and sophomore year, and more)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.01, 40.71]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.01, 40.71])),
+                        name: "New York, NY"
                     }),
                     new ol.Feature({
                         //Clemson, SC (Visiting Sam in college)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-82.84, 34.68]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-82.84, 34.68])),
+                        name: "Clemson, SC"
                     }),
                     new ol.Feature({
                         //Charleston, SC (Jake's house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-79.93, 32.78]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-79.93, 32.78])),
+                        name: "Charleston, SC"
                     }),
                     new ol.Feature({
                         //Fairfield, CT (Rugby games and Jake's old house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.26, 41.14]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.26, 41.14])),
+                        name: "Fairfield, CT"
                     }),
                     new ol.Feature({
                         //Orono, ME (Rugby playoffs freshman year)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-68.67, 44.88]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-68.67, 44.88])),
+                        name: "Orono, ME"
                     }),
                     new ol.Feature({
                         //South Kingstown, RI (University of Rhode Island rugby game)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.52, 41.45]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-71.52, 41.45])),
+                        name: "South Kingston, RI"
                     }),
                     new ol.Feature({
                         //Washington DC (JC in congress, Cam and Gil's apartments for NYE 2019/2020)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-77.04, 38.91]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-77.04, 38.91])),
+                        name: "Washington DC"
                     }),
                     new ol.Feature({
                         //Baltimore, MD (ESPN Zone and aquarium)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-76.61, 39.29]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-76.61, 39.29])),
+                        name: "Baltimore, MD"
                     }),
                     new ol.Feature({
                         //Puerto Rico (8th grade WFS service trip)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-66.59, 18.22]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-66.59, 18.22])),
+                        name: "Puerto Rico"
                     }),
                     new ol.Feature({
                         //Bakersfield, VT (Air B&B with Zach, Mal, and Sinclair)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.80, 44.78]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.80, 44.78])),
+                        name: "Bakersfield, VT"
+                    }),
+                    new ol.Feature({
+                        //Burlington, VT (Air B&B day trip with Zach, Mal, and Sinclair)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.21, 44.48])),
+                        name: "Burlington, VT"
                     }),
                     new ol.Feature({
                         //West Dover, VT (Mount Snow with Jake, Scott, Morgan, Merch, Tim, etc.)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.92, 42.96]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.92, 42.96])),
+                        name: "West Dover, VT"
                     }),
                     new ol.Feature({
                         //Ocean City, NJ (Pink House)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.57, 39.28]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.57, 39.28])),
+                        name: "Ocean City, NJ"
                     }),
                     new ol.Feature({
                         //Pittburgh, PA (Carnegie Mellon)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-80.00, 40.44]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-80.00, 40.44])),
+                        name: "Pittsburgh, PA"
                     }),
                     new ol.Feature({
                         //Sioux Falls, SD (ISC Work Trip)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.73, 43.55]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.73, 43.55])),
+                        name: "Sioux Falls, SD"
                     }),
                     new ol.Feature({
                         //Philadelphia, PA (Philly sports and many times)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.17, 39.95]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.17, 39.95])),
+                        name: "Philadelphia, PA"
                     }),
                     new ol.Feature({
                         //Chapel Hill, NC (Sam college visits)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-79.06, 35.91]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-79.06, 35.91])),
+                        name: "Chapel Hill, NC"
                     }),
                     new ol.Feature({
                         //Wilmington, NC (First ISC Work Trip)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-77.89, 34.21]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-77.89, 34.21])),
+                        name: "Wilmington, NC"
                     }),
                     new ol.Feature({
                         //Stamford, CT (Rosen household)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.54, 41.05]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.54, 41.05])),
+                        name: "Stamford, CT"
                     }),
                     new ol.Feature({
                         //Cape Cod, MA (Rugby friends trip after graduation)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.30, 41.67]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-70.30, 41.67])),
+                        name: "Cape Code, MA"
                     }),
                     new ol.Feature({
                         //Columbus, OH (OSU with Cam, Sam, Dana, and Dan)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.00, 39.96]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-83.00, 39.96])),
+                        name: "Columbus, OH"
                     }),
                     new ol.Feature({
                         //Dover, DE (Governor's Mansion)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.52, 39.16]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-75.52, 39.16])),
+                        name: "Dover, DE"
                     }),
                     new ol.Feature({
                         //Atlantic City, NJ (Night at the Casino)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.42, 39.36]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-74.42, 39.36])),
+                        name: "Atlantic City, NJ"
                     }),
                     new ol.Feature({
                         //Syracuse, NY (Rugby game vs Ithaca)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-76.15, 43.05]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-76.15, 43.05])),
+                        name: "Syracuse, NY"
                     }),
                     new ol.Feature({
                         //New Haven, CT (Yale Art Museum with Isaac)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.93, 41.31]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-72.93, 41.31])),
+                        name: "New Haven, CT"
                     }),
                     new ol.Feature({
                         //Chicago, IL (4th of July with Pam, Cam visit with Jack)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-87.63, 41.88]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-87.63, 41.88])),
+                        name: "Chicago, IL"
                     }),
                     new ol.Feature({
                         //Capitola, CA (Fallers' wedding)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-121.95, 36.96]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-121.95, 36.96])),
+                        name: "Capitola, CA"
                     }),
                     new ol.Feature({
                         //Louisville, KY (Pam's house)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-85.76, 32.25]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-85.76, 32.25])),
+                        name: "Louisville, KY"
                     }),
                     new ol.Feature({
                         //Winnipeg, CA (Nathab northern lights)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-97.14, 49.90]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-97.14, 49.90])),
+                        name: "Winnipeg, CA"
                     }),
                     new ol.Feature({
                         //Churchill, CA (Nathab northern lights)
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-94.17, 58.77]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-94.17, 58.77])),
+                        name: "Churchill, CA"
                     }),
                     new ol.Feature({
                         //Bar Harbor, ME (Presidents' Day with Pam)
