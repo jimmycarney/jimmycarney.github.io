@@ -1013,70 +1013,156 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.charismaVal = 8;
     $scope.totalpoints = 0;
     
-    //TO DO: write function to increment (finish last four stats)
+    //change dnd stats based on arrow clicks
     $scope.changeStat = function(stat, upBool) {
         if (stat == "strength") {
             if (upBool) {
-                $scope.strengthVal += 1;
-                $scope.totalpoints += 1;
-                if ($scope.strengthVal > 13) {
+                if (($scope.strengthVal < 15) && ($scope.totalpoints < 27)){
+                    if ($scope.strengthVal >= 13) {
+                        if ($scope.totalpoints == 26) {
+                            return;
+                        }
+                        else{
+                            $scope.totalpoints += 1;
+                        }
+                    }
+                    $scope.strengthVal += 1;
                     $scope.totalpoints += 1;
                 }
             }
             else {
-                $scope.strengthVal -= 1;
-                $scope.totalpoints -= 1;
-                if ($scope.strengthVal >= 13) {
+                if ($scope.strengthVal >8) {
+                    $scope.strengthVal -= 1;
                     $scope.totalpoints -= 1;
+                    if ($scope.strengthVal >= 13) {
+                        $scope.totalpoints -= 1;
+                    }
                 }
             }
         }
         else if (stat == "dexterity") {
             if (upBool) {
-                $scope.dexterityVal += 1;
-                $scope.totalpoints += 1;
-                if ($scope.dexterityVal > 13) {
+                if (($scope.dexterityVal < 15) && ($scope.totalpoints < 27)) {
+                    if ($scope.dexterityVal >= 13) {
+                        if ($scope.totalpoints == 26) {
+                            return;
+                        }
+                        else {
+                            $scope.totalpoints += 1;
+                        }
+                    }
+                    $scope.dexterityVal += 1;
                     $scope.totalpoints += 1;
                 }
             }
             else {
-                $scope.dexterityVal -= 1;
-                $scope.totalpoints -= 1;
-                if ($scope.dexterityVal >= 13) {
+                if ($scope.dexterityVal > 8) {
+                    $scope.dexterityVal -= 1;
                     $scope.totalpoints -= 1;
+                    if ($scope.dexterityVal >= 13) {
+                        $scope.totalpoints -= 1;
+                    }
                 }
             }
         }
         else if (stat == "constitution") {
             if (upBool) {
-                $scope.constitutionVal = $scope.constitutionVal + 1;
+                if (($scope.constitutionVal < 15) && ($scope.totalpoints < 27)) {
+                    if ($scope.constitutionVal >= 13) {
+                        if ($scope.totalpoints == 26) {
+                            return;
+                        }
+                        else {
+                            $scope.totalpoints += 1;
+                        }
+                    }
+                    $scope.constitutionVal += 1;
+                    $scope.totalpoints += 1;
+                }
             }
             else {
-                $scope.constitutionVal = $scope.constitutionVal - 1;
+                if ($scope.constitutionVal > 8) {
+                    $scope.constitutionVal -= 1;
+                    $scope.totalpoints -= 1;
+                    if ($scope.constitutionVal >= 13) {
+                        $scope.totalpoints -= 1;
+                    }
+                }
             } 
         }
         else if (stat == "intelligence") {
             if (upBool) {
-                $scope.intelligenceVal = $scope.intelligenceVal + 1;
+                if (($scope.intelligenceVal < 15) && ($scope.totalpoints < 27)) {
+                    if ($scope.intelligenceVal >= 13) {
+                        if ($scope.totalpoints == 26) {
+                            return;
+                        }
+                        else {
+                            $scope.totalpoints += 1;
+                        }
+                    }
+                    $scope.intelligenceVal += 1;
+                    $scope.totalpoints += 1;
+                }
             }
             else {
-                $scope.intelligenceVal = $scope.intelligenceVal - 1;
+                if ($scope.intelligenceVal > 8) {
+                    $scope.intelligenceVal -= 1;
+                    $scope.totalpoints -= 1;
+                    if ($scope.intelligenceVal >= 13) {
+                        $scope.totalpoints -= 1;
+                    }
+                }
             }     
         }
         else if (stat == "wisdom") {
             if (upBool) {
-                $scope.wisdomVal = $scope.wisdomVal + 1;
+                if (($scope.wisdomVal < 15) && ($scope.totalpoints < 27)) {
+                    if ($scope.wisdomVal >= 13) {
+                        if ($scope.totalpoints == 26) {
+                            return;
+                        }
+                        else {
+                            $scope.totalpoints += 1;
+                        }
+                    }
+                    $scope.wisdomVal += 1;
+                    $scope.totalpoints += 1;
+                }
             }
             else {
-                $scope.wisdomVal = $scope.wisdomVal - 1;
+                if ($scope.wisdomVal > 8) {
+                    $scope.wisdomVal -= 1;
+                    $scope.totalpoints -= 1;
+                    if ($scope.wisdomVal >= 13) {
+                        $scope.totalpoints -= 1;
+                    }
+                }
             }
         }
         else if (stat == "charisma") {
             if (upBool) {
-                $scope.charismaVal = $scope.charismaVal + 1;
+                if (($scope.charismaVal < 15) && ($scope.totalpoints < 27)) {
+                    if ($scope.charismaVal >= 13) {
+                        if ($scope.totalpoints == 26) {
+                            return;
+                        }
+                        else {
+                            $scope.totalpoints += 1;
+                        }
+                    }
+                    $scope.charismaVal += 1;
+                    $scope.totalpoints += 1;
+                }
             }
             else {
-                $scope.charismaVal = $scope.charismaVal - 1;
+                if ($scope.charismaVal >8) {
+                    $scope.charismaVal -= 1;
+                    $scope.totalpoints -= 1;
+                    if ($scope.charismaVal >= 13) {
+                        $scope.totalpoints -= 1;
+                    }
+                }
             }     
         }
     }
