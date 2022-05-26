@@ -811,10 +811,10 @@ app.controller('myCtrl', function($scope, $http) {
         }
     }
 
-    $scope.philliesSeason = 2021;
+    $scope.philliesSeason = 2022;
     $scope.philliesSeasonList = [];
     $scope.initPhilliesSeasonList = function() {
-        for(var i = 1900; i < 2022; i++){
+        for(var i = 1900; i < 2023; i++){
             $scope.philliesSeasonList.push(i);
         }
     }
