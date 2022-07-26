@@ -1202,7 +1202,7 @@ app.controller('myCtrl', function($scope, $http) {
             ],
             view: new ol.View({
               center: ol.proj.fromLonLat([-71.11, 42.37]),
-              zoom: 4
+              zoom: 3
             })
           });
         var layer = new ol.layer.Vector({
@@ -1467,6 +1467,21 @@ app.controller('myCtrl', function($scope, $http) {
                         //Bar Harbor, ME (Presidents' Day with Pam)
                         geometry: new ol.geom.Point(ol.proj.fromLonLat([-68.21, 44.38])),
                         name: "Bar Harbor, ME"
+                    }),
+                    new ol.Feature({
+                        //Geneva (Visited Cam)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([6.14, 46.20])),
+                        name: "Geneva, CH"
+                    }),
+                    new ol.Feature({
+                        //Hyeres (Beach with Cam)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([6.13, 43.12])),
+                        name: "Hyeres, FR"
+                    }),
+                    new ol.Feature({
+                        //Beaune (Vineyards with Cam)
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([4.84, 47.03])),
+                        name: "Beaune, FR"
                     }),
                 ]
             })
